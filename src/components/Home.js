@@ -1,15 +1,10 @@
 import wave from "../assets/images/backgrounds/wave.png";
+import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Home() {
-  const programmingLanguages = [
-    "HTML",
-    "CSS",
-    "Tailwind CSS",
-    "JavaScript",
-    "React",
-    "C++",
-    "C",
-  ];
+  const lanClasses =
+    "p-4 rounded bg-gradient-to-tr hover:bg-gradient-to-bl transition ease-in duration-300 from-indigo-500 via-purple-500 to-pink-500 font-semibold text-white flex flex-col gap-3 items-center justify-center";
 
   return (
     <>
@@ -33,16 +28,26 @@ function Home() {
           <div className="flex flex-col items-center justify-center gap-2">
             <h1 className="text-3xl font-bold">Skills</h1>
             <p className="flex flex-wrap items-center justify-center gap-4">
-              {programmingLanguages.map((lang, i) => {
-                return (
-                  <span
-                    key={i}
-                    className="px-4 py-2 rounded bg-gradient-to-r hover:bg-gradient-to-l transition-all ease-in duration-300 from-indigo-500 via-purple-500 to-pink-500 font-semibold text-white"
-                  >
-                    {lang}
-                  </span>
-                );
-              })}
+              <h2 className={lanClasses}>
+                <FaHtml5 className="text-9xl" />
+                HTML
+              </h2>
+              <h2 className={lanClasses}>
+                <FaCss3Alt className="text-9xl" />
+                CSS
+              </h2>
+              <h2 className={lanClasses}>
+                <SiTailwindcss className="text-9xl" />
+                Tailwind
+              </h2>
+              <h2 className={lanClasses}>
+                <SiJavascript className="text-9xl rounded" />
+                JavaScript
+              </h2>
+              <h2 className={lanClasses}>
+                <FaReact className="text-9xl" />
+                React JS
+              </h2>
             </p>
           </div>
 
