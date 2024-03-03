@@ -18,7 +18,7 @@ function Home() {
         style={{ backgroundImage: `url('${wave}')` }}
       >
         <div className="max-w-[90rem] w-full h-full bg-white/20 p-4 mx-2 flex flex-col gap-8 backdrop-blur-sm rounded-md">
-          <div className="flex flex-col items-start justify-center gap-4">
+          <div className="flex flex-col items-start justify-center gap-2">
             <h1 className="text-3xl font-bold">
               Welcome to I Farhat's Portfolio Website!
             </h1>
@@ -30,14 +30,14 @@ function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-3xl font-bold">My Skillset</h1>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <h1 className="text-3xl font-bold">Skills</h1>
             <p className="flex flex-wrap items-center justify-center gap-4">
               {programmingLanguages.map((lang, i) => {
                 return (
                   <span
                     key={i}
-                    className="px-4 py-2 rounded bg-gradient-to-tr hover:bg-gradient-to-bl transition-colors ease-in duration-300 from-indigo-500 via-purple-500 to-pink-500 font-semibold text-white"
+                    className="px-4 py-2 rounded bg-gradient-to-r hover:bg-gradient-to-l transition-all ease-in duration-300 from-indigo-500 via-purple-500 to-pink-500 font-semibold text-white"
                   >
                     {lang}
                   </span>
@@ -46,7 +46,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col items-start justify-center gap-4">
+          <div className="flex flex-col items-start justify-center gap-2">
             <h1 className="text-3xl font-bold">Intrests</h1>
             <p>
               I am enthusiastic about exploring new technologies and frameworks
