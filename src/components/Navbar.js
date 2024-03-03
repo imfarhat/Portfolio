@@ -14,7 +14,7 @@ function Navbar() {
             href="./home"
             className="rounded font-semibold text-2xl text-white drop-shadow-md"
           >
-            Imran Farhat
+            I Farhat
           </a>
           <div className="flex gap-4 items-center justify-center">
             <a href="./home" className={navLinksClasses}>
