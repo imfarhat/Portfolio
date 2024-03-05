@@ -5,8 +5,8 @@ import {
   TbHomeSignal,
   TbUserScan,
   TbSend,
+  TbWorldCode,
 } from "react-icons/tb";
-import { LuFileCode2 } from "react-icons/lu";
 
 function Navbar() {
   const [online, setOnline] = useState(navigator.onLine);
@@ -24,38 +24,41 @@ function Navbar() {
     };
   }, []);
 
-  const navLinkClass =
-    "px-3 py-1.5 flex gap-1.5 items-center justify-center rounded font-semibold bg-white/10 text-white backdrop-blur-sm transition duration-300 ease-in active:scale-95 active:bg-white active:text-[#323262] hover:bg-white hover:text-[#323262] drop-shadow-md";
+  const navLinkClassNormal =
+    "px-3 pt-1.5 pb-0.5 md:px-3 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition duration-200 ease-in active:bg-white/75 active:text-[#323262] hover:bg-white hover:text-[#323262]";
+
+  const navLinkClassWide =
+    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition duration-200 ease-in active:bg-white/75 active:text-[#323262] hover:bg-white hover:text-[#323262]";
 
   return (
-    <nav className="flex items-center justify-center top-0 sticky z-20">
-      <div className="flex gap-4 items-center justify-between max-w-7xl mx-2 w-full p-4 rounded-md rounded-t-none bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
+    <nav className="flex items-center justify-center sticky top-0 z-20 shadow-md">
+      <div className="flex gap-2 md:gap-4 items-center justify-between max-w-7xl mx-1 md:mx-2 w-full px-2 pt-2 pb-1 md:px-3 md:pt-3 md:pb-2 rounded-md rounded-t-none bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
         <Link
           to="/"
-          className="rounded font-semibold text-2xl text-white drop-shadow-md px-3 py-1"
+          className="font-semibold text-xl md:text-2xl text-white drop-shadow-md"
         >
           I. Farhat
         </Link>
-        <div className="flex gap-4 items-center justify-center">
-          <NavLink to="/" className={navLinkClass}>
+        <div className="flex gap-3 md:gap-4 items-center justify-center">
+          <NavLink to="/" className={navLinkClassNormal}>
             {online ? (
-              <TbHomeSignal className="text-xl" />
+              <TbHomeSignal className="text-2xl md:text-[1.35rem]" />
             ) : (
-              <TbHomeQuestion className="text-xl" />
+              <TbHomeQuestion className="text-2xl md:text-[1.35rem]" />
             )}
-            Home
+            <span className="text-xs md:text-base">Home</span>
           </NavLink>
-          <NavLink to="/about" className={navLinkClass}>
-            <TbUserScan className="text-xl" />
-            About
+          <NavLink to="/about" className={navLinkClassNormal}>
+            <TbUserScan className="text-2xl md:text-[1.35rem]" />
+            <span className="text-xs md:text-base">About</span>
           </NavLink>
-          <NavLink to="/projects" className={navLinkClass}>
-            <LuFileCode2 className="text-xl" />
-            Projects
+          <NavLink to="/projects" className={navLinkClassWide}>
+            <TbWorldCode className="text-2xl md:text-[1.35rem]" />
+            <span className="text-xs md:text-base">Projects</span>
           </NavLink>
-          <NavLink to="/contact" className={navLinkClass}>
-            <TbSend className="text-xl" />
-            Contact
+          <NavLink to="/contact" className={navLinkClassWide}>
+            <TbSend className="text-2xl md:text-[1.35rem]" />
+            <span className="text-xs md:text-base">Contact</span>
           </NavLink>
         </div>
       </div>

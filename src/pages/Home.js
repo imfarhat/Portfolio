@@ -14,7 +14,7 @@ function Home() {
         className="mt-4 min-h-[calc(100vh-88px)] flex items-center justify-center gap-40 bg-no-repeat bg-cover"
         style={{ backgroundImage: `url('${wave}')` }}
       >
-        <div className="max-w-7xl w-full h-full bg-white/20 p-4 mx-2 flex flex-col gap-8 backdrop-blur-sm rounded-md">
+        <div className="max-w-7xl w-full h-full bg-white/20 p-2 md:p-4 mx-1 flex flex-col gap-8 backdrop-blur-sm rounded-md">
           <div className="flex flex-col items-start justify-center gap-2">
             <h1 className="text-3xl font-bold">
               Welcome to I Farhat's Portfolio Website!
