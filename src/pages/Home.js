@@ -11,7 +11,7 @@ function Home() {
     <>
       <Navbar />
       <div
-        className="mt-4 min-h-[calc(100vh-88px)] flex items-center justify-center gap-40 bg-no-repeat bg-cover"
+        className="mt-4 min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-70px)] flex items-center justify-center gap-40 bg-no-repeat bg-cover"
         style={{ backgroundImage: `url('${wave}')` }}
       >
         <div className="max-w-7xl w-full h-full bg-white/20 p-2 md:p-4 mx-1 flex flex-col gap-8 backdrop-blur-sm rounded-md">
