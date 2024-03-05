@@ -25,10 +25,10 @@ function Navbar() {
   }, []);
 
   const navLinkClassNormal =
-    "px-3 pt-1.5 pb-0.5 md:px-3 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition duration-[250ms] ease-in active:bg-white/75 active:text-[#323262] hover:bg-white hover:text-[#323262]";
+    "px-3 pt-1.5 pb-0.5 md:px-3 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#323262] hover:bg-white hover:text-[#323262]";
 
   const navLinkClassWide =
-    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition duration-[250ms] ease-in active:bg-white/75 active:text-[#323262] hover:bg-white hover:text-[#323262]";
+    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#323262] hover:bg-white hover:text-[#323262]";
 
   return (
     <nav className="flex items-center justify-center sticky top-0 z-20">
