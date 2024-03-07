@@ -25,21 +25,21 @@ function Navbar() {
   }, []);
 
   const navLinkClassNormal =
-    "px-3 pt-1.5 pb-0.5 md:px-3 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#323262] hover:bg-white hover:text-[#323262]";
+    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#4379FB] hover:bg-white hover:text-[#4379FB]";
 
   const navLinkClassWide =
-    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pb-1 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 text-white backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#323262] hover:bg-white hover:text-[#323262]";
+    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#4379FB] hover:bg-white hover:text-[#4379FB]";
 
   return (
-    <nav className="flex items-center justify-center sticky top-0 z-20">
-      <div className="flex gap-2 md:gap-4 items-center justify-between max-w-7xl mx-1 md:mx-2 w-full px-2 pt-2 pb-1 md:px-3 md:pt-3 md:pb-2 rounded-md rounded-t-none bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-md">
+    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#4379FB] border-b">
+      <nav className="px-2 pt-1.5 pb-1 md:px-2.5 md:pt-2 md:pb-1.5 flex items-center justify-between max-w-7xl md:mx-2 w-full rounded-b-md text-white">
         <Link
           to="/"
-          className="font-semibold text-xl md:text-2xl text-white drop-shadow-md"
+          className="drop-shadow-md text-lg md:text-xl pr-2.5 py-2.5 md:py-1"
         >
           I. Farhat
         </Link>
-        <div className="flex gap-3 md:gap-4 items-center justify-center">
+        <div className="flex gap-2 md:gap-3 items-center justify-center">
           <NavLink to="/" className={navLinkClassNormal}>
             {online ? (
               <TbHomeSignal className="text-2xl md:text-[1.35rem]" />
@@ -61,8 +61,8 @@ function Navbar() {
             <span className="text-xs md:text-base">Contact</span>
           </NavLink>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
