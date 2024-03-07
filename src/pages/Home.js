@@ -1,19 +1,20 @@
 import Navbar from "../components/Navbar.js";
-import wave from "../assets/images/backgrounds/wave.png";
+import Footer from "../components/Footer.js";
+import workingDev from "../assets/images/characters/working-dev.png";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Home() {
   const langClasses =
-    "p-2 md:p-4 rounded bg-gradient-to-tr hover:bg-gradient-to-bl transition ease-in duration-300 from-indigo-500 via-purple-500 to-pink-500 font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
+    "p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br transition duration-300 from-[#141e28] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
 
   return (
     <>
       <Navbar />
-      <main className="min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-54px)] flex flex-col items-center justify-center my-12 bg-no-repeat bg-cover bg-[#437afb00]">
-        <section className="max-w-7xl w-full h-full bg-white/20 p-2 md:p-4 flex flex-col gap-8 backdrop-blur-sm rounded-md">
-          <article className="flex flex-wrap md:flex-nowrap md:flex-row items-center justify-between gap-4">
-            <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%]">
+      <main className="min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-54px)] flex flex-col items-center justify-center bg-no-repeat bg-cover bg-gradient-to-tl from-[#141e28] from-90% to-[#646674]">
+        <section className="max-w-7xl w-full h-full flex flex-col gap-8">
+          <article className="flex flex-wrap md:flex-nowrap md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
+            <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-white">
               <h1 className="text-3xl font-bold">
                 Welcome to I Farhat's Portfolio Website!
               </h1>
@@ -26,13 +27,17 @@ function Home() {
             </aside>
             <aside className="w-full md:w-[50%]">
               <div>
-                <img src={wave} alt="Background" />
+                <img
+                  src={workingDev}
+                  alt="Background"
+                  className="w-full h-full"
+                />
               </div>
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 bg-pink-50/50 rounded">
-            <h1 className="rotate-0 lg:-rotate-90 text-2xl md:text-3xl font-bold">
+          <article className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-4 bg-white rounded-md overflow-hidden p-2 md:p-4 md:pl-0">
+            <h1 className="rotate-0 lg:-rotate-90 text-[#646674] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -59,7 +64,7 @@ function Home() {
             </div>
           </article>
 
-          <article className="flex flex-col items-start justify-center gap-2">
+          <article className="flex flex-col items-start justify-center gap-2 text-white">
             <h1 className="text-3xl font-bold">Interests</h1>
             <p>
               I am enthusiastic about exploring new technologies and frameworks
@@ -71,6 +76,7 @@ function Home() {
           </article>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
