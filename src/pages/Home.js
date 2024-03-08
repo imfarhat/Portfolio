@@ -6,14 +6,14 @@ import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Home() {
   const langClasses =
-    "p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br transition duration-300 from-[#141e28] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
+    "p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
 
   return (
     <>
       <Navbar />
-      <main className="min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-54px)] flex flex-col items-center justify-center bg-no-repeat bg-cover bg-gradient-to-tl from-[#141e28] from-90% to-[#646674]">
+      <main className="flex flex-col items-center justify-center bg-[#16181d]">
         <section className="max-w-7xl w-full h-full flex flex-col gap-8">
-          <article className="flex flex-wrap md:flex-nowrap md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
+          <article className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
             <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-white">
               <h1 className="text-3xl font-bold">
                 Welcome to I Farhat's Portfolio Website!
@@ -25,19 +25,23 @@ function Home() {
                 strive to create engaging and user-friendly web experiences.
               </p>
             </aside>
-            <aside className="w-full md:w-[50%]">
-              <div>
-                <img
-                  src={workingDev}
-                  alt="Background"
-                  className="w-full h-full"
-                />
+            <aside className="w-full md:w-[50%] p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full group">
+              <div className="bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6">
+                <div className="bg-gradient-to-b from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6">
+                  <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6">
+                    <img
+                      src={workingDev}
+                      alt="Background"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition duration-200 ease-in"
+                    />
+                  </div>
+                </div>
               </div>
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-4 bg-white rounded-md overflow-hidden p-2 md:p-4 md:pl-0">
-            <h1 className="rotate-0 lg:-rotate-90 text-[#646674] text-2xl md:text-3xl font-bold">
+          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-white rounded-md overflow-hidden p-2 md:p-4">
+            <h1 className="rotate-0 lg:rotate-90 text-[#646674] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">

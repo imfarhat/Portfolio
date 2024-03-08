@@ -22,21 +22,18 @@ function Navbar() {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
     };
-  }, []);
+  }, [online]);
 
   const navLinkClassNormal =
-    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#141e28] hover:bg-white hover:text-[#141e28]";
+    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d]";
 
   const navLinkClassWide =
-    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/10 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#141e28] hover:bg-white hover:text-[#141e28]";
+    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d]";
 
   return (
-    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#141e28] border-b">
-      <nav className="px-2 pt-1.5 pb-1 md:px-2.5 md:pt-2 md:pb-1.5 flex items-center justify-between max-w-7xl w-full rounded-b-md text-white">
-        <Link
-          to="/"
-          className="drop-shadow-md text-lg md:text-xl pr-2.5 py-2.5 md:py-1"
-        >
+    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#16181d]">
+      <nav className="px-2 pt-1.5  md:px-2.5 md:pt-2 flex items-center justify-between max-w-7xl w-full rounded-b-md text-white">
+        <Link to="/" className="text-lg md:text-xl pr-2 md:px-2 py-2.5 md:py-1.5">
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">

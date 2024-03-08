@@ -9,7 +9,7 @@ function Footer() {
   };
 
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 bg-[#141e28] border-t">
+    <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d] border-t">
       <div className="w-full text-[141e28] flex items-center justify-center">
         <button
           className="bg-white rounded-b py-1.5 px-4 font-semibold active:bg-white/85 transition duration-200"
