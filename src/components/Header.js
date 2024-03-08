@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
   TbHomeQuestion,
@@ -10,6 +10,11 @@ import {
 
 function Header() {
   const [online, setOnline] = useState(navigator.onLine);
+
+  const [headerPromo, setHeaderPromo] = useState(
+    localStorage.getItem("headerPromo") !== "closed"
+  );
+  const headerPromoParentRef = useRef(null);
 
   useEffect(() => {
     const handleOnline = () => setOnline(true);
@@ -24,16 +29,49 @@ function Header() {
     };
   }, [online]);
 
+  useEffect(() => {
+    // Check if the user has previously closed the header promo
+    const storedHeaderPromo = localStorage.getItem("headerPromo");
+    if (storedHeaderPromo) {
+      setHeaderPromo(false); // Hide the promo if found in localStorage
+    }
+  }, [headerPromo]);
+
+  const removeHeaderPromo = () => {
+    setHeaderPromo(false); // Hide the promo
+    localStorage.setItem("headerPromo", "closed"); // Store in localStorage
+  };
+
   const navLinkClassNormal =
-    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
+    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
 
   const navLinkClassWide =
-    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
+    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/5 backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
 
   return (
-    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#000000]/90">
-      <nav className="px-2 pt-1.5  md:px-2.5 md:pt-2 flex items-center justify-between max-w-7xl w-full rounded-b-md text-white">
-        <Link to="/" className="text-lg md:text-xl pr-2 md:px-2 py-2.5 md:py-1.5">
+    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#000000]/[0.905]">
+      {headerPromo && (
+        <section
+          ref={headerPromoParentRef}
+          className="hidden md:flex items-center justify-between max-w-7xl w-full text-white font-light italic bg-white/5 rounded-b-md"
+        >
+          <div className="px-2 py-0.5 animate-bounce mt-0.5">Hello World!</div>
+          <button
+            onClick={() => removeHeaderPromo()}
+            className="px-4 rounded-tr-md rounded-bl-md text-xs py-0.5 font-semibold bg-white/[0.035] hover:bg-white/85 hover:text-[#16181d] active:bg-white/75 text-white/90 transition"
+          >
+            X
+          </button>
+          <Link to="/contact" className="px-2 py-0.5 animate-bounce mt-0.5">
+            Hire me!
+          </Link>
+        </section>
+      )}
+      <nav className="px-2 pt-1.5 md:px-2.5 md:pt-1 flex items-center justify-between max-w-7xl w-full text-white">
+        <Link
+          to="/"
+          className="text-lg md:text-xl pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-3"
+        >
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">

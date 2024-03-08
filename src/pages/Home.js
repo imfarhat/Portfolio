@@ -70,7 +70,7 @@ function Home() {
 
           <article className="flex flex-col items-start justify-center gap-2 p-2 md:p-4 text-white">
             <h1 className="text-3xl font-bold">Interests</h1>
-            <p>
+            <p className="text-white/75">
               I am enthusiastic about exploring new technologies and frameworks
               to enhance my skills and stay updated with the latest trends in
               web development. In my free time, I enjoy contributing to
