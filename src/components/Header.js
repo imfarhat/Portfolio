@@ -53,16 +53,17 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="hidden md:flex items-center justify-between max-w-7xl w-full text-white font-light italic bg-white/5 rounded-b-md"
+          className="hidden md:flex items-center justify-between max-w-7xl w-full text-[#f0f0f2] font-light italic bg-white/[0.0125] rounded-b-md"
         >
-          <div className="px-2 py-0.5 animate-bounce mt-0.5">Hello World!</div>
+          <div className="px-2 py-0.5 animate-bounce">Hello World!</div>
           <button
+            title="Click to close this section"
             onClick={() => removeHeaderPromo()}
-            className="px-4 rounded-tr-md rounded-bl-md text-xs py-0.5 font-semibold bg-white/[0.035] hover:bg-white/85 hover:text-[#16181d] active:bg-white/75 text-white/90 transition"
+            className="px-4 rounded-tr-md rounded-bl-md text-xs py-0.5 font-semibold bg-white/[0.035] hover:bg-red-600/85 active:bg-red-600/75 text-white/90 transition overflow-hidden"
           >
             X
           </button>
-          <Link to="/contact" className="px-2 py-0.5 animate-bounce mt-0.5">
+          <Link to="/contact" className="px-2 py-0.5 animate-bounce">
             Hire me!
           </Link>
         </section>
@@ -70,7 +71,7 @@ function Header() {
       <nav className="px-2 pt-1.5 md:px-2.5 md:pt-1 flex items-center justify-between max-w-7xl w-full text-white">
         <Link
           to="/"
-          className="text-lg md:text-xl pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-3"
+          className="text-lg md:text-xl pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-1.5"
         >
           I. Farhat
         </Link>

@@ -19,7 +19,7 @@ function Home() {
                 Welcome to I Farhat's Portfolio Website!
               </h1>
               <p className="text-white/75">
-                I am I Farhat, a passionate web developer with expertise in
+                I am I. Farhat, a passionate web developer with expertise in
                 HTML, CSS, Tailwind CSS, JavaScript, React, C, and C++. With a
                 strong foundation in coding principles and a creative mindset, I
                 strive to create engaging and user-friendly web experiences.
@@ -40,29 +40,29 @@ function Home() {
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-white rounded-md overflow-hidden p-2 md:p-4">
-            <h1 className="rotate-0 lg:rotate-90 text-[#646674] text-2xl md:text-3xl font-bold">
+          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-[#fdfdff]/5 rounded-md overflow-hidden p-2 md:p-4">
+            <h1 className="rotate-0 lg:rotate-90 text-[#fdfdff]/95 md:text-[#646674] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <h3 className={langClasses}>
-                <FaHtml5 className="text-7xl md:text-9xl" />
+                <FaHtml5 className="text-7xl md:text-9xl text-[#fdfdff]/90" />
                 <span className="text-sm md:text-base">HTML</span>
               </h3>
               <h3 className={langClasses}>
-                <FaCss3Alt className="text-7xl md:text-9xl" />
+                <FaCss3Alt className="text-7xl md:text-9xl text-[#fdfdff]/90" />
                 <span className="text-sm md:text-base">CSS</span>
               </h3>
               <h3 className={langClasses}>
-                <SiTailwindcss className="text-7xl md:text-9xl" />
+                <SiTailwindcss className="text-7xl md:text-9xl text-[#fdfdff]/90" />
                 <span className="text-sm md:text-base">Tailwind</span>
               </h3>
               <h3 className={langClasses}>
-                <SiJavascript className="text-7xl md:text-9xl rounded" />
+                <SiJavascript className="text-7xl md:text-9xl text-[#fdfdff]/90 rounded" />
                 <span className="text-sm md:text-base">JavaScript</span>
               </h3>
               <h3 className={langClasses}>
-                <FaReact className="text-7xl md:text-9xl" />
+                <FaReact className="text-7xl md:text-9xl text-[#fdfdff]/90" />
                 <span className="text-sm md:text-base">React JS</span>
               </h3>
             </div>

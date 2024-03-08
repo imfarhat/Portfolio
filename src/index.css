@@ -21,3 +21,6 @@
 button {
   user-select: none;
 }
+button title {
+  background-color: red;
+}
