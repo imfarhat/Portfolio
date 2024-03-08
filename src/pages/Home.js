@@ -32,7 +32,7 @@ function Home() {
                     <img
                       src={workingDev}
                       alt="Web Developer"
-                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto animate-pulse group-hover:animate-none"
                     />
                   </div>
                 </div>
