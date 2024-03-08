@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar.js";
+import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import workingDev from "../assets/images/characters/working-dev.png";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
@@ -10,9 +10,9 @@ function Home() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <main className="flex flex-col items-center justify-center bg-[#16181d]">
-        <section className="max-w-7xl w-full h-full flex flex-col gap-8">
+        <section className="py-6 max-w-7xl w-full h-full flex flex-col gap-8">
           <article className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
             <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-white">
               <h1 className="text-3xl font-bold">
@@ -25,14 +25,14 @@ function Home() {
                 strive to create engaging and user-friendly web experiences.
               </p>
             </aside>
-            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full">
-              <div className="bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 group animate-reverse-spin">
+            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full animate-spin">
+              <div className="group bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                 <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                     <img
                       src={workingDev}
                       alt="Web Developer"
-                      className="w-full h-full aspect-square group-hover:scale-105 transition duration-200 ease-in animate-spin select-none pointer-events-none"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto"
                     />
                   </div>
                 </div>
@@ -68,7 +68,7 @@ function Home() {
             </div>
           </article>
 
-          <article className="flex flex-col items-start justify-center gap-2 text-white">
+          <article className="flex flex-col items-start justify-center gap-2 p-2 md:p-4 text-white">
             <h1 className="text-3xl font-bold">Interests</h1>
             <p>
               I am enthusiastic about exploring new technologies and frameworks
