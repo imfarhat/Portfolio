@@ -18,21 +18,21 @@ function Home() {
               <h1 className="text-3xl font-bold">
                 Welcome to I Farhat's Portfolio Website!
               </h1>
-              <p>
+              <p className="text-white/75">
                 I am I Farhat, a passionate web developer with expertise in
                 HTML, CSS, Tailwind CSS, JavaScript, React, C, and C++. With a
                 strong foundation in coding principles and a creative mindset, I
                 strive to create engaging and user-friendly web experiences.
               </p>
             </aside>
-            <aside className="w-full md:w-[50%] p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full">
-              <div className="bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 group">
-                <div className="bg-gradient-to-b from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6">
-                  <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6">
+            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full">
+              <div className="bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 group animate-reverse-spin">
+                <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
+                  <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                     <img
                       src={workingDev}
-                      alt="Background"
-                      className="w-full h-full aspect-square group-hover:scale-105 transition duration-200 ease-in"
+                      alt="Web Developer"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition duration-200 ease-in animate-spin select-none pointer-events-none"
                     />
                   </div>
                 </div>
