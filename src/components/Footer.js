@@ -229,6 +229,7 @@ function Footer() {
                 type="email"
                 size="30"
                 required
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="subEmail"
                 id="subEmail"
                 placeholder="example@gmail.com"
@@ -236,10 +237,7 @@ function Footer() {
                 onChange={handleSubInputChange}
                 className="py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:border-red-500 outline-1 rounded"
               />
-              <button
-                type="submit"
-                className="feedback-tab-btn"
-              >
+              <button type="submit" className="feedback-tab-btn">
                 Subscribe+
               </button>
             </form>
@@ -287,10 +285,7 @@ function Footer() {
                   value="5"
                 />
               </div>
-              <button
-                type="submit"
-                className="feedback-tab-btn"
-              >
+              <button type="submit" className="feedback-tab-btn">
                 Rate &#9733;
               </button>
             </form>
@@ -304,6 +299,7 @@ function Footer() {
                 type="email"
                 size="30"
                 required
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="resumeEmail"
                 id="resumeEmail"
                 placeholder="example@gmail.com"
@@ -312,10 +308,7 @@ function Footer() {
                 ref={inputResumeReqRef}
                 className="py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:border-red-500 outline-1 rounded"
               />
-              <button
-                type="submit"
-                className="feedback-tab-btn"
-              >
+              <button type="submit" className="feedback-tab-btn">
                 Resume &#10148;
               </button>
             </form>
