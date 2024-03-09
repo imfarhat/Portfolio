@@ -69,13 +69,6 @@
   }
 
   /*Start Ratings*/
-  :root {
-    --enlarge: scale(1.25);
-    --page-color: steelblue;
-    --star-primary-color: gold;
-    --star-secondary-color: darkgoldenrod;
-  }
-
   .container-rate {
     display: grid;
     place-content: center;

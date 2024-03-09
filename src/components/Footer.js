@@ -19,16 +19,16 @@ function Footer() {
     setEmailResume(e.target.value);
   };
 
-  /*const handleSubSubmit = (e) => {
-    e.preventDefault();
-    // Here you can perform any validation or submission logic
-    console.log("Submitted email:", emailSub);
-  };
-  const handleResumeSubmit = (e) => {
-    e.preventDefault();
-    // Here you can perform any validation or submission logic
-    console.log("Submitted email:", emailResume);
-  };*/
+  // const handleSubSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Here you can perform any validation or submission logic
+  //   console.log("Submitted email:", emailSub);
+  // };
+  // const handleResumeSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Here you can perform any validation or submission logic
+  //   console.log("Submitted email:", emailResume);
+  // };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -217,13 +217,13 @@ function Footer() {
         <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Feedback+ Tab</h2>
           <article
-            className="px-2 py-4 md:px-4 md:py-6 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-full max-w-7xl
+            className="px-2 py-4 md:px-4 md:py-8 flex flex-wrap items-center justify-center lg:justify-between gap-8 w-full max-w-7xl
           "
           >
             <form
               action=""
               method="post"
-              className="flex flex-col gap-4 items-center justify-center"
+              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
                 type="email"
@@ -245,7 +245,7 @@ function Footer() {
             <form
               action=""
               method="post"
-              className="flex flex-col gap-4 items-center justify-center"
+              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <div className="flex flex-row gap-2 items-center justify-center star-group">
                 <input
@@ -286,14 +286,14 @@ function Footer() {
                 />
               </div>
               <button type="submit" className="feedback-tab-btn">
-                Rate &#9733;
+                Rate us
               </button>
             </form>
 
             <form
               action=""
               method="post"
-              className="flex flex-col gap-4 items-center justify-center"
+              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
                 type="email"

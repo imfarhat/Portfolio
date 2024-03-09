@@ -100,9 +100,9 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="hidden md:flex items-center justify-between max-w-7xl w-full text-[#f0f0f2] rounded-b-md"
+          className="hidden md:flex items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
         >
-          <div className="px-2 animate-bounce font-light italic">
+          <div className="px-2 animate-bounce font-light">
             Hello World!
           </div>
           <button
@@ -112,7 +112,7 @@ function Header() {
           >
             <FaCode />
           </button>
-          <Link to="/contact" className="px-2 animate-bounce font-light italic">
+          <Link to="/contact" className="px-2 animate-bounce font-light">
             Hire me!
           </Link>
         </section>
