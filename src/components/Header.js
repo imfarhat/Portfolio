@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FaCode } from "react-icons/fa6";
 import {
   TbHomeQuestion,
   TbHomeSignal,
@@ -104,9 +105,9 @@ function Header() {
           <button
             title="Close (<), Undo (>)"
             onClick={() => removeHeaderPromo()}
-            className="px-4 rounded-tr-md rounded-bl-md text-xs py-0.5 font-semibold bg-white/[0.035] hover:bg-red-600/90 active:bg-red-600/75 text-white/90 transition overflow-hidden"
+            className="px-4 rounded-tr-md rounded-bl-md py-0.5 font-semibold bg-white/[0.035] hover:bg-white hover:text-[#16181d] active:bg-white/75 text-white/90 transition overflow-hidden"
           >
-            {"</>"}
+            <FaCode />
           </button>
           <Link
             to="/contact"
