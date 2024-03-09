@@ -69,6 +69,13 @@
   }
 
   /*Start Ratings*/
+  :root {
+    --enlarge: scale(1.25);
+    --page-color: steelblue;
+    --star-primary-color: gold;
+    --star-secondary-color: darkgoldenrod;
+  }
+
   .container-rate {
     display: grid;
     place-content: center;
@@ -180,26 +187,24 @@
     transform: var(--enlarge);
   }
 
-  .star-group:has(> #five:checked) {
-    #one {
-      transform: rotate(-15deg);
-    }
+  .star-group:has(> #five:checked) #one {
+    transform: rotate(-15deg);
+  }
 
-    #two {
-      transform: translateY(-20%) rotate(-7.5deg);
-    }
+  .star-group:has(> #five:checked) #two {
+    transform: translateY(-20%) rotate(-7.5deg);
+  }
 
-    #three {
-      transform: translateY(-30%);
-    }
+  .star-group:has(> #five:checked) #three {
+    transform: translateY(-30%);
+  }
 
-    #four {
-      transform: translateY(-20%) rotate(7.5deg);
-    }
+  .star-group:has(> #five:checked) #four {
+    transform: translateY(-20%) rotate(7.5deg);
+  }
 
-    #five {
-      transform: rotate(15deg);
-    }
+  .star-group:has(> #five:checked) #five {
+    transform: rotate(15deg);
   }
 
   .star:focus {
