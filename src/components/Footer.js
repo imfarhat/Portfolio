@@ -19,7 +19,7 @@ function Footer() {
     setEmailResume(e.target.value);
   };
 
-  const handleSubSubmit = (e) => {
+  /*const handleSubSubmit = (e) => {
     e.preventDefault();
     // Here you can perform any validation or submission logic
     console.log("Submitted email:", emailSub);
@@ -28,7 +28,7 @@ function Footer() {
     e.preventDefault();
     // Here you can perform any validation or submission logic
     console.log("Submitted email:", emailResume);
-  };
+  };*/
 
   const scrollToTop = () => {
     window.scrollTo({
