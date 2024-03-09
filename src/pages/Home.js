@@ -26,13 +26,13 @@ function Home() {
               </p>
             </aside>
             <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full animate-spin">
-              <div className="group bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
+              <div className="group md:cursor-pointer bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                 <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                     <img
                       src={workingDev}
                       alt="Web Developer"
-                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto animate-pulse group-hover:animate-none"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto md:animate-pulse md:group-hover:animate-none"
                     />
                   </div>
                 </div>
@@ -40,29 +40,29 @@ function Home() {
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-[#fdfdff]/5 rounded-md overflow-hidden p-2 md:p-4">
-            <h1 className="rotate-0 lg:rotate-90 text-[#fdfdff]/95 md:text-[#646674] text-2xl md:text-3xl font-bold">
+          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 rounded-md overflow-hidden p-2 md:p-4">
+            <h1 className="rotate-0 lg:rotate-90 text-[#fdfdff] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <h3 className={langClasses}>
-                <FaHtml5 className="text-7xl md:text-9xl text-[#fdfdff]/90" />
+                <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#fdfdff]/95 rounded" />
                 <span className="text-sm md:text-base">HTML</span>
               </h3>
               <h3 className={langClasses}>
-                <FaCss3Alt className="text-7xl md:text-9xl text-[#fdfdff]/90" />
+                <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#fdfdff]/95 rounded" />
                 <span className="text-sm md:text-base">CSS</span>
               </h3>
               <h3 className={langClasses}>
-                <SiTailwindcss className="text-7xl md:text-9xl text-[#fdfdff]/90" />
+                <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#fdfdff]/95 rounded p-1.5" />
                 <span className="text-sm md:text-base">Tailwind</span>
               </h3>
               <h3 className={langClasses}>
-                <SiJavascript className="text-7xl md:text-9xl text-[#fdfdff]/90 rounded" />
+                <SiJavascript className="text-7xl md:text-9xl text-[#f0db4f] rounded" />
                 <span className="text-sm md:text-base">JavaScript</span>
               </h3>
               <h3 className={langClasses}>
-                <FaReact className="text-7xl md:text-9xl text-[#fdfdff]/90" />
+                <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#fdfdff]/95 rounded p-1.5" />
                 <span className="text-sm md:text-base">React JS</span>
               </h3>
             </div>
