@@ -60,16 +60,16 @@ function Footer() {
           <h3 className="footer-card-h3">Quick Links</h3>
           <ul className="p-2 flex flex-col gap-0.5">
             <Link to="/" className="footer-links-panel-item">
-              Home
+              Home page
             </Link>
             <Link to="/about" className="footer-links-panel-item">
-              About
-            </Link>
-            <Link to="/projects" className="footer-links-panel-item">
-              Projects
+              About page
             </Link>
             <Link to="/contact" className="footer-links-panel-item">
-              Contact
+              Contact page
+            </Link>
+            <Link to="/projects" className="footer-links-panel-item">
+              Projects page
             </Link>
           </ul>
         </div>
@@ -86,12 +86,12 @@ function Footer() {
               Web Development
             </Link>
             <Link
-              to="https://farhateservices.pages.dev/eCommerce/"
+              to="#"
               rel="noopener norefferer"
               target="_blank"
               className="footer-links-panel-item"
             >
-              E Commerce Website
+              Educational Website
             </Link>
             <Link
               to="https://tis.pages.dev"
@@ -102,28 +102,6 @@ function Footer() {
               Institutional Website
             </Link>
             <Link
-              to="#"
-              rel="noopener norefferer"
-              target="_blank"
-              className="footer-links-panel-item"
-            >
-              Educational Website
-            </Link>
-          </ul>
-        </div>
-
-        <div className="footer-link-card">
-          <h3 className="footer-card-h3">Categories</h3>
-          <ul className="p-2 flex flex-col gap-0.5">
-            <Link
-              to="https://farhateservices.pages.dev/projects"
-              rel="noopener norefferer"
-              target="_blank"
-              className="footer-links-panel-item"
-            >
-              Website Development
-            </Link>
-            <Link
               to="https://farhateservices.pages.dev/eCommerce/"
               rel="noopener norefferer"
               target="_blank"
@@ -131,6 +109,12 @@ function Footer() {
             >
               E Commerce Website
             </Link>
+          </ul>
+        </div>
+
+        <div className="footer-link-card">
+          <h3 className="footer-card-h3">Categories</h3>
+          <ul className="p-2 flex flex-col gap-0.5">
             <Link
               to="https://farhateservices.pages.dev"
               rel="noopener norefferer"
@@ -146,6 +130,22 @@ function Footer() {
               className="footer-links-panel-item"
             >
               Educational Website
+            </Link>
+            <Link
+              to="https://farhateservices.pages.dev/eCommerce/"
+              rel="noopener norefferer"
+              target="_blank"
+              className="footer-links-panel-item"
+            >
+              E Commerce Website
+            </Link>
+            <Link
+              to="https://farhateservices.pages.dev/projects"
+              rel="noopener norefferer"
+              target="_blank"
+              className="footer-links-panel-item"
+            >
+              Website Development
             </Link>
           </ul>
         </div>
