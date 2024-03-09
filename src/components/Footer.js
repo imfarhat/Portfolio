@@ -173,7 +173,7 @@ function Footer() {
             <Link
               to="/contact"
               rel="noopener norefferer"
-              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf]"
+              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
             >
               <TbMessageShare />
             </Link>
@@ -189,7 +189,7 @@ function Footer() {
               to="mailto:imfarhat.dev@gmail.com"
               rel="noopener norefferer"
               target="_blank"
-              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf]"
+              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
             >
               <MdOutlineMarkEmailUnread />
             </Link>
@@ -197,7 +197,7 @@ function Footer() {
               to="https://wa.me/+919830836212?text=Hi%20I.%20Frahat%20from%20Farhat%20e%20Services%20%26%20Assistance!%0A%0A[Redirected%20from%20your%20portfolio%20website]"
               rel="noopener norefferer"
               target="_blank"
-              className="social-link-item hover:bg-[#4ac959] text-[#4ac959]"
+              className="social-link-item hover:bg-[#4ac959] text-[#4ac959] active:bg-opacity-85"
             >
               <FaWhatsapp />
             </Link>
@@ -205,7 +205,7 @@ function Footer() {
               to="https://farhateservices.pages.dev"
               rel="noopener norefferer"
               target="_blank"
-              className="social-link-item hover:bg-[#3273dc] text-[#3273dc]"
+              className="social-link-item hover:bg-[#3273dc] text-[#3273dc] active:bg-opacity-85"
             >
               <IoGlobeOutline />
             </Link>
@@ -235,7 +235,7 @@ function Footer() {
                 placeholder="example@gmail.com"
                 value={emailSub}
                 onChange={handleSubInputChange}
-                className="py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:border-red-500 outline-1 rounded"
+                className="feedback-tab-input"
               />
               <button type="submit" className="feedback-tab-btn">
                 Subscribe+
@@ -306,7 +306,7 @@ function Footer() {
                 value={emailResume}
                 onChange={handleResumeInputChange}
                 ref={inputResumeReqRef}
-                className="py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:border-red-500 outline-1 rounded"
+                className="feedback-tab-input"
               />
               <button type="submit" className="feedback-tab-btn">
                 Resume &#10148;
