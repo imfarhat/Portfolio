@@ -10,12 +10,10 @@ import {
 } from "react-icons/tb";
 
 function Header() {
-  const [home, about, contact, projects] = [
-    useRef(),
-    useRef(),
-    useRef(),
-    useRef(),
-  ];
+  const home = useRef(null);
+  const about = useRef(null);
+  const contact = useRef(null);
+  const projects = useRef(null);
 
   const [online, setOnline] = useState(navigator.onLine);
 
