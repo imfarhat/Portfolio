@@ -30,7 +30,7 @@ function Home() {
                     loading="eager"
                       src={workingDev}
                       alt="Web Developer"
-                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in duration-200 select-none pointer-events-none md:pointer-events-auto md:animate-pulse md:group-hover:animate-none"
+                      className="w-full h-full aspect-square group-hover:scale-105 transition ease-in md:duration-200 select-none pointer-events-none md:pointer-events-auto md:animate-pulse md:group-hover:animate-none"
                     />
                   </div>
                 </div>

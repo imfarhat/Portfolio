@@ -4,10 +4,10 @@
 
 @layer components {
   .nav-link-n {
-    @apply px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none;
+    @apply px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all md:duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none;
   }
   .nav-link-w {
-    @apply px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none;
+    @apply px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all md:duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none;
   }
   .nav-link-span {
     @apply text-xs md:text-base;
@@ -25,7 +25,7 @@
     @apply text-2xl md:text-[1.35rem];
   }
   .footer-links-panel-item {
-    @apply border-b-[1.5px] border-transparent hover:border-white w-fit transition duration-200 ease-in;
+    @apply border-b-[1.5px] border-transparent hover:border-white w-fit transition md:duration-200 ease-in;
   }
   .footer-panel-h2 {
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 rounded-b-md;
@@ -37,7 +37,7 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 w-full rounded-t-md mb-2.5;
   }
   .social-link-item {
-    @apply p-2.5 md:p-4 bg-white rounded-full hover:text-[#fdfdff] hover:scale-110 active:opacity-90 transition duration-200 ease-in;
+    @apply p-2.5 md:p-4 bg-white rounded-full hover:text-[#fdfdff] hover:scale-110 active:scale-105 active:opacity-90 transition md:duration-200 ease-in;
   }
   .social-link-ig-addon {
     @apply hover:bg-gradient-to-tr text-[#fd1d1d] from-[#f56040] via-[#fd1d1d] via-80% to-[#c13584];
@@ -46,10 +46,10 @@
     @apply cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center;
   }
   .back-to-top-btn {
-    @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-white/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-white/5 border-x-[1.5px] border-b-[1.5px] border-current shadow w-fit rounded-b-md mb-2.5 transition;
+    @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-white/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-white/5 active:scale-95 border-x-[1.5px] border-b-[1.5px] border-current shadow w-fit rounded-b-md mb-2.5 transition;
   }
   .feedback-tab-btn {
-    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-white/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] border-[#fdfdff] active:bg-white/5 transition ease-in duration-200;
+    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-white/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-white/5 transition ease-in md:duration-200;
   }
 
   .animate-reverse-spin {
