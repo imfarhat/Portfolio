@@ -56,6 +56,9 @@ function Header() {
         case "h":
           document.getElementById("home").click();
           break;
+        case "/":
+          document.getElementById("home").click();
+          break;
         case "a":
           document.getElementById("about").click();
           break;
@@ -99,19 +102,19 @@ function Header() {
           ref={headerPromoParentRef}
           className="hidden md:flex items-center justify-between max-w-7xl w-full text-[#f0f0f2] rounded-b-md"
         >
-          <div className="px-2 py-0.5 animate-bounce font-light italic">
+          <div className="px-2 animate-bounce font-light italic">
             Hello World!
           </div>
           <button
             title="Close (<), Undo (>)"
             onClick={() => removeHeaderPromo()}
-            className="px-4 rounded-tr-md rounded-bl-md py-0.5 font-semibold bg-white/[0.035] hover:bg-white hover:text-[#16181d] active:bg-white/75 text-white/90 transition overflow-hidden"
+            className="px-4 rounded py-0.5 font-semibold bg-white/[0.035] hover:bg-[#f0f0f2] hover:text-[#16181d] active:bg-[#f0f0f2]/75 text-[#f0f0f2] transition overflow-hidden"
           >
             <FaCode />
           </button>
           <Link
             to="/contact"
-            className="px-2 py-0.5 animate-bounce font-light italic"
+            className="px-2 animate-bounce font-light italic"
           >
             Hire me!
           </Link>

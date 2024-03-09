@@ -40,7 +40,7 @@ function Home() {
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 rounded-md overflow-hidden p-2 md:p-4">
+          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="rotate-0 lg:rotate-90 text-[#fdfdff] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
