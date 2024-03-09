@@ -6,7 +6,7 @@ import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Home() {
   const langClasses =
-    "p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
+    "cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
 
   return (
     <>

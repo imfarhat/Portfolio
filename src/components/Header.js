@@ -123,7 +123,7 @@ function Header() {
       <nav className="px-2 pt-1.5 md:px-2.5 md:pt-1 flex items-center justify-between max-w-7xl w-full text-white">
         <Link
           to="/"
-          className="text-lg md:text-xl pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-1.5"
+          className="text-lg md:text-xl font-semibold pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-1.5"
         >
           I. Farhat
         </Link>
