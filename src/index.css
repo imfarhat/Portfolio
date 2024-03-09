@@ -52,7 +52,7 @@
     @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-white/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-white/5 transition ease-in md:duration-200;
   }
   .feedback-tab-input {
-    @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:border-red-500 outline-1 rounded;
+    @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded;
   }
   .animate-reverse-spin {
     animation: reverse-spin 1s linear infinite;

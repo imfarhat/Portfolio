@@ -7,28 +7,58 @@ import { IoGlobeOutline } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa6";
 
 function Footer() {
-  const [emailSub, setEmailSub] = useState("");
-  const [emailResume, setEmailResume] = useState("");
+  const [user, setUser] = useState({
+    subEmail: "",
+    resumeEmail: "",
+    folioRating: null,
+  });
   const inputResumeReqRef = useRef(null);
 
-  const handleSubInputChange = (e) => {
-    setEmailSub(e.target.value);
+  const subForm = useRef(null);
+  const resumeForm = useRef(null);
+  const folioRatingForm = useRef(null);
+
+  let name, value;
+  const handleInputChange = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+    setUser({ ...user, [name]: value });
   };
 
-  const handleResumeInputChange = (e) => {
-    setEmailResume(e.target.value);
+  const handleSubForm = (e) => {
+    e.preventDefault();
+    const { submitDate, submitTime } = getDateTime();
+    console.log(submitDate, submitTime);
+    e.target.reset();
   };
 
-  // const handleSubSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Here you can perform any validation or submission logic
-  //   console.log("Submitted email:", emailSub);
-  // };
-  // const handleResumeSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Here you can perform any validation or submission logic
-  //   console.log("Submitted email:", emailResume);
-  // };
+  const handleResumeForm = (e) => {
+    e.preventDefault();
+    const { submitDate, submitTime } = getDateTime();
+    console.log(submitDate, submitTime);
+    e.target.reset();
+  };
+  const handleFolioForm = (e) => {
+    e.preventDefault();
+    const { submitDate, submitTime } = getDateTime();
+    console.log(submitDate, submitTime);
+    e.target.reset();
+  };
+
+  const getDateTime = () => {
+    const now = new Date();
+    const dd = now.getDate().toString().padStart(2, "0");
+    const mm = (now.getMonth() + 1).toString().padStart(2, "0");
+    const yyyy = now.getFullYear();
+    const submitDate = `${dd}/${mm}/${yyyy}`; // dd/mm/yyyy
+
+    const h = now.getHours().toString().padStart(2, "0");
+    const m = now.getMinutes().toString().padStart(2, "0");
+    const s = now.getSeconds().toString().padStart(2, "0");
+    const submitTime = `${h}:${m}:${s}`; // hh:mm:ss
+
+    return { submitDate, submitTime };
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -223,18 +253,22 @@ function Footer() {
             <form
               action=""
               method="post"
+              ref={subForm}
+              autoComplete="off"
+              onSubmit={handleSubForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
                 type="email"
-                size="30"
+                maxLength="35"
+                size="35"
                 required
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="subEmail"
                 id="subEmail"
                 placeholder="example@gmail.com"
-                value={emailSub}
-                onChange={handleSubInputChange}
+                value={user.subEmail}
+                onChange={handleInputChange}
                 className="feedback-tab-input"
               />
               <button type="submit" className="feedback-tab-btn">
@@ -245,6 +279,9 @@ function Footer() {
             <form
               action=""
               method="post"
+              ref={folioRatingForm}
+              autoComplete="off"
+              onSubmit={handleFolioForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <div className="flex flex-row gap-2 items-center justify-center star-group">
@@ -252,37 +289,42 @@ function Footer() {
                   type="radio"
                   className="star"
                   id="one"
-                  name="star_rating"
-                  value="1"
+                  name="folioRating"
+                  value={1}
                   required
+                  onChange={handleInputChange}
                 />
                 <input
                   type="radio"
                   className="star"
                   id="two"
-                  name="star_rating"
-                  value="2"
+                  name="folioRating"
+                  value={2}
+                  onChange={handleInputChange}
                 />
                 <input
                   type="radio"
                   className="star"
                   id="three"
-                  name="star_rating"
-                  value="3"
+                  name="folioRating"
+                  value={3}
+                  onChange={handleInputChange}
                 />
                 <input
                   type="radio"
                   className="star"
                   id="four"
-                  name="star_rating"
-                  value="4"
+                  name="folioRating"
+                  value={4}
+                  onChange={handleInputChange}
                 />
                 <input
                   type="radio"
                   className="star"
                   id="five"
-                  name="star_rating"
-                  value="5"
+                  name="folioRating"
+                  value={5}
+                  onChange={handleInputChange}
                 />
               </div>
               <button type="submit" className="feedback-tab-btn">
@@ -293,18 +335,22 @@ function Footer() {
             <form
               action=""
               method="post"
+              ref={resumeForm}
+              autoComplete="off"
+              onSubmit={handleResumeForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
                 type="email"
-                size="30"
+                maxLength="35"
+                size="35"
                 required
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="resumeEmail"
                 id="resumeEmail"
                 placeholder="example@gmail.com"
-                value={emailResume}
-                onChange={handleResumeInputChange}
+                value={user.resumeEmail}
+                onChange={handleInputChange}
                 ref={inputResumeReqRef}
                 className="feedback-tab-input"
               />
