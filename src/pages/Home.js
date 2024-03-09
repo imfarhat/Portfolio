@@ -5,9 +5,6 @@ import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
 function Home() {
-  const langClasses =
-    "cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center ";
-
   return (
     <>
       <Header />
@@ -20,9 +17,9 @@ function Home() {
               </h1>
               <p className="text-white/75">
                 I am I. Farhat, a passionate web developer with expertise in
-                HTML, CSS, Tailwind CSS, JavaScript, React, C, and C++. With a
-                strong foundation in coding principles and a creative mindset, I
-                strive to create engaging and user-friendly web experiences.
+                HTML, CSS, Tailwind CSS, JavaScript and React JS. With a strong
+                foundation in coding principles and a creative mindset, I strive
+                to create engaging and user-friendly web experiences.
               </p>
             </aside>
             <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full animate-spin">
@@ -45,23 +42,23 @@ function Home() {
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <h3 className={langClasses}>
+              <h3 className="programming-lang-card">
                 <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#fdfdff]/95 rounded" />
                 <span className="text-sm md:text-base">HTML</span>
               </h3>
-              <h3 className={langClasses}>
+              <h3 className="programming-lang-card">
                 <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#fdfdff]/95 rounded" />
                 <span className="text-sm md:text-base">CSS</span>
               </h3>
-              <h3 className={langClasses}>
+              <h3 className="programming-lang-card">
                 <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#fdfdff]/95 rounded p-1.5" />
                 <span className="text-sm md:text-base">Tailwind</span>
               </h3>
-              <h3 className={langClasses}>
+              <h3 className="programming-lang-card">
                 <SiJavascript className="text-7xl md:text-9xl text-[#f0db4f] rounded" />
                 <span className="text-sm md:text-base">JavaScript</span>
               </h3>
-              <h3 className={langClasses}>
+              <h3 className="programming-lang-card">
                 <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#fdfdff]/95 rounded p-1.5" />
                 <span className="text-sm md:text-base">React JS</span>
               </h3>

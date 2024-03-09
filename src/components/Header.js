@@ -10,6 +10,13 @@ import {
 } from "react-icons/tb";
 
 function Header() {
+  const [home, about, contact, projects] = [
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+  ];
+
   const [online, setOnline] = useState(navigator.onLine);
 
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
@@ -52,21 +59,22 @@ function Header() {
       if (key === lastKeyPressed) {
         return; // No need to proceed if last key and current key are the same
       }
+      if (e.target.tagName.toLowerCase() === "input") {
+        return; // If the target is an input field, do nothing
+      }
       switch (key) {
         case "h":
-          document.getElementById("home").click();
-          break;
         case "/":
-          document.getElementById("home").click();
+          home.current.click();
           break;
         case "a":
-          document.getElementById("about").click();
+          about.current.click();
           break;
         case "p":
-          document.getElementById("projects").click();
+          projects.current.click();
           break;
         case "c":
-          document.getElementById("contact").click();
+          contact.current.click();
           break;
         case ">":
           localStorage.setItem("headerPromo", "open"); // Store in localStorage
@@ -89,14 +97,8 @@ function Header() {
     };
   }, [lastKeyPressed]);
 
-  const navLinkClassNormal =
-    "px-3 pt-1.5 pb-0.5 md:px-3 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
-
-  const navLinkClassWide =
-    "px-1.5 pt-1.5 pb-0.5 md:px-2 md:pt-2.5 md:pb-2 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-white/[0.075] backdrop-blur-sm transition-all duration-200 ease-in active:bg-white/85 active:text-[#16181d] hover:bg-white hover:text-[#16181d] select-none";
-
   return (
-    <header className="flex flex-col items-center justify-center sticky top-0 z-20 bg-[#16181d]">
+    <header>
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
@@ -107,20 +109,17 @@ function Header() {
           </div>
           <button
             title="Close (<), Undo (>)"
-            onClick={() => removeHeaderPromo()}
-            className="px-4 rounded py-0.5 font-semibold bg-white/[0.035] hover:bg-[#f0f0f2] hover:text-[#16181d] active:bg-[#f0f0f2]/75 text-[#f0f0f2] transition overflow-hidden"
+            onClick={removeHeaderPromo}
+            className="header-promo-close-btn"
           >
             <FaCode />
           </button>
-          <Link
-            to="/contact"
-            className="px-2 animate-bounce font-light italic"
-          >
+          <Link to="/contact" className="px-2 animate-bounce font-light italic">
             Hire me!
           </Link>
         </section>
       )}
-      <nav className="px-2 pt-1.5 md:px-2.5 md:pt-1 flex items-center justify-between max-w-7xl w-full text-white">
+      <nav>
         <Link
           to="/"
           className="text-lg md:text-xl font-semibold pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-1.5"
@@ -128,45 +127,40 @@ function Header() {
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">
-          <NavLink
-            to="/"
-            title="Home (h)"
-            id="home"
-            className={navLinkClassNormal}
-          >
+          <NavLink to="/" title="Home (h)" ref={home} className="nav-link-n">
             {online ? (
-              <TbHomeSignal className="text-2xl md:text-[1.35rem]" />
+              <TbHomeSignal className="nav-link-icon" />
             ) : (
-              <TbHomeQuestion className="text-2xl md:text-[1.35rem]" />
+              <TbHomeQuestion className="nav-link-icon" />
             )}
-            <span className="text-xs md:text-base">Home</span>
+            <span className="nav-link-span">Home</span>
           </NavLink>
           <NavLink
             to="/about"
             title="About (a)"
-            id="about"
-            className={navLinkClassNormal}
+            ref={about}
+            className="nav-link-n"
           >
-            <TbUserScan className="text-2xl md:text-[1.35rem]" />
-            <span className="text-xs md:text-base">About</span>
+            <TbUserScan className="nav-link-icon" />
+            <span className="nav-link-span">About</span>
           </NavLink>
           <NavLink
             to="/projects"
             title="Projects (p)"
-            id="projects"
-            className={navLinkClassWide}
+            ref={projects}
+            className="nav-link-w"
           >
-            <TbWorldCode className="text-2xl md:text-[1.35rem]" />
-            <span className="text-xs md:text-base">Projects</span>
+            <TbWorldCode className="nav-link-icon" />
+            <span className="nav-link-span">Projects</span>
           </NavLink>
           <NavLink
             to="/contact"
             title="Contact (c)"
-            id="contact"
-            className={navLinkClassWide}
+            ref={contact}
+            className="nav-link-w"
           >
-            <TbSend className="text-2xl md:text-[1.35rem]" />
-            <span className="text-xs md:text-base">Contact</span>
+            <TbSend className="nav-link-icon" />
+            <span className="nav-link-span">Contact</span>
           </NavLink>
         </div>
       </nav>
