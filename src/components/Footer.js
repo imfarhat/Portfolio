@@ -408,14 +408,14 @@ function Footer() {
           <span>I. Farhat</span>
         </Link>
         <Link
-          to="https://farhateservices.github.io/fesa"
+          to="https://farhateservices.pages.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
           <span className="flex flex-row gap-1 md:gap-1.5 items-center justify-center">
             Powered by
             <img
-              src="https://farhateservices.github.io/fesa/logo-head-white.png"
+              src="https://farhateservices.pages.dev/logo-head-white.png"
               alt="Farhat e Services & Assistance"
               loading="lazy"
               className="h-5 filter bg-blend-multiply"
