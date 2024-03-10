@@ -45,7 +45,7 @@ function Footer() {
       }
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwNZEUeFqEEiEQiiZ-BsR-VQKHWU4GHSrVjfNqrSwzwxJIT2X_ti5ilPJq7p2Dw_ItkZQ/exec",
+        "https://script.google.com/macros/s/AKfycbxEP9k9-HsfCya0DaALQaJAIn68K2FRXPgUGtCzdSPqTN0RovI_K8-7MVoNRVDer88rOA/exec",
         {
           method: "POST",
           body: formData,
