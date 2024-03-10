@@ -60,15 +60,16 @@ function Footer() {
         throw new Error("Network response was not ok");
       }
 
-      const { result } = await response.json();
-      console.log("Success:", result);
-      if (result === "error") {
+      const { res } = await response.json();
+      console.log("Response:", res);
+      if (res === "error") {
         throw new Error("Backend response was not ok");
       }
       submitButton.innerHTML = "Success !";
       // Handle success response here
     } catch (error) {
       submitButton.innerHTML = "Error !";
+      console.log(error);
       // Handle error here
     } finally {
       setUser({
