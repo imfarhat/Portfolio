@@ -14,10 +14,6 @@ function Footer() {
   });
   const inputResumeReqRef = useRef(null);
 
-  const subForm = useRef(null);
-  const resumeForm = useRef(null);
-  const folioRatingForm = useRef(null);
-
   let name, value;
   const handleInputChange = (e) => {
     name = e.target.name;
@@ -25,24 +21,56 @@ function Footer() {
     setUser({ ...user, [name]: value });
   };
 
-  const handleSubForm = (e) => {
+  const handleFooterForm = async (e) => {
     e.preventDefault();
-    const { submitDate, submitTime } = getDateTime();
-    console.log(submitDate, submitTime);
-    e.target.reset();
-  };
+    const et = e.target;
+    const submitButton = et.querySelector('button[type="submit"]');
+    submitButton.disabled = true; // Disable submit button
 
-  const handleResumeForm = (e) => {
-    e.preventDefault();
-    const { submitDate, submitTime } = getDateTime();
-    console.log(submitDate, submitTime);
-    e.target.reset();
-  };
-  const handleFolioForm = (e) => {
-    e.preventDefault();
-    const { submitDate, submitTime } = getDateTime();
-    console.log(submitDate, submitTime);
-    e.target.reset();
+    try {
+      // Get current date and time
+      const { submitDate, submitTime } = getDateTime();
+
+      // Get form data
+      const formData = new FormData(et);
+
+      // Append submitDate and submitTime to the formData
+      formData.append("submitDate", submitDate);
+      formData.append("submitTime", submitTime);
+      formData.append("formName", et.name);
+
+      // Example: log the formData for demonstration
+      for (let pair of formData.entries()) {
+        console.log(pair[0] + ":" + pair[1]);
+      }
+
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwNeJ1d0eVlmVwhXMagolzWzd6bEazqY7yXL3xV3iEvAf1mpwSI9WMk_1fXUlGj3LG2YQ/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const res = await response.json();
+      console.log("Success:", res);
+      // Handle success response here
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error here
+    } finally {
+      setUser({
+        subEmail: "",
+        resumeEmail: "",
+        folioRating: null,
+      });
+      et.reset(); // Reset the form
+      submitButton.disabled = false; // Enable submit button
+    }
   };
 
   const getDateTime = () => {
@@ -253,9 +281,9 @@ function Footer() {
             <form
               action=""
               method="post"
-              ref={subForm}
+              name="Subscribers"
               autoComplete="off"
-              onSubmit={handleSubForm}
+              onSubmit={handleFooterForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
@@ -279,12 +307,12 @@ function Footer() {
             <form
               action=""
               method="post"
-              ref={folioRatingForm}
+              name="Ratings"
               autoComplete="off"
-              onSubmit={handleFolioForm}
+              onSubmit={handleFooterForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
-              <div className="flex flex-row gap-2 items-center justify-center star-group">
+              <label className="flex flex-row gap-2 items-center justify-center star-group">
                 <input
                   type="radio"
                   className="star"
@@ -326,7 +354,7 @@ function Footer() {
                   value={5}
                   onChange={handleInputChange}
                 />
-              </div>
+              </label>
               <button type="submit" className="feedback-tab-btn">
                 Rate us
               </button>
@@ -335,9 +363,9 @@ function Footer() {
             <form
               action=""
               method="post"
-              ref={resumeForm}
+              name="Resumers"
               autoComplete="off"
-              onSubmit={handleResumeForm}
+              onSubmit={handleFooterForm}
               className="flex flex-col gap-2 md:gap-4 items-center justify-center"
             >
               <input
