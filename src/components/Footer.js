@@ -25,11 +25,14 @@ function Footer() {
     e.preventDefault();
     const et = e.target;
     const submitButton = et.querySelector('button[type="submit"]');
+
+    const submitBtnInitailaValue = submitButton.innerHTML;
+    submitButton.innerHTML = "Wait...";
     submitButton.disabled = true; // Disable submit button
 
     try {
       // Get current date and time
-      const { submitDate, submitTime } = getDateTime();
+      const { submitDate, submitTime } = await getDateTime();
 
       // Get form data
       const formData = new FormData(et);
@@ -38,14 +41,15 @@ function Footer() {
       formData.append("submitDate", submitDate);
       formData.append("submitTime", submitTime);
       formData.append("formName", et.name);
+      formData.append("origin", window.location.origin);
 
-      // Example: log the formData for demonstration
-      for (let pair of formData.entries()) {
-        console.log(pair[0] + ":" + pair[1]);
-      }
+      // // Example: log the formData for demonstration
+      // for (let pair of formData.entries()) {
+      //   console.log(pair[0] + ":" + pair[1]);
+      // }
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxEP9k9-HsfCya0DaALQaJAIn68K2FRXPgUGtCzdSPqTN0RovI_K8-7MVoNRVDer88rOA/exec",
+        "https://script.google.com/macros/s/AKfycbzKUfou_CtJScNi4hNCn93__GsXjpPpq_ZvfGKLnpikCL470gTpWio_ap_mZe7JUTa8Rg/exec",
         {
           method: "POST",
           body: formData,
@@ -56,11 +60,15 @@ function Footer() {
         throw new Error("Network response was not ok");
       }
 
-      const res = await response.json();
-      console.log("Success:", res);
+      const { result } = await response.json();
+      console.log("Success:", result);
+      if (result === "error") {
+        throw new Error("Backend response was not ok");
+      }
+      submitButton.innerHTML = "Success !";
       // Handle success response here
     } catch (error) {
-      console.error("Error:", error);
+      submitButton.innerHTML = "Error !";
       // Handle error here
     } finally {
       setUser({
@@ -69,11 +77,14 @@ function Footer() {
         folioRating: null,
       });
       et.reset(); // Reset the form
-      submitButton.disabled = false; // Enable submit button
+      setTimeout(() => {
+        submitButton.innerHTML = submitBtnInitailaValue;
+        submitButton.disabled = false; // Enable submit button
+      }, 2500);
     }
   };
 
-  const getDateTime = () => {
+  const getDateTime = async () => {
     const now = new Date();
     const dd = now.getDate().toString().padStart(2, "0");
     const mm = (now.getMonth() + 1).toString().padStart(2, "0");
@@ -289,7 +300,7 @@ function Footer() {
               <input
                 type="email"
                 maxLength="35"
-                size="35"
+                size="30"
                 required
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="subEmail"
@@ -356,7 +367,7 @@ function Footer() {
                 />
               </label>
               <button type="submit" className="feedback-tab-btn">
-                Rate us
+                Rate us ★
               </button>
             </form>
 
@@ -371,7 +382,7 @@ function Footer() {
               <input
                 type="email"
                 maxLength="35"
-                size="35"
+                size="30"
                 required
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="resumeEmail"
