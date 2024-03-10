@@ -60,9 +60,9 @@ function Footer() {
         throw new Error("Network response was not ok");
       }
 
-      const { res } = await response.json();
-      console.log("Response:", res);
-      if (res === "error") {
+      const { result } = await response.json();
+      console.log("Response:", result);
+      if (result === "error") {
         throw new Error("Backend response was not ok");
       }
       submitButton.innerHTML = "Success !";
