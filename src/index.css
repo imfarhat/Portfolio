@@ -31,7 +31,7 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 rounded-b-md;
   }
   .footer-link-card {
-    @apply flex flex-col items-start justify-center bg-gradient-to-br from-[#16181d] from-85% to-[#646674] text-[#fdfdff] rounded-md w-full;
+    @apply flex flex-col items-start justify-center bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-85% to-[#646674] text-[#fdfdff] rounded-md w-full;
   }
   .footer-card-h3 {
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 w-full rounded-t-md mb-2.5;
