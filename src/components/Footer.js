@@ -27,7 +27,7 @@ function Footer() {
     const submitButton = et.querySelector('button[type="submit"]');
 
     const submitBtnInitailaValue = submitButton.innerHTML;
-    submitButton.innerHTML = "Wait...";
+    submitButton.innerHTML = "Wait... &#x23F3;"
     submitButton.disabled = true; // Disable submit button
 
     try {
@@ -43,13 +43,13 @@ function Footer() {
       formData.append("formName", et.name);
       formData.append("origin", window.location.origin);
 
-      // // Example: log the formData for demonstration
-      // for (let pair of formData.entries()) {
-      //   console.log(pair[0] + ":" + pair[1]);
-      // }
+      // Example: log the formData for demonstration
+      /* for (let pair of formData.entries()) {
+        console.log(pair[0] + ":" + pair[1]);
+      } */
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzKUfou_CtJScNi4hNCn93__GsXjpPpq_ZvfGKLnpikCL470gTpWio_ap_mZe7JUTa8Rg/exec",
+        "https://script.google.com/macros/s/AKfycbxPQJRQ_9bHoYNYP0CLQ-GDHcsAsYJuBYxntK_-gsaCfkrTHUvDT-4hxqNgSuKLaDU3/exec",
         {
           method: "POST",
           body: formData,
@@ -65,7 +65,7 @@ function Footer() {
       if (result === "error") {
         throw new Error("Backend response was not ok");
       }
-      submitButton.innerHTML = "Success !";
+      submitButton.innerHTML = "Success &check;";
       // Handle success response here
     } catch (error) {
       submitButton.innerHTML = "Error !";
