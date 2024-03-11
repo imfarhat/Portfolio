@@ -311,7 +311,11 @@ function Footer() {
                 onChange={handleInputChange}
                 className="feedback-tab-input"
               />
-              <button type="submit" className="feedback-tab-btn">
+              <button
+                type="submit"
+                disabled={false}
+                className="feedback-tab-btn"
+              >
                 Subscribe+
               </button>
             </form>
@@ -367,7 +371,11 @@ function Footer() {
                   onChange={handleInputChange}
                 />
               </label>
-              <button type="submit" className="feedback-tab-btn">
+              <button
+                type="submit"
+                disabled={false}
+                className="feedback-tab-btn"
+              >
                 Rate us ★
               </button>
             </form>
@@ -394,7 +402,11 @@ function Footer() {
                 ref={inputResumeReqRef}
                 className="feedback-tab-input"
               />
-              <button type="submit" className="feedback-tab-btn">
+              <button
+                type="submit"
+                disabled={false}
+                className="feedback-tab-btn"
+              >
                 Resume &#10148;
               </button>
             </form>
