@@ -27,7 +27,7 @@ function Footer() {
     const submitButton = et.querySelector('button[type="submit"]');
 
     const submitBtnInitailaValue = submitButton.innerHTML;
-    submitButton.innerHTML = "Wait... &#x23F3;"
+    submitButton.innerHTML = "Wait... &#x23F3;";
     submitButton.disabled = true; // Disable submit button
 
     try {
@@ -49,7 +49,7 @@ function Footer() {
       } */
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxPQJRQ_9bHoYNYP0CLQ-GDHcsAsYJuBYxntK_-gsaCfkrTHUvDT-4hxqNgSuKLaDU3/exec",
+        "https://script.google.com/macros/s/AKfycbx4mZrF_arBlAqVwtlB1F63njETwBNwN0scd_zZ97gmVD4wIjL4azHIgF8PCHRVN4Q/exec",
         {
           method: "POST",
           body: formData,
