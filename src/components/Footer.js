@@ -41,7 +41,7 @@ function Footer() {
       formData.append("submitDate", submitDate);
       formData.append("submitTime", submitTime);
       formData.append("formName", et.name);
-      formData.append("origin", window.location.origin);
+      formData.append("origin", "https://ifarhat.pages.dev");
 
       // Example: log the formData for demonstration
       /* for (let pair of formData.entries()) {
