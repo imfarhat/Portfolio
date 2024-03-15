@@ -9,7 +9,7 @@ function Home() {
     <>
       <Header />
       <main className="flex flex-col items-center justify-center bg-[#16181d]">
-        <section className="py-6 max-w-7xl w-full h-full flex flex-col gap-8">
+        <section className="pt-8 pb-24 max-w-7xl w-full h-full flex flex-col gap-8">
           <article className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
             <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-white">
               <h1 className="text-3xl font-bold">

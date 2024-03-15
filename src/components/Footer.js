@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
-import { TbMessageShare } from "react-icons/tb";
-import { IoGlobeOutline } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -119,7 +117,7 @@ function Footer() {
 
   return (
     <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d]">
-      <section className="w-full pb-4 text-[#141e28] bg-gradient-to-l from-[#16181d] to-[#646674]/25 flex items-center justify-center">
+      <section className="w-full py-4 text-[#141e28] bg-gradient-to-l from-[#16181d] to-[#646674]/25 flex items-center justify-center">
         <button className="back-to-top-btn" onClick={scrollToTop}>
           Back to Top
         </button>
@@ -241,11 +239,11 @@ function Footer() {
           <h2 className="footer-panel-h2">Connect with me</h2>
           <article className="px-2 py-4 md:px-4 md:py-6 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-fit text-3xl">
             <Link
-              to="/contact"
+              to=""
               rel="noopener norefferer"
               className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
             >
-              <TbMessageShare />
+              <MdOutlineMarkEmailUnread />
             </Link>
             <Link
               to="https://www.instagram.com/raan_farhat/"
@@ -256,28 +254,29 @@ function Footer() {
               <FaInstagram />
             </Link>
             <Link
-              to="mailto:imfarhat.dev@gmail.com"
+              to="https://twitter.com/raan_farhat"
               rel="noopener norefferer"
               target="_blank"
-              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
+              className="social-link-item  hover:bg-[#16181d] text-[#16181d] active:bg-opacity-85"
             >
-              <MdOutlineMarkEmailUnread />
+              <RiTwitterXFill />
             </Link>
             <Link
-              to="https://wa.me/+919830836212?text=Hi%20I.%20Frahat%20from%20Farhat%20e%20Services%20%26%20Assistance!%0A%0A[Redirected%20from%20your%20portfolio%20website]"
+              to="https://www.github.com/imfarhat/"
               rel="noopener norefferer"
               target="_blank"
-              className="social-link-item hover:bg-[#4ac959] text-[#4ac959] active:bg-opacity-85"
+              className="social-link-item hover:bg-[#16181d] text-[#16181d] active:bg-opacity-85"
             >
-              <FaWhatsapp />
+              <FaGithub />
             </Link>
+
             <Link
-              to="https://farhateservices.pages.dev"
+              to="https://www.linkedin.com/in/imfarhat/"
               rel="noopener norefferer"
               target="_blank"
               className="social-link-item hover:bg-[#3273dc] text-[#3273dc] active:bg-opacity-85"
             >
-              <IoGlobeOutline />
+              <FaLinkedin />
             </Link>
           </article>
         </div>

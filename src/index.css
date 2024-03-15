@@ -46,7 +46,7 @@
     @apply cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center;
   }
   .back-to-top-btn {
-    @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-white/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-white/5 active:scale-95 border-x-[1.5px] border-b-[1.5px] border-current shadow w-fit rounded-b-md mb-2.5 transition;
+    @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-white/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-white/5 active:scale-95 border-[1.5px] border-current shadow w-fit rounded-md transition;
   }
   .feedback-tab-btn {
     @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-white/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-white/5 disabled:opacity-50 min-w-[50%] transition ease-in md:duration-200;
@@ -57,7 +57,15 @@
   .animate-reverse-spin {
     animation: reverse-spin 1s linear infinite;
   }
-
+  .ficjc {
+    @apply flex items-center justify-center;
+  }
+  .ficjs {
+    @apply flex items-center justify-start;
+  }
+  .ffwicjc {
+    @apply flex flex-wrap items-center justify-center;
+  }
   @keyframes reverse-spin {
     from {
       transform: rotate(0deg);
