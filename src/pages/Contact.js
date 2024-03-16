@@ -30,7 +30,7 @@ function Contact() {
 
     try {
       // Get current date and time
-      const { submitDate, submitTime } = await getDateTime()
+      const { submitDate, submitTime } = await getDateTime();
       // Get form data
       const formData = new FormData(et);
 

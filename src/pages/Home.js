@@ -1,6 +1,5 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import workingDev from "../assets/images/characters/working-dev.png";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
@@ -27,8 +26,8 @@ function Home() {
                 <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                     <img
-                    loading="eager"
-                      src={workingDev}
+                      loading="eager"
+                      src="https://ifarhat.pages.dev/static/media/working-dev.cbc4cc36b6bf17168c29.png"
                       alt="Web Developer"
                       className="w-full h-full aspect-square group-hover:scale-105 transition ease-in md:duration-200 select-none pointer-events-none md:pointer-events-auto md:animate-pulse md:group-hover:animate-none"
                     />
