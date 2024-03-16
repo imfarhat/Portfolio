@@ -29,7 +29,7 @@ function About() {
           <article className="max-w-7xl w-full items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="about-details-card">
               <h3>Education</h3>
-              <ul className="w-full list-disc px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black flex flex-col gap-y-2">
+              <ul>
                 <li>Persuing UG Degree under (MAKAUT)</li>
                 <li>H. Seconday: SJV Kolkata (WBCHSE)</li>
                 <li>Specialised in Computer Science</li>
@@ -39,7 +39,7 @@ function About() {
 
             <div className="about-details-card">
               <h3>Experience</h3>
-              <ul className="w-full list-disc px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black flex flex-col gap-y-2">
+              <ul>
                 <li>Part Time Web Manager at FeSA</li>
                 <li>Front End Web Developer</li>
                 <li>Freelanced for clients</li>
@@ -49,7 +49,7 @@ function About() {
 
             <div className="about-details-card">
               <h3>Interests</h3>
-              <ul className="w-full list-disc px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black flex flex-col gap-y-2">
+              <ul>
                 <li>Front End Web Development</li>
                 <li>Coding and Development</li>
                 <li>Graphic Design</li>
