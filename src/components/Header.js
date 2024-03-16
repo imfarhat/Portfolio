@@ -54,31 +54,33 @@ function Header() {
   useEffect(() => {
     const handleKeyPress = (e) => {
       const key = e.key.toLowerCase();
+      const altKey = e.altKey;
+
       if (key === lastKeyPressed) {
         return; // No need to proceed if last key and current key are the same
       }
       if (e.target.tagName.toLowerCase() === "input") {
         return; // If the target is an input field, do nothing
       }
-      switch (key) {
-        case "h":
-        case "/":
+      switch (true) {
+        case key === "h" && altKey:
+        case key === "/":
           home.current.click();
           break;
-        case "a":
+        case key === "a" && altKey:
           about.current.click();
           break;
-        case "p":
+        case key === "p" && altKey:
           projects.current.click();
           break;
-        case "c":
+        case key === "c" && altKey:
           contact.current.click();
           break;
-        case ">":
+        case key === ">" && altKey:
           localStorage.setItem("headerPromo", "open"); // Store in localStorage
           setHeaderPromo(true);
           break;
-        case "<":
+        case key === "<" && altKey:
           localStorage.setItem("headerPromo", "closed"); // Store in localStorage
           setHeaderPromo(false);
           break;
@@ -89,7 +91,6 @@ function Header() {
     };
 
     window.addEventListener("keydown", handleKeyPress);
-
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
@@ -102,9 +103,7 @@ function Header() {
           ref={headerPromoParentRef}
           className="hidden md:flex items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
         >
-          <div className="px-2 animate-bounce font-light">
-            Hello World!
-          </div>
+          <div className="px-2 animate-bounce font-light">Hello World!</div>
           <button
             title="Close (<), Undo (>)"
             onClick={removeHeaderPromo}

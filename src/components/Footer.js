@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { RiTwitterXFill } from "react-icons/ri";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
+import SocialLinks from "../components/SocialLinks.js";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -238,46 +236,7 @@ function Footer() {
         <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Connect with me</h2>
           <article className="px-2 py-4 md:px-4 md:py-6 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-fit text-3xl">
-            <Link
-              to=""
-              rel="noopener norefferer"
-              className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
-            >
-              <MdOutlineMarkEmailUnread />
-            </Link>
-            <Link
-              to="https://www.instagram.com/raan_farhat/"
-              rel="noopener norefferer"
-              target="_blank"
-              className="social-link-item social-link-ig-addon"
-            >
-              <FaInstagram />
-            </Link>
-            <Link
-              to="https://twitter.com/raan_farhat"
-              rel="noopener norefferer"
-              target="_blank"
-              className="social-link-item  hover:bg-[#16181d] text-[#16181d] active:bg-opacity-85"
-            >
-              <RiTwitterXFill />
-            </Link>
-            <Link
-              to="https://www.github.com/imfarhat/"
-              rel="noopener norefferer"
-              target="_blank"
-              className="social-link-item hover:bg-[#16181d] text-[#16181d] active:bg-opacity-85"
-            >
-              <FaGithub />
-            </Link>
-
-            <Link
-              to="https://www.linkedin.com/in/imfarhat/"
-              rel="noopener norefferer"
-              target="_blank"
-              className="social-link-item hover:bg-[#3273dc] text-[#3273dc] active:bg-opacity-85"
-            >
-              <FaLinkedin />
-            </Link>
+           <SocialLinks />
           </article>
         </div>
       </section>

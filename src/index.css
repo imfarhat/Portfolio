@@ -93,6 +93,16 @@
   .ficjc {
     @apply flex items-center justify-center;
   }
+  main section article form {
+    @apply w-full flex items-center justify-center;
+  }
+  main section article form div {
+    @apply w-full flex flex-col items-start justify-center gap-y-1;
+  }
+  main section article form div input,
+  textarea {
+    @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded w-full;
+  }
   .ficjs {
     @apply flex items-center justify-start;
   }
