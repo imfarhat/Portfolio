@@ -105,7 +105,7 @@ function Header() {
         >
           <div className="px-2 animate-bounce font-light">Hello World!</div>
           <button
-            title="Close (<), Undo (>)"
+            title="Close (Alt + <), Undo (Alt + >)"
             onClick={removeHeaderPromo}
             className="header-promo-close-btn"
           >
@@ -124,7 +124,12 @@ function Header() {
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">
-          <NavLink to="/" title="Home (h)" ref={home} className="nav-link-n">
+          <NavLink
+            to="/"
+            title="Home (Alt + h)"
+            ref={home}
+            className="nav-link-n"
+          >
             {online ? (
               <TbHomeSignal className="nav-link-icon" />
             ) : (
@@ -134,7 +139,7 @@ function Header() {
           </NavLink>
           <NavLink
             to="/about"
-            title="About (a)"
+            title="About (Alt + a)"
             ref={about}
             className="nav-link-n"
           >
@@ -143,7 +148,7 @@ function Header() {
           </NavLink>
           <NavLink
             to="/projects"
-            title="Projects (p)"
+            title="Projects (Alt + p)"
             ref={projects}
             className="nav-link-w"
           >
@@ -152,7 +157,7 @@ function Header() {
           </NavLink>
           <NavLink
             to="/contact"
-            title="Contact (c)"
+            title="Contact (Alt + c)"
             ref={contact}
             className="nav-link-w"
           >

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import SocialLinks from "../components/SocialLinks.js";
+import SocialLinks from "../components/SocialLinks.js"
 
 function Contact() {
   const [user, setUser] = useState({
@@ -38,7 +38,7 @@ function Contact() {
       // Append submitDate and submitTime to the formData
       formData.append("submitDate", submitDate);
       formData.append("submitTime", submitTime);
-      formData.append("formName", et.name);
+      formData.append("formName", "Contact");
       formData.append("origin", window.location.origin);
 
       // Example: log the formData for demonstration
