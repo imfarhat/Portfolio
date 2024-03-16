@@ -8,7 +8,7 @@ function Projects() {
   return (
     <>
       <Header />
-      <main className="pt-16 py-24 ficjc flex-col bg-[#16181d]">
+      <main className="pt-16 py-24 ficjc flex-col gap-8 bg-[#16181d]">
         <section className="w-full flex flex-col ficjc gap-8">
           <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-white md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">
@@ -24,15 +24,23 @@ function Projects() {
           </article>
         </section>
         <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc">
-          <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-6">
+          <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card group">
               <h3>
                 T.I.S.
                 <span>
-                  <Link to="https://tis.pages.dev">
+                  <Link
+                    to="https://tis.pages.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IoGlobeOutline />
                   </Link>
-                  <Link to="https://github.com/imfarhat/The-International-School">
+                  <Link
+                    to="https://github.com/imfarhat/The-International-School"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BsGithub />
                   </Link>
                 </span>
@@ -55,10 +63,18 @@ function Projects() {
               <h3>
                 AttendQR
                 <span>
-                  <Link to="https://attendqr.pages.dev">
+                  <Link
+                    to="https://attendqr.pages.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IoGlobeOutline />
                   </Link>
-                  <Link to="https://github.com/imfarhat/AttendQR">
+                  <Link
+                    to="https://github.com/imfarhat/AttendQR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BsGithub />
                   </Link>
                 </span>
@@ -76,14 +92,24 @@ function Projects() {
               </p>
             </div>
 
-            <div className="projects-card group">
+            <div
+              className="projects-card group"
+            >
               <h3>
                 Business Portfolio
                 <span>
-                  <Link to="https://farhateservices.pages.dev/eCommerce/">
+                  <Link
+                    to="https://farhateservices.pages.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IoGlobeOutline />
                   </Link>
-                  <Link to="https://github.com/farhateservices/fesa/tree/main/eCommerce">
+                  <Link
+                    to="https://github.com/farhateservices/fesa/tree/main/eCommerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BsGithub />
                   </Link>
                 </span>
@@ -101,14 +127,24 @@ function Projects() {
               </p>
             </div>
 
-            <div className="projects-card group">
+            <div
+              className="projects-card group"
+            >
               <h3>
                 SkipPi
                 <span>
-                  <Link to="https://github.com/imfarhat/SkipPi">
+                  <Link
+                    to="https://github.com/imfarhat/SkipPi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IoGlobeOutline />
                   </Link>
-                  <Link to="https://github.com/imfarhat/SkipPi">
+                  <Link
+                    to="https://github.com/imfarhat/SkipPi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BsGithub />
                   </Link>
                 </span>
