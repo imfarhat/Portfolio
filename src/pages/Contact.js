@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import SocialLinks from "../components/SocialLinks.js"
+import SocialLinks from "../components/SocialLinks.js";
 
 function Contact() {
   const [user, setUser] = useState({
@@ -134,7 +134,7 @@ function Contact() {
                   maxLength="50"
                   size="30"
                   required
-                  pattern="[a-zA-Z]{2,}"
+                  pattern="[a-zA-Z ]{2,}"
                   name="name"
                   id="name"
                   placeholder="Your Name"
