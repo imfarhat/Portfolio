@@ -30,7 +30,7 @@ function Contact() {
 
     try {
       // Get current date and time
-      const { submitDate, submitTime } = await getDateTime();
+      const { submitDate, submitTime } = await getDateTimeForContact();
 
       // Get form data
       const formData = new FormData(et);
@@ -85,7 +85,7 @@ function Contact() {
     }
   };
 
-  const getDateTime = async () => {
+  const getDateTimeForContact = async () => {
     const now = new Date();
     const dd = now.getDate().toString().padStart(2, "0");
     const mm = (now.getMonth() + 1).toString().padStart(2, "0");
