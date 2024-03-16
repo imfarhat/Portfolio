@@ -123,10 +123,10 @@ function Footer() {
         </button>
       </section>
 
-      <section className="py-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-3 md:gap-6 rounded-3xl">
+      <section className="py-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-3 md:gap-6 lg:gap-8 rounded-3xl">
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Quick Links</h3>
-          <ul className="p-2 flex flex-col gap-0.5">
+          <ul>
             <Link to="/" className="footer-links-panel-item">
               Home page
             </Link>
@@ -144,7 +144,7 @@ function Footer() {
 
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Services</h3>
-          <ul className="p-2 flex flex-col gap-0.5">
+          <ul>
             <Link
               to="https://farhateservices.pages.dev"
               rel="noopener norefferer"
@@ -182,7 +182,7 @@ function Footer() {
 
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Categories</h3>
-          <ul className="p-2 flex flex-col gap-0.5">
+          <ul>
             <Link
               to="https://farhateservices.pages.dev"
               rel="noopener norefferer"
@@ -220,7 +220,7 @@ function Footer() {
 
         <div className="footer-link-card">
           <h3 className="footer-card-h3">For Recruiters</h3>
-          <ul className="p-2 flex flex-col gap-0.5">
+          <ul>
             <button
               onClick={locateResumeReqInput}
               className="footer-links-panel-item"

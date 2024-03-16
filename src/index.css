@@ -31,10 +31,19 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 rounded-b-md;
   }
   .footer-link-card {
-    @apply flex flex-col items-start justify-center bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-85% to-[#646674] text-[#fdfdff] rounded-md w-full;
+    @apply flex flex-col items-start justify-center bg-gradient-to-br hover:bg-gradient-to-tl from-[#16181d] from-85% to-[#646674]/50 hover:to-[#646674] text-[#fdfdff] rounded-md w-full;
+  }
+  .footer-link-card ul {
+    @apply p-2 md:px-4 flex flex-col gap-0.5;
   }
   .footer-card-h3 {
     @apply font-semibold text-base py-2 px-4 text-center bg-white/5 w-full rounded-t-md mb-2.5;
+  }
+  .about-details-card h3 {
+    @apply font-semibold text-lg py-2 px-4 text-center bg-white/5 w-full rounded-b-md mb-2.5;
+  }
+  .about-details-card ul li {
+    @apply transition duration-150 md:duration-200 ease-in hover:text-white;
   }
   .social-link-item {
     @apply p-2.5 md:p-4 bg-white rounded-full hover:text-[#fdfdff] hover:scale-110 active:scale-100 transition md:duration-200 ease-in;
@@ -44,6 +53,9 @@
   }
   .programming-lang-card {
     @apply cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-white flex flex-col gap-1 md:gap-2 items-center justify-center;
+  }
+  .about-details-card {
+    @apply cursor-pointer p-4 md:pt-0 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-80% to-[#646674] hover:to-[#646675]/50 font-semibold text-white flex flex-col gap-2 items-center justify-center;
   }
   .back-to-top-btn {
     @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-white/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-white/5 active:scale-95 border-[1.5px] border-current shadow w-fit rounded-md transition;
