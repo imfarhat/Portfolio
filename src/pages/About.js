@@ -7,7 +7,7 @@ function About() {
     <>
       <Header />
       <main className="pt-16 py-24 ficjc flex-col bg-[#16181d]">
-        <section className="w-full flex flex-col ficjc gap-8 bg-gradient-to-r from-[#16181d] to-[#646674]/25">
+        <section className="w-full flex flex-col ficjc gap-8">
           <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-white md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">
               About Me
@@ -25,7 +25,7 @@ function About() {
             </p>
           </article>
         </section>
-        <section className="bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc">
+        <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc">
           <article className="max-w-7xl w-full items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="about-details-card">
               <h3>Education</h3>
