@@ -103,6 +103,9 @@
   textarea {
     @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded w-full;
   }
+  input[type="radio"] {
+    @apply cursor-pointer
+  }
   .ficjs {
     @apply flex items-center justify-start;
   }
