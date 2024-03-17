@@ -147,7 +147,9 @@ function Contact() {
                 <span>Gender:</span>
                 <aside className="flex items-start justify-center gap-4">
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="male">Male</label>
+                    <label htmlFor="male" className="cursor-pointer">
+                      Male
+                    </label>
                     <input
                       type="radio"
                       required
@@ -160,7 +162,9 @@ function Contact() {
                   </div>
 
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="female">Female</label>
+                    <label htmlFor="female" className="cursor-pointer">
+                      Female
+                    </label>
                     <input
                       type="radio"
                       required
@@ -173,7 +177,9 @@ function Contact() {
                   </div>
 
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="other">Other</label>
+                    <label htmlFor="other" className="cursor-pointer">
+                      Other
+                    </label>
                     <input
                       type="radio"
                       required
