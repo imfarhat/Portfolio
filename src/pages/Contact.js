@@ -138,12 +138,13 @@ function Contact() {
                   id="name"
                   placeholder="Your Name"
                   value={user.name}
+                  autoComplete="off"
                   onChange={handleInputChange}
                 />
               </div>
 
               <div>
-                <label>Gender:</label>
+                <span>Gender:</span>
                 <aside className="flex items-start justify-center gap-4">
                   <div className="flex flex-row items-center justify-center gap-2">
                     <label htmlFor="male">Male</label>
@@ -197,7 +198,8 @@ function Contact() {
                   name="email"
                   id="email"
                   placeholder="example@gmail.com"
-                  value={user.email || ""}
+                  value={user.email}
+                  autoComplete="off"
                   onChange={handleInputChange}
                 />
               </div>
@@ -213,6 +215,7 @@ function Contact() {
                   id="phone"
                   placeholder="Phone Number"
                   value={user.phone}
+                  autoComplete="off"
                   onChange={handleInputChange}
                 />
               </div>
@@ -220,13 +223,15 @@ function Contact() {
               <div>
                 <label htmlFor="message">Message:</label>
                 <textarea
-                  maxLength="500"
                   rows="5"
+                  minLength="10"
+                  maxLength="500"
                   required
                   name="message"
                   id="message"
                   placeholder="Your Message"
                   value={user.message}
+                  autoComplete="off"
                   onChange={handleInputChange}
                 ></textarea>
               </div>
