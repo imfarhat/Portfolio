@@ -114,7 +114,7 @@ function Contact() {
           </article>
         </section>
         <section className="max-w-7xl md:rounded-md overflow-hidden p-2 md:p-4 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-          <article className="px-2 py-4 md:px-4 md:py-6 flex items-center justify-center gap-3 md:gap-4 w-full text-3xl">
+          <article className="px-2 py-4 md:px-4 md:py-6 flex md:flex-col-reverse items-center justify-center gap-3 md:gap-4 w-full text-3xl">
             <SocialLinks />
           </article>
           <article className=" w-full flex flex-col items-center justify-center gap-4 text-white">
