@@ -25,17 +25,16 @@ function NoPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between gap-36 py-44 px-4 text-white/90 bg-[#16181d]">
+      <main className="flex flex-col items-center justify-between gap-24 py-24 px-4 text-white/90 bg-[#16181d]">
         <h2 className="text-3xl font-semibold">Sorry, page not found!</h2>
         <TbError404 className="text-9xl scale-[3]" />
-        <div className="ficjc flex-col gap-4">
-          <h3 className="text-2xl">
-            {" "}
+        <div className="ficjc flex-col gap-2">
+          <h3 className="text-lg">
             Redirecting to previous page in {countdown}s...
           </h3>
           <button
             onClick={() => navigate(-1)}
-            className="text-lg px-4 py-1.5 bg-white text-black font-semibold rounded active:bg-white/75 transition md:duration-200 ease-in"
+            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition md:duration-200 ease-in"
           >
             Go Back Now
           </button>
