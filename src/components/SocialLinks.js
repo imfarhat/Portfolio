@@ -7,7 +7,7 @@ function SocialLinks() {
   return (
     <>
       <Link
-        to=""
+        to="mailto:imfarhat.dev@gmail.com"
         rel="noopener norefferer"
         className="social-link-item hover:bg-[#3e65cf] text-[#3e65cf] active:bg-opacity-85"
       >
