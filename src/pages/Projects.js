@@ -48,7 +48,7 @@ function Projects() {
               <img
                 src="https://raw.githubusercontent.com/imfarhat/The-International-School/main/contents/images/logo/main-icon.png"
                 alt="TIS Logo"
-                loading="lazy"
+                loading="eager"
                 className="p-2"
               />
               <p className="group-hover:opacity-100 h-fit">
@@ -82,7 +82,7 @@ function Projects() {
               <img
                 src="https://raw.githubusercontent.com/imfarhat/AttendQR/main/public/AttendQR.png"
                 alt="AttendQR Logo"
-                loading="lazy"
+                loading="eager"
               />
               <p className="group-hover:opacity-100 h-fit">
                 <strong>AttendQR</strong>: QR Code based Attendance App to makr
@@ -92,9 +92,7 @@ function Projects() {
               </p>
             </div>
 
-            <div
-              className="projects-card group"
-            >
+            <div className="projects-card group">
               <h3>
                 Business Portfolio
                 <span>
@@ -117,7 +115,7 @@ function Projects() {
               <img
                 src="https://raw.githubusercontent.com/farhateservices/fesa/main/logo-head-black.png"
                 alt="FeSA Logo"
-                loading="lazy"
+                loading="eager"
               />
               <p className="group-hover:opacity-100 h-fit">
                 <strong>Farhat e Services & Assistance</strong>: A platform that
@@ -127,9 +125,7 @@ function Projects() {
               </p>
             </div>
 
-            <div
-              className="projects-card group"
-            >
+            <div className="projects-card group">
               <h3>
                 SkipPi
                 <span>
@@ -152,7 +148,7 @@ function Projects() {
               <img
                 src="https://raw.githubusercontent.com/imfarhat/SkipPi/main/icon.png"
                 alt="SkipPi Logo"
-                loading="lazy"
+                loading="eager"
               />
               <p className="group-hover:opacity-100 h-fit">
                 <strong>A Chrome / Firefox Extension</strong>: Auto-skip YouTube
