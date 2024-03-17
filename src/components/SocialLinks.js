@@ -14,7 +14,7 @@ function SocialLinks() {
         <MdOutlineMarkEmailUnread />
       </Link>
       <Link
-        to="https://www.instagram.com/raan_farhat/"
+        to="https://www.instagram.com/raan_farhat"
         rel="noopener norefferer"
         target="_blank"
         className="social-link-item social-link-ig-addon"
@@ -30,7 +30,7 @@ function SocialLinks() {
         <RiTwitterXFill />
       </Link>
       <Link
-        to="https://www.github.com/imfarhat/"
+        to="https://www.github.com/imfarhat"
         rel="noopener norefferer"
         target="_blank"
         className="social-link-item hover:bg-[#16181d] text-[#16181d] active:bg-opacity-85"
@@ -39,7 +39,7 @@ function SocialLinks() {
       </Link>
 
       <Link
-        to="https://www.linkedin.com/in/imfarhat/"
+        to="https://www.linkedin.com/in/imfarhat"
         rel="noopener norefferer"
         target="_blank"
         className="social-link-item hover:bg-[#3273dc] text-[#3273dc] active:bg-opacity-85"
