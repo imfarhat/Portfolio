@@ -235,56 +235,26 @@ function Footer() {
       <section className="py-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full">
         <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Connect with me</h2>
-          <article className="px-2 py-4 md:px-4 md:py-6 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-fit text-3xl">
-           <SocialLinks />
+          <article className="px-2 py-4 md:px-4 md:py-8 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-fit text-3xl">
+            <SocialLinks />
           </article>
         </div>
       </section>
 
       <section className="py-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full">
-        <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-0 bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Feedback+ Tab</h2>
           <article
-            className="px-2 py-4 md:px-4 md:py-8 flex flex-wrap items-center justify-center lg:justify-between gap-8 w-full max-w-7xl
+            className="px-2 py-4 md:px-4 md:pt-8 md:pb-0 flex flex-wrap items-center justify-center lg:justify-center gap-8 w-full max-w-7xl
           "
           >
-            <form
-              action=""
-              method="post"
-              name="Subscribers"
-              autoComplete="off"
-              onSubmit={handleFooterForm}
-              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
-            >
-              <input
-                type="email"
-                maxLength="35"
-                size="30"
-                required
-                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-                name="subEmail"
-                id="subEmail"
-                placeholder="example@gmail.com"
-                value={user.subEmail}
-                onChange={handleInputChange}
-                className="feedback-tab-input"
-              />
-              <button
-                type="submit"
-                disabled={false}
-                className="feedback-tab-btn"
-              >
-                Subscribe+
-              </button>
-            </form>
-
             <form
               action=""
               method="post"
               name="Ratings"
               autoComplete="off"
               onSubmit={handleFooterForm}
-              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
+              className="flex flex-col gap-4 md:gap-6 items-center justify-center"
             >
               <label className="flex flex-row gap-2 items-center justify-center star-group">
                 <input
@@ -337,6 +307,41 @@ function Footer() {
                 Rate us ★
               </button>
             </form>
+          </article>
+
+          <article
+            className="px-2 py-4 md:px-4 md:py-8 flex flex-wrap items-center justify-center md:justify-between gap-8 w-full max-w-7xl
+          "
+          >
+            <form
+              action=""
+              method="post"
+              name="Subscribers"
+              autoComplete="off"
+              onSubmit={handleFooterForm}
+              className="flex flex-col gap-4 md:gap-6 items-center justify-center"
+            >
+              <input
+                type="email"
+                maxLength="35"
+                size="30"
+                required
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                name="subEmail"
+                id="subEmail"
+                placeholder="example@gmail.com"
+                value={user.subEmail}
+                onChange={handleInputChange}
+                className="feedback-tab-input"
+              />
+              <button
+                type="submit"
+                disabled={false}
+                className="feedback-tab-btn"
+              >
+                Subscribe+
+              </button>
+            </form>
 
             <form
               action=""
@@ -344,7 +349,7 @@ function Footer() {
               name="Resumers"
               autoComplete="off"
               onSubmit={handleFooterForm}
-              className="flex flex-col gap-2 md:gap-4 items-center justify-center"
+              className="flex flex-col gap-4 md:gap-6 items-center justify-center"
             >
               <input
                 type="email"
