@@ -38,6 +38,7 @@ function Home() {
                     <img
                       src="https://raw.githubusercontent.com/imfarhat/portfolio/main/src/assets/images/characters/working-dev.png"
                       alt="Working Developer"
+                      loading="eager"
                       onLoad={handleImageLoad}
                       style={{ display: imageLoaded ? "block" : "none" }}
                     />
