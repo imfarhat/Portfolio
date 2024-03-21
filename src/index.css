@@ -61,7 +61,7 @@
     @apply cursor-pointer p-4 md:pt-0 bg-gradient-to-tl hover:bg-gradient-to-br rounded-md from-[#16181d] from-80% to-[#646674] hover:to-[#646675]/50 font-semibold text-white flex flex-col gap-1 items-center justify-center;
   }
   .projects-card {
-    @apply cursor-pointer w-64 relative flex-col items-center justify-center overflow-hidden rounded-xl shadow-inner shadow-black;
+    @apply cursor-pointer w-64 relative flex-col items-center justify-center overflow-hidden rounded-xl border-[1.5px] border-[#646674] shadow-inner shadow-black;
   }
   .projects-card h3 {
     @apply text-lg flex flex-row items-center justify-between gap-1.5 w-full bg-black bottom-0 left-0 py-1.5 pl-2 pr-1 text-white text-start font-semibold truncate;

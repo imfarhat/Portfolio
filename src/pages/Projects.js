@@ -1,6 +1,7 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import { IoGlobeOutline } from "react-icons/io5";
+import { MdInstallDesktop } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -130,11 +131,12 @@ function Projects() {
                 SkipPi
                 <span>
                   <Link
-                    to="https://github.com/imfarhat/SkipPi"
+                    to="https://github.com/imfarhat/SkipPi?tab=readme-ov-file#installation"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="hidden md:block"
                   >
-                    <IoGlobeOutline />
+                    <MdInstallDesktop />
                   </Link>
                   <Link
                     to="https://github.com/imfarhat/SkipPi"
