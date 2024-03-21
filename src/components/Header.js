@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaCode } from "react-icons/fa6";
 import {
   TbHomeQuestion,
@@ -10,10 +10,7 @@ import {
 } from "react-icons/tb";
 
 function Header() {
-  const home = useRef(null);
-  const about = useRef(null);
-  const contact = useRef(null);
-  const projects = useRef(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const [online, setOnline] = useState(navigator.onLine);
 
@@ -64,17 +61,16 @@ function Header() {
       }
       switch (true) {
         case key === "h" && altKey:
-        case key === "/":
-          home.current.click();
+          navigate("/");
           break;
         case key === "a" && altKey:
-          about.current.click();
+          navigate("/about");
           break;
         case key === "p" && altKey:
-          projects.current.click();
+          navigate("/projects");
           break;
         case key === "c" && altKey:
-          contact.current.click();
+          navigate("/contact");
           break;
         case key === ">" && altKey:
           localStorage.setItem("headerPromo", "open"); // Store in localStorage
@@ -94,7 +90,7 @@ function Header() {
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
-  }, [lastKeyPressed]);
+  }, [lastKeyPressed, navigate]);
 
   return (
     <header>
@@ -124,12 +120,7 @@ function Header() {
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">
-          <NavLink
-            to="/"
-            title="Home (Alt + h)"
-            ref={home}
-            className="nav-link-n"
-          >
+          <NavLink to="/" title="Home (Alt + h)" className="nav-link-n">
             {online ? (
               <TbHomeSignal className="nav-link-icon" />
             ) : (
@@ -137,19 +128,13 @@ function Header() {
             )}
             <span className="nav-link-span">Home</span>
           </NavLink>
-          <NavLink
-            to="/about"
-            title="About (Alt + a)"
-            ref={about}
-            className="nav-link-n"
-          >
+          <NavLink to="/about" title="About (Alt + a)" className="nav-link-n">
             <TbUserScan className="nav-link-icon" />
             <span className="nav-link-span">About</span>
           </NavLink>
           <NavLink
             to="/projects"
             title="Projects (Alt + p)"
-            ref={projects}
             className="nav-link-w"
           >
             <TbWorldCode className="nav-link-icon" />
@@ -158,7 +143,6 @@ function Header() {
           <NavLink
             to="/contact"
             title="Contact (Alt + c)"
-            ref={contact}
             className="nav-link-w"
           >
             <TbSend className="nav-link-icon" />
