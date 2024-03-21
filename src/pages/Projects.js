@@ -24,7 +24,7 @@ function Projects() {
             </p>
           </article>
         </section>
-        <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc">
+        <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card group">
               <h3>
