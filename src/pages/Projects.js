@@ -19,11 +19,13 @@ function Projects() {
               Projects
             </h1>
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
-              Welcome to my <span className="text-[#f5f5f5]">digital gallery</span>
+              Welcome to my{" "}
+              <span className="text-[#f5f5f5]">digital gallery</span>
               where pixels meet passion! Below, you'll find a curated selection
               of my proudest creations. From sleek website designs to robust
-              <span className="text-[#f5f5f5]">web applications,</span> each project
-              represents a unique journey of creativity and craftsmanship.
+              <span className="text-[#f5f5f5]">web applications,</span> each
+              project represents a unique journey of creativity and
+              craftsmanship.
             </p>
           </article>
         </section>
