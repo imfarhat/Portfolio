@@ -19,6 +19,8 @@ function Header() {
   const [headerPromo, setHeaderPromo] = useState(
     localStorage.getItem("headerPromo") !== "closed"
   );
+  const [dayName, setDayName] = useState("");
+
   const headerPromoParentRef = useRef(null);
 
   useEffect(() => {
@@ -92,6 +94,29 @@ function Header() {
     };
   }, [lastKeyPressed, navigate]);
 
+  function getDayName() {
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    return days[new Date().getDay()];
+  }
+
+  useEffect(() => {
+    setDayName(getDayName());
+    const millisecondsUntilMidnight =
+      24 * 60 * 60 * 1000 - (new Date() % (24 * 60 * 60 * 1000));
+    const timerId = setTimeout(() => {
+      setDayName(getDayName());
+    }, millisecondsUntilMidnight);
+    return () => clearTimeout(timerId);
+  }, []);
+
   return (
     <header>
       {headerPromo && (
@@ -99,7 +124,7 @@ function Header() {
           ref={headerPromoParentRef}
           className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
         >
-          <div className="px-2 animate-bounce font-light">Hello World!</div>
+          <span className="px-2 animate-bounce font-light">Hello World!</span>
           <button
             title="Close (Alt + <), Undo (Alt + >)"
             onClick={removeHeaderPromo}
@@ -107,9 +132,7 @@ function Header() {
           >
             <FaCode />
           </button>
-          <Link to="/contact" className="px-2 animate-bounce font-light">
-            Hire me!
-          </Link>
+          <span className="px-2 animate-bounce font-light">It's {dayName}</span>
         </section>
       )}
       <nav>
