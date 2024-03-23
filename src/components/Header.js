@@ -97,7 +97,7 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="hidden md:flex px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
+          className="flex px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
         >
           <div className="px-2 animate-bounce font-light">Hello World!</div>
           <button
