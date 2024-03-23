@@ -36,7 +36,7 @@ function Home() {
                 <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition-all ease-in md:duration-200">
                     {!imageLoaded && (
-                      <TbLoader className="text-7xl h-[50%] w-[50%] text-white/75 animate-[spin_3s_ease-in-out_infinite]" />
+                      <TbLoader className="text-7xl h-[50%] w-[50%] text-white/50 animate-[spin_3s_ease-in-out_infinite]" />
                     )}
                     <img
                       src="https://raw.githubusercontent.com/imfarhat/portfolio/main/src/assets/images/characters/working-dev.png"
