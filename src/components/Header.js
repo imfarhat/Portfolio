@@ -97,7 +97,7 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="flex items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
+          className="hidden md:flex items-center justify-between max-w-7xl w-full text-white font-bold rounded-b-md"
         >
           <div className="px-2 animate-bounce font-light">Hello World!</div>
           <button
@@ -115,7 +115,7 @@ function Header() {
       <nav>
         <Link
           to="/"
-          className="text-lg md:text-xl font-semibold px-2.5 pt-1 md:px-2.5 md:pt-2 md:pb-1.5"
+          className="text-lg md:text-xl font-semibold px-0 pt-1 md:px-2 md:pt-2 md:pb-1.5"
         >
           I. Farhat
         </Link>
