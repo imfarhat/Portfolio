@@ -115,7 +115,7 @@ function Header() {
       <nav>
         <Link
           to="/"
-          className="text-lg md:text-xl font-semibold pr-2 md:pr-2 py-2.5 md:pt-2 md:pb-1.5"
+          className="text-lg md:text-xl font-semibold pr-2 md:pr-2 py-2"
         >
           I. Farhat
         </Link>
