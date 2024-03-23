@@ -3,6 +3,8 @@ import Footer from "../components/Footer.js";
 //import sparkingRays from "../assets/images/backgrounds/black-spakring-color-rays.jpg";
 
 function About() {
+  sessionStorage.setItem("previousPage", window.location.pathname);
+
   return (
     <>
       <Header />

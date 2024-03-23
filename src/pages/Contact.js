@@ -11,6 +11,7 @@ function Contact() {
     phone: "",
     message: "",
   });
+  sessionStorage.setItem("previousPage", window.location.pathname);
 
   let name, value;
   const handleInputChange = (e) => {

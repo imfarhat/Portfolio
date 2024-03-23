@@ -3,10 +3,12 @@ import Footer from "../components/Footer.js";
 import React, { useState } from "react";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
-import { TbLoader  } from "react-icons/tb";
+import { TbLoader } from "react-icons/tb";
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  sessionStorage.setItem("previousPage", window.location.pathname);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -31,7 +33,7 @@ function Home() {
             <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-white/5 rounded-full animate-spin">
               <div className="group md:cursor-pointer bg-gradient-to-t from-white/5 to-white/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                 <div className="bg-gradient-to-t from-white/10 to-white/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
-                  <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition ease-in md:duration-200">
+                  <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition-all ease-in md:duration-200">
                     {!imageLoaded && (
                       <TbLoader className="text-7xl h-[50%] w-[50%] text-white animate-[spin_3s_ease-in-out_infinite]" />
                     )}

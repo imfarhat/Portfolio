@@ -1,12 +1,13 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import { TbError404 } from "react-icons/tb";
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 function NoPage() {
-  const [countdown, setCountdown] = useState(10); // Reduced the countdown for demonstration
+  const [countdown, setCountdown] = useState(10);
   const navigate = useNavigate();
+  const previousPage = sessionStorage.getItem("previousPage");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,10 +18,12 @@ function NoPage() {
   }, []);
 
   useEffect(() => {
-    if (countdown === 0) {
-      navigate(-1); // Go back one step in history
-    }
-  }, [countdown, navigate]);
+    countdown === 0 && goBackOrHome();
+  }, [countdown]);
+
+  const goBackOrHome = () => {
+    previousPage ? navigate(previousPage) : navigate("/");
+  };
 
   return (
     <>
@@ -30,13 +33,14 @@ function NoPage() {
         <TbError404 className="text-9xl scale-[3]" />
         <div className="ficjc flex-col gap-2">
           <h3 className="text-lg">
-            Redirecting to previous page in {countdown}s...
+            Redirecting to {previousPage ? "Previous" : "Home"} page in{" "}
+            {countdown}s...
           </h3>
           <button
-            onClick={() => navigate(-1)}
-            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition md:duration-200 ease-in"
+            onClick={goBackOrHome}
+            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition-all md:duration-200 ease-in"
           >
-            Go Back Now
+            {previousPage ? "Go Back" : "Go Home"}
           </button>
         </div>
       </main>
@@ -44,4 +48,5 @@ function NoPage() {
     </>
   );
 }
+
 export default NoPage;
