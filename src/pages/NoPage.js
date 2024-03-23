@@ -38,7 +38,7 @@ function NoPage() {
           </h3>
           <button
             onClick={goBackOrHome}
-            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition-all md:duration-200 ease-in"
+            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition active:scale-95 md:duration-200 ease-in"
           >
             {previousPage ? "Go Back" : "Go Home"}
           </button>

@@ -4,16 +4,16 @@
 
 @layer components {
   .nav-link-n {
-    @apply px-2.5 pt-1 md:px-2.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition-all md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
+    @apply px-2.5 pt-1 md:px-2.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
   }
   .nav-link-w {
-    @apply px-1 pt-1 md:px-1.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition-all md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
+    @apply px-1 pt-1 md:px-1.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
   }
   .nav-link-span {
     @apply text-xs md:text-base;
   }
   .header-promo-close-btn {
-    @apply px-4 rounded py-0.5 font-semibold bg-[#f5f5f5]/[0.035] hover:bg-[#f0f0f2] hover:text-[#16181d] active:text-[#16181d] active:bg-[#f0f0f2]/75 text-[#f0f0f2] transition-all overflow-hidden;
+    @apply px-4 rounded py-0.5 font-semibold bg-[#f5f5f5]/[0.035] hover:bg-[#f0f0f2] hover:text-[#16181d] active:text-[#16181d] active:bg-[#f0f0f2]/75 text-[#f0f0f2] transition overflow-hidden;
   }
   header {
     @apply flex flex-col items-center justify-center sticky top-0 z-20 bg-[#111111] border-b shadow;
@@ -25,7 +25,7 @@
     @apply text-2xl md:text-[1.35rem];
   }
   .footer-links-panel-item {
-    @apply border-b-[1.5px] border-transparent hover:border-[#f5f5f5] w-fit transition-all md:duration-200 ease-in;
+    @apply border-b-[1.5px] border-transparent hover:border-[#f5f5f5] w-fit transition md:duration-200 ease-in;
   }
   .footer-panel-h2 {
     @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 rounded-b-md;
@@ -46,10 +46,10 @@
     @apply w-full list-disc px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-[#111111] flex flex-col gap-y-1;
   }
   .about-details-card ul li {
-    @apply transition-all md:duration-200 ease-in hover:text-[#f5f5f5];
+    @apply transition md:duration-200 ease-in hover:text-[#f5f5f5];
   }
   .social-link-item {
-    @apply p-2.5 md:p-4 bg-[#f5f5f5] rounded-full hover:text-[#fdfdff] hover:scale-110 active:scale-100 transition-all md:duration-200 ease-in;
+    @apply p-2.5 md:p-4 bg-[#f5f5f5] rounded-full hover:text-[#fdfdff] hover:scale-110 active:scale-100 transition md:duration-200 ease-in;
   }
   .social-link-ig-addon {
     @apply hover:bg-gradient-to-tr text-[#fd1d1d] from-[#f56040] via-[#fd1d1d] via-80% to-[#c13584] active:from-[#f56040]/85 active:via-[#fd1d1d]/85 active:to-[#c13584]/85;
@@ -70,10 +70,10 @@
     @apply flex flex-row items-center justify-center gap-1 w-fit text-xs font-semibold text-center rounded-bl drop-shadow;
   }
   .projects-card h3 span a {
-    @apply p-0.5 text-[#f5f5f5] rounded-full text-2xl aspect-square hover:scale-110 active:opacity-75 transition-all md:duration-200 ease-in;
+    @apply p-0.5 text-[#f5f5f5] rounded-full text-2xl aspect-square hover:scale-110 active:opacity-75 transition md:duration-200 ease-in;
   }
   .projects-card p {
-    @apply absolute opacity-100 bottom-0 md:opacity-0 transition-all ease-in md:duration-200 pt-1 pb-2 px-2 w-fit font-normal text-xs bg-[#111111]/65 text-[#f5f5f5] drop-shadow text-justify;
+    @apply absolute opacity-100 bottom-0 md:opacity-0 transition ease-in md:duration-200 pt-1 pb-2 px-2 w-fit font-normal text-xs bg-[#111111]/65 text-[#f5f5f5] drop-shadow text-justify;
   }
   .projects-card img {
     @apply aspect-square w-64 h-64 border-2 border-[#111111] bg-[#f5f5f5] rounded-b-xl select-none;
@@ -82,7 +82,7 @@
     @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-[#f5f5f5]/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-[#f5f5f5]/5 active:scale-95 border-[1.5px] border-current shadow w-fit rounded-md transition;
   }
   .feedback-tab-btn {
-    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-[#f5f5f5]/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-[#f5f5f5]/5 disabled:opacity-50 min-w-[50%] transition-all ease-in md:duration-200;
+    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-[#f5f5f5]/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-[#f5f5f5]/5 disabled:opacity-50 min-w-[50%] transition ease-in md:duration-200;
   }
   .feedback-tab-input {
     @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded;
