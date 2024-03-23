@@ -103,7 +103,7 @@ function Footer() {
     });
   };
   //Scroll to top when user switched page
-  scrollToTop();
+  //scrollToTop();
 
   function locateResumeReqInput() {
     if (inputResumeReqRef.current) {
