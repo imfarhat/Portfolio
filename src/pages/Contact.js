@@ -104,7 +104,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <main className="pt-16 py-24 ficjc flex-col gap-0 bg-[#16181d]">
+      <main className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d]">
         <section className="w-full max-w-7xl flex flex-col ficjc gap-8">
           <article className="flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">Contact</h1>

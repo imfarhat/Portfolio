@@ -29,7 +29,7 @@ function NoPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between gap-24 py-24 px-4 text-[#f5f5f5]/90 bg-[#16181d]">
+      <main className="flex flex-col items-center justify-between gap-8 py-4 md:pt-8 pb-16 text-[#f5f5f5]/90 bg-[#16181d]">
         <img src={error404Img} alt="404" className="rounded" />
         {/* <h2 className="text-3xl font-semibold">Sorry, page not found!</h2>
         <TbError404 className="text-9xl scale-[3]" /> */}
