@@ -6,7 +6,6 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Projects() {
-
   sessionStorage.setItem("previousPage", window.location.pathname);
 
   return (
@@ -19,7 +18,7 @@ function Projects() {
               Projects
             </h1>
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
-              Welcome to my{" "}
+              Welcome to my
               <span className="text-[#f5f5f5]">digital gallery</span>
               where pixels meet passion! Below, you'll find a curated selection
               of my proudest creations. From sleek website designs to robust
@@ -27,6 +26,7 @@ function Projects() {
               project represents a unique journey of creativity and
               craftsmanship.
             </p>
+            <h1>Here are some of my recent projects</h1>
           </article>
         </section>
         <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
