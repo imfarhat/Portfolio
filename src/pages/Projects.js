@@ -6,6 +6,7 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Projects() {
+  
   sessionStorage.setItem("previousPage", window.location.pathname);
 
   return (

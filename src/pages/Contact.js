@@ -11,7 +11,6 @@ function Contact() {
     phone: "",
     message: "",
   });
-  sessionStorage.setItem("previousPage", window.location.pathname);
 
   let name, value;
   const handleInputChange = (e) => {
@@ -99,6 +98,9 @@ function Contact() {
 
     return { submitDate, submitTime };
   };
+
+  sessionStorage.setItem("previousPage", window.location.pathname);
+
   return (
     <>
       <Header />

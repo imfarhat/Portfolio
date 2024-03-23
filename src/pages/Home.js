@@ -8,11 +8,12 @@ import { TbLoader } from "react-icons/tb";
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  sessionStorage.setItem("previousPage", window.location.pathname);
-
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
+
+  sessionStorage.setItem("previousPage", window.location.pathname);
+
   return (
     <>
       <Header />
