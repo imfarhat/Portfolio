@@ -94,6 +94,7 @@ function Header() {
     };
   }, [lastKeyPressed, navigate]);
 
+  //Function to get day
   function getDayName() {
     const days = [
       "Sunday",
@@ -107,6 +108,7 @@ function Header() {
     return days[new Date().getDay()];
   }
 
+  //Update day at 12:00:00hrs
   useEffect(() => {
     setDayName(getDayName());
     const millisecondsUntilMidnight =
