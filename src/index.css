@@ -4,10 +4,10 @@
 
 @layer components {
   .nav-link-n {
-    @apply px-2.5 pt-1 md:px-2.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
+    @apply px-2.5 pt-1 md:px-2.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none shadow;
   }
   .nav-link-w {
-    @apply px-1 pt-1 md:px-1.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none;
+    @apply px-1 pt-1 md:px-1.5 md:pt-2 md:pb-1.5 flex flex-col md:flex-row md:gap-1.5 items-center justify-center rounded-t-xl font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:scale-95 active:text-[#16181d] border md:border-2 border-transparent hover:border-[#f5f5f5] select-none shadow;
   }
   .nav-link-span {
     @apply text-xs md:text-base;
@@ -16,7 +16,7 @@
     @apply px-4 rounded py-0.5 font-semibold bg-[#f5f5f5]/[0.035] hover:bg-[#f0f0f2] hover:text-[#16181d] active:text-[#16181d] active:bg-[#f0f0f2]/75 text-[#f0f0f2] transition overflow-hidden;
   }
   header {
-    @apply flex flex-col items-center justify-center sticky top-0 z-20 bg-[#111111] border-b shadow;
+    @apply flex flex-col items-center justify-center sticky top-0 z-20 bg-[#111111]/90 backdrop-blur-sm border-b shadow;
   }
   nav {
     @apply px-2 py-1.5 md:px-2.5 md:py-2.5 flex items-center justify-between max-w-7xl w-full text-[#f5f5f5];
