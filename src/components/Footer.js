@@ -102,6 +102,8 @@ function Footer() {
       behavior: "smooth",
     });
   };
+  //Scroll to top when user switched page
+  scrollToTop();
 
   function locateResumeReqInput() {
     if (inputResumeReqRef.current) {
