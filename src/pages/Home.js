@@ -52,20 +52,20 @@ function Home() {
           </article>
 
           <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4">
-            <h1 className="rotate-0 lg:rotate-90 text-[#fdfdff] text-2xl md:text-3xl font-bold">
+            <h1 className="rotate-0 lg:rotate-90 text-[#f5f5f5] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <h3 className="programming-lang-card">
-                <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#fdfdff]/95 rounded" />
+                <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded" />
                 <span className="text-sm md:text-base">HTML</span>
               </h3>
               <h3 className="programming-lang-card">
-                <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#fdfdff]/95 rounded" />
+                <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded" />
                 <span className="text-sm md:text-base">CSS</span>
               </h3>
               <h3 className="programming-lang-card">
-                <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#fdfdff]/95 rounded p-1.5" />
+                <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded p-1.5" />
                 <span className="text-sm md:text-base">Tailwind</span>
               </h3>
               <h3 className="programming-lang-card">
@@ -73,7 +73,7 @@ function Home() {
                 <span className="text-sm md:text-base">JavaScript</span>
               </h3>
               <h3 className="programming-lang-card">
-                <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#fdfdff]/95 rounded p-1.5" />
+                <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded p-1.5" />
                 <span className="text-sm md:text-base">React JS</span>
               </h3>
             </div>
