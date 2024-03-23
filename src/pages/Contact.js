@@ -80,7 +80,7 @@ function Contact() {
       setTimeout(() => {
         submitButton.innerHTML = submitBtnInitailaValue;
         submitButton.disabled = false; // Enable submit button
-      }, 2500);
+      }, 5000);
     }
   };
 
