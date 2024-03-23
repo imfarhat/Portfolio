@@ -150,7 +150,10 @@ function Contact() {
                 <span>Gender:</span>
                 <aside className="flex items-start justify-center gap-4">
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="male" className="cursor-pointer">
+                    <label
+                      htmlFor="male"
+                      className="cursor-pointer select-none"
+                    >
                       Male
                     </label>
                     <input
@@ -165,7 +168,10 @@ function Contact() {
                   </div>
 
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="female" className="cursor-pointer">
+                    <label
+                      htmlFor="female"
+                      className="cursor-pointer select-none"
+                    >
                       Female
                     </label>
                     <input
@@ -180,7 +186,10 @@ function Contact() {
                   </div>
 
                   <div className="flex flex-row items-center justify-center gap-2">
-                    <label htmlFor="other" className="cursor-pointer">
+                    <label
+                      htmlFor="other"
+                      className="cursor-pointer select-none"
+                    >
                       Other
                     </label>
                     <input
