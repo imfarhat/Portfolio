@@ -28,7 +28,7 @@ function NoPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between gap-24 py-24 px-4 text-white/90 bg-[#16181d]">
+      <main className="flex flex-col items-center justify-between gap-24 py-24 px-4 text-[#f5f5f5]/90 bg-[#16181d]">
         <h2 className="text-3xl font-semibold">Sorry, page not found!</h2>
         <TbError404 className="text-9xl scale-[3]" />
         <div className="ficjc flex-col gap-2">
@@ -38,7 +38,7 @@ function NoPage() {
           </h3>
           <button
             onClick={goBackOrHome}
-            className="text-base px-4 py-1 bg-white text-black font-semibold rounded active:bg-white/75 transition active:scale-95 md:duration-200 ease-in"
+            className="text-base px-4 py-1 bg-[#f5f5f5] text-black font-semibold rounded active:bg-[#f5f5f5]/75 transition active:scale-95 md:duration-200 ease-in"
           >
             {previousPage ? "Go Back" : "Go Home"}
           </button>

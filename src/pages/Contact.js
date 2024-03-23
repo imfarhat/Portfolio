@@ -106,9 +106,9 @@ function Contact() {
       <Header />
       <main className="pt-16 py-24 ficjc flex-col gap-0 bg-[#16181d]">
         <section className="w-full max-w-7xl flex flex-col ficjc gap-8">
-          <article className="flex flex-col items-center justify-center gap-4 text-white md:rounded-md overflow-hidden p-2 md:p-4">
+          <article className="flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">Contact</h1>
-            <p className="px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black">
+            <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black">
               I'd love to hear from you, whether you have a question, a project
               idea, feedback, or just want to say hi. Feel free to reach out to
               us using the contact information provided above or by submitting a
@@ -120,7 +120,7 @@ function Contact() {
           <article className="px-2 py-4 md:px-4 md:py-6 flex md:flex-col-reverse items-center justify-center gap-3 md:gap-4 w-full text-3xl">
             <SocialLinks />
           </article>
-          <article className=" w-full flex flex-col items-center justify-center gap-4 text-white">
+          <article className=" w-full flex flex-col items-center justify-center gap-4 text-[#f5f5f5]">
             <h3 className="font-semibold text-xl">Send a mesage</h3>
             <form
               action=""

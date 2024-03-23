@@ -10,18 +10,18 @@ function About() {
       <Header />
       <main className="pt-16 py-24 ficjc flex-col gap-8 bg-[#16181d]">
         <section className="w-full flex flex-col ficjc gap-8">
-          <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-white md:rounded-md overflow-hidden p-2 md:p-4">
+          <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">
               About Me
             </h1>
-            <p className="px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
+            <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
               Greetings! I'm I. Frahta, a professional with a penchant for
               problem-solving and a passion for continuous learning. My journey
               in the realm of
-              <span className="text-white">web development,</span>
-              <span className="text-white">web design</span>
+              <span className="text-[#f5f5f5]">web development,</span>
+              <span className="text-[#f5f5f5]">web design</span>
               and
-              <span className="text-white">graphic-design</span>
+              <span className="text-[#f5f5f5]">graphic-design</span>
               has been driven by curiosity and fueled by a desire to make a
               positive impact through digital innovation.
             </p>

@@ -6,7 +6,7 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Projects() {
-  
+
   sessionStorage.setItem("previousPage", window.location.pathname);
 
   return (
@@ -14,15 +14,15 @@ function Projects() {
       <Header />
       <main className="pt-16 py-24 ficjc flex-col gap-8 bg-[#16181d]">
         <section className="w-full flex flex-col ficjc gap-8">
-          <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-white md:rounded-md overflow-hidden p-2 md:p-4">
+          <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">
               Projects
             </h1>
-            <p className="px-2 md:px-4 text-justify text-white/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
-              Welcome to my <span className="text-white">digital gallery</span>
+            <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
+              Welcome to my <span className="text-[#f5f5f5]">digital gallery</span>
               where pixels meet passion! Below, you'll find a curated selection
               of my proudest creations. From sleek website designs to robust
-              <span className="text-white">web applications,</span> each project
+              <span className="text-[#f5f5f5]">web applications,</span> each project
               represents a unique journey of creativity and craftsmanship.
             </p>
           </article>
