@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+// import React, { useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaCode } from "react-icons/fa6";
+// import { FaCode } from "react-icons/fa6";
 import {
   TbHomeQuestion,
   TbHomeSignal,
@@ -16,12 +17,13 @@ function Header() {
 
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
 
+  /*
   const [headerPromo, setHeaderPromo] = useState(
     localStorage.getItem("headerPromo") !== "closed"
   );
   const [dayName, setDayName] = useState("");
 
-  const headerPromoParentRef = useRef(null);
+  const headerPromoParentRef = useRef(null); */
 
   useEffect(() => {
     const handleOnline = () => setOnline(true);
@@ -36,6 +38,7 @@ function Header() {
     };
   }, [online]);
 
+  /*
   useEffect(() => {
     // Check if the user has previously closed the header promo
     const storedHeaderPromo = localStorage.getItem("headerPromo") === "closed";
@@ -49,6 +52,7 @@ function Header() {
     localStorage.setItem("headerPromo", "closed"); // Store in localStorage
     setLastKeyPressed(null);
   };
+  */
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -74,6 +78,7 @@ function Header() {
         case key === "c" && altKey:
           navigate("/contact");
           break;
+        /*
         case key === ">" && altKey:
           localStorage.setItem("headerPromo", "open"); // Store in localStorage
           setHeaderPromo(true);
@@ -82,6 +87,7 @@ function Header() {
           localStorage.setItem("headerPromo", "closed"); // Store in localStorage
           setHeaderPromo(false);
           break;
+          */
         default:
           break;
       }
@@ -94,6 +100,7 @@ function Header() {
     };
   }, [lastKeyPressed, navigate]);
 
+  /*
   //Function to get day
   function getDayName() {
     const days = [
@@ -117,11 +124,11 @@ function Header() {
       setDayName(getDayName());
     }, millisecondsUntilMidnight);
     return () => clearTimeout(timerId);
-  }, []);
+  }, []); */
 
   return (
     <header>
-      {headerPromo && (
+      {/* {headerPromo && (
         <section
           ref={headerPromoParentRef}
           className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md"
@@ -138,7 +145,7 @@ function Header() {
             It's {dayName}!
           </span>
         </section>
-      )}
+      )} */}
       <nav>
         <Link
           to="/"
