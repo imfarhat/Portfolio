@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
@@ -17,13 +17,13 @@ function NoPage() {
     return () => clearInterval(timer);
   }, []);
 
+  const goBackOrHome = useCallback(() => {
+    previousPage ? navigate(previousPage) : navigate("/");
+  }, [navigate, previousPage]);
+
   useEffect(() => {
     countdown === 0 && goBackOrHome();
-  }, [countdown]);
-
-  const goBackOrHome = () => {
-    previousPage ? navigate(previousPage) : navigate("/");
-  };
+  }, [countdown, goBackOrHome]);
 
   return (
     <>
