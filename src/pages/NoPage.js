@@ -31,14 +31,14 @@ function NoPage() {
       <main className="flex flex-col items-center justify-between gap-8 py-4 md:pt-8 pb-16 text-[#f5f5f5]/90 bg-[#16181d]">
         <h2 className="text-lg font-semibold">Sorry, page not found!</h2>
         <TbFaceIdError className="text-9xl" />
-        <div className="ficjc flex-col gap-2">
-          <h3>
+        <div className="ficjc flex-col gap-4">
+          <span className="text-sm">
             Redirecting to {previousPage ? "Previous" : "Home"} page in{" "}
             {countdown}s...
-          </h3>
+          </span>
           <button
             onClick={goBackOrHome}
-            className="text-base px-4 py-1 border-2 text-[#f5f5f5] hover:bg-[#f5f5f5] hover:text-[#16181d] active:text-[#16181d] font-semibold rounded active:bg-[#f5f5f5]/75 transition active:scale-95 md:duration-200 ease-in"
+            className="text-base px-4 py-1 border text-[#f5f5f5] hover:bg-[#f5f5f5] hover:text-[#16181d] active:text-[#16181d] font-semibold rounded active:bg-[#f5f5f5]/75 transition active:scale-95 md:duration-200 ease-in"
           >
             {previousPage ? "Go Back" : "Go Home"}
           </button>
