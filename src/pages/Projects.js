@@ -36,7 +36,7 @@ function Projects() {
                 T.I.S.
                 <span>
                   <Link
-                    to="https://tis.pages.dev"
+                    to="https://tis-farhat.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -70,7 +70,7 @@ function Projects() {
                 AttendQR
                 <span>
                   <Link
-                    to="https://attendqr.pages.dev"
+                    to="https://attendqr.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
