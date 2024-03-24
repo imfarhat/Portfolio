@@ -36,7 +36,7 @@ function Home() {
                 <div className="bg-gradient-to-t from-[#f5f5f5]/10 to-[#f5f5f5]/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition-all ease-in md:duration-200">
                     {!imageLoaded && (
-                      <TbLoader className="text-7xl h-[50%] w-[50%] text-[#f5f5f5]/25 animate-[spin_3s_ease-in-out_infinite]" />
+                      <TbLoader className="text-7xl h-[50%] w-[50%] text-[#f5f5f5]/25 animate-[spin_3s_ease-in-out_infinite] transition md:duration-200 ease-in" />
                     )}
                     <img
                       src="https://raw.githubusercontent.com/imfarhat/portfolio/main/src/assets/images/characters/working-dev.png"
@@ -44,6 +44,7 @@ function Home() {
                       loading="eager"
                       onLoad={handleImageLoad}
                       style={{ display: imageLoaded ? "block" : "none" }}
+                      className="group-hover:scale-105 transition md:duration-200 ease-in"
                     />
                   </div>
                 </div>
