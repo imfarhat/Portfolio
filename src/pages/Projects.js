@@ -139,7 +139,6 @@ function Projects() {
                     to="https://github.com/imfarhat/SkipPi?tab=readme-ov-file#installation"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hidden md:block"
                   >
                     <MdInstallDesktop />
                   </Link>
