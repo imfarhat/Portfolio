@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <script>
-      location.href !== "https://imfarhat.vercel.app" &&
-        (location.href = "https://imfarhat.vercel.app");
+      if (window.location.href !== "https://imfarhat.vercel.app")
+        window.location.href = "https://imfarhat.vercel.app";
     </script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
