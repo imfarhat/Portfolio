@@ -46,7 +46,7 @@ function Contact() {
       } */
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzAB1nnEfbceEnKJy-c70yjgzTchudAG88sQS1tBAdVi8EjjQYfep3mcFFvk1ZD_Vk/exec",
+        "https://script.google.com/macros/s/AKfycbzOfVyYAhi4EQgeqHbWigRiyc3NxoQspPUI38I5s2HbCHQcVZ5rwch-qPRE99ZdPFE/exec",
         {
           method: "POST",
           body: formData,
