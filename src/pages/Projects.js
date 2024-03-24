@@ -36,7 +36,7 @@ function Projects() {
                 T.I.S.
                 <span>
                   <Link
-                    to="https://tis-farhat.vercel.app"
+                    to="https://tis.pages.dev"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
