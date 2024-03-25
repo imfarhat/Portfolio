@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-// import React, { useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-// import { FaCode } from "react-icons/fa6";
+import { FaCode } from "react-icons/fa6";
 import {
   TbHomeQuestion,
   TbHomeSignal,
@@ -9,23 +8,26 @@ import {
   TbSend,
   TbWorldCode,
 } from "react-icons/tb";
+import debounce from "lodash/debounce";
 
 function Header() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const [online, setOnline] = useState(navigator.onLine);
-
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
-
-  /*
   const [headerPromo, setHeaderPromo] = useState(
     localStorage.getItem("headerPromo") !== "closed"
   );
-  const [dayName, setDayName] = useState("");
+  const [dayName, setDayName] = useState("Loading..");
+  const headerPromoParentRef = useRef(null);
 
-  const headerPromoParentRef = useRef(null); */
+  // Debounce key press event
+  const [debouncedKeyPress] = useState(() =>
+    debounce((e) => handleDebouncedKeyPress(e), 250)
+  );
 
   useEffect(() => {
+    // Handle online/offline status
     const handleOnline = () => setOnline(true);
     const handleOffline = () => setOnline(false);
 
@@ -38,114 +40,105 @@ function Header() {
     };
   }, [online]);
 
-  /*
   useEffect(() => {
     // Check if the user has previously closed the header promo
     const storedHeaderPromo = localStorage.getItem("headerPromo") === "closed";
     if (storedHeaderPromo) {
       setHeaderPromo(false); // Hide the promo if found in localStorage
     }
-  }, [headerPromo]);
+  }, []);
 
   const removeHeaderPromo = () => {
     setHeaderPromo(false); // Hide the promo
     localStorage.setItem("headerPromo", "closed"); // Store in localStorage
     setLastKeyPressed(null);
   };
-  */
 
   useEffect(() => {
+    // Handle key press events
     const handleKeyPress = (e) => {
-      const key = e.key.toLowerCase();
-      const altKey = e.altKey;
-
-      if (key === lastKeyPressed) {
-        return; // No need to proceed if last key and current key are the same
-      }
-      if (e.target.tagName.toLowerCase() === "input") {
-        return; // If the target is an input field, do nothing
-      }
-      switch (true) {
-        case key === "h" && altKey:
-          navigate("/");
-          break;
-        case key === "a" && altKey:
-          navigate("/about");
-          break;
-        case key === "p" && altKey:
-          navigate("/projects");
-          break;
-        case key === "c" && altKey:
-          navigate("/contact");
-          break;
-        /*
-        case key === ">" && altKey:
-          localStorage.setItem("headerPromo", "open"); // Store in localStorage
-          setHeaderPromo(true);
-          break;
-        case key === "<" && altKey:
-          localStorage.setItem("headerPromo", "closed"); // Store in localStorage
-          setHeaderPromo(false);
-          break;
-          */
-        default:
-          break;
-      }
-      setLastKeyPressed(key);
+      debouncedKeyPress(e); // Debounce the key press event
     };
 
     window.addEventListener("keydown", handleKeyPress);
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [lastKeyPressed, navigate]);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [debouncedKeyPress]);
 
-  /*
-  //Function to get day
-  function getDayName() {
+  const handleDebouncedKeyPress = useCallback(
+    (e) => {
+      const key = e.key.toLowerCase();
+      if (["input", "textarea"].includes(e.target.tagName.toLowerCase()))
+        return;
+      if (key === lastKeyPressed) return;
+      const actions = {
+        h: () => navigate("/"),
+        a: () => navigate("/about"),
+        p: () => navigate("/projects"),
+        c: () => navigate("/contact"),
+        ">": () => {
+          localStorage.setItem("headerPromo", "open");
+          setHeaderPromo(true);
+        },
+        "<": () => {
+          localStorage.setItem("headerPromo", "closed");
+          setHeaderPromo(false);
+        },
+      };
+
+      const action = actions[key];
+      if (action) {
+        action();
+        setLastKeyPressed(key);
+      }
+    },
+    [lastKeyPressed, navigate]
+  );
+
+  const updateDayName = useCallback(() => {
+    // Update day name only when the day changes
     const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
+      "Sunday!",
+      "Monday!",
+      "Tuesday!",
+      "Wednesday!",
+      "Thursday!",
+      "Friday!",
+      "Saturday!",
     ];
-    return days[new Date().getDay()];
-  }
+    const currentDate = new Date();
+    const currentDayIndex = currentDate.getDay();
+    setDayName(days[currentDayIndex]);
 
-  //Update day at 12:00:00hrs
-  useEffect(() => {
-    setDayName(getDayName());
     const millisecondsUntilMidnight =
-      24 * 60 * 60 * 1000 - (new Date() % (24 * 60 * 60 * 1000));
-    const timerId = setTimeout(() => {
-      setDayName(getDayName());
-    }, millisecondsUntilMidnight);
+      24 * 60 * 60 * 1000 - (currentDate % (24 * 60 * 60 * 1000));
+    const timerId = setTimeout(updateDayName, millisecondsUntilMidnight);
     return () => clearTimeout(timerId);
-  }, []); */
+  }, []);
 
+  useEffect(() => {
+    updateDayName(); // initial call
+    return () => {}; // Empty cleanup function to prevent re-renders
+  }, [updateDayName]);
+
+  // Render the component
   return (
     <header>
-      {/* {headerPromo && (
+      {headerPromo && (
         <section
           ref={headerPromoParentRef}
           className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md"
         >
           <span className="px-2 animate-bounce font-light">Hello World!</span>
           <button
-            title="Close (Alt + <), Undo (Alt + >)"
+            title="Close (<), Undo (>)"
             onClick={removeHeaderPromo}
             className="header-promo-close-btn"
           >
             <FaCode />
           </button>
-          <span className="px-2 animate-bounce font-light">
-            It's {dayName}!
-          </span>
+          <span className="px-2 animate-bounce font-light">It's {dayName}</span>
         </section>
-      )} */}
+      )}
       <nav>
         <Link
           to="/"
@@ -154,7 +147,7 @@ function Header() {
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">
-          <NavLink to="/" title="Home (Alt + h)" className="nav-link-n">
+          <NavLink to="/" title="Home (h)" className="nav-link-n">
             {online ? (
               <TbHomeSignal className="nav-link-icon" />
             ) : (
@@ -162,23 +155,15 @@ function Header() {
             )}
             <span className="nav-link-span">Home</span>
           </NavLink>
-          <NavLink to="/about" title="About (Alt + a)" className="nav-link-n">
+          <NavLink to="/about" title="About (a)" className="nav-link-n">
             <TbUserScan className="nav-link-icon" />
             <span className="nav-link-span">About</span>
           </NavLink>
-          <NavLink
-            to="/projects"
-            title="Projects (Alt + p)"
-            className="nav-link-w"
-          >
+          <NavLink to="/projects" title="Projects (p)" className="nav-link-w">
             <TbWorldCode className="nav-link-icon" />
             <span className="nav-link-span">Projects</span>
           </NavLink>
-          <NavLink
-            to="/contact"
-            title="Contact (Alt + c)"
-            className="nav-link-w"
-          >
+          <NavLink to="/contact" title="Contact (c)" className="nav-link-w">
             <TbSend className="nav-link-icon" />
             <span className="nav-link-span">Contact</span>
           </NavLink>
