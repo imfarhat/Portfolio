@@ -130,7 +130,7 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md"
+          className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md transition-all md:duration-200 ease-in"
         >
           <span className="px-2 animate-pulse font-light text-sm">
             Hello World!
