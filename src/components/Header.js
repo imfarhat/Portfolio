@@ -22,9 +22,7 @@ function Header() {
   const headerPromoParentRef = useRef(null);
 
   // Debounce key press event
-  const [debouncedKeyPress] = useState(() =>
-    debounce((e) => handleDebouncedKeyPress(e), 250)
-  );
+  useState(() => debounce((e) => handleDebouncedKeyPress(e), 250));
 
   useEffect(() => {
     // Handle online/offline status
@@ -47,54 +45,6 @@ function Header() {
       setHeaderPromo(false); // Hide the promo if found in localStorage to be closed
     }
   }, []);
-
-  const removeHeaderPromo = () => {
-    localStorage.setItem("headerPromo", "closed");
-    setHeaderPromo(false);
-    setLastKeyPressed("x");
-  };
-
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      debouncedKeyPress(e);
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [debouncedKeyPress]);
-
-  const handleDebouncedKeyPress = useCallback(
-    (e) => {
-      const key = e.key.toLowerCase();
-      const { tagName } = e.target;
-      if (["input", "textarea"].includes(tagName.toLowerCase())) return;
-      if (key === lastKeyPressed) return;
-
-      const actions = {
-        h: () => navigate("/"),
-        a: () => navigate("/about"),
-        p: () => navigate("/projects"),
-        c: () => navigate("/contact"),
-        u: () => {
-          localStorage.setItem("headerPromo", "open");
-          setHeaderPromo(true);
-        },
-        x: () => {
-          localStorage.setItem("headerPromo", "closed");
-          setHeaderPromo(false);
-        },
-      };
-
-      const action = actions[key];
-      if (action) {
-        action();
-        setLastKeyPressed(key);
-      }
-    },
-    [navigate, lastKeyPressed, setHeaderPromo]
-  );
 
   const updateDayName = useCallback(() => {
     const days = [
@@ -121,6 +71,59 @@ function Header() {
     //return () => {};
   }, [updateDayName]);
 
+  const handleDebouncedKeyPress = useCallback(
+    (e) => {
+      const key = e.key.toLowerCase();
+      const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
+      if (tagName && ["input", "textarea"].includes(tagName)) return;
+      if (key === lastKeyPressed) return; // Check if the current key is the same as the last one
+
+      const actions = {
+        h: () => navigate("/"),
+        a: () => navigate("/about"),
+        p: () => navigate("/projects"),
+        c: () => navigate("/contact"),
+        u: () => {
+          localStorage.setItem("headerPromo", "open");
+          setHeaderPromo(true);
+        },
+        x: () => {
+          if (!headerPromo) return;
+          if (
+            window.confirm(
+              "Are you sure you want to close the header promo? This action is permanent."
+            )
+          ) {
+            localStorage.setItem("headerPromo", "closed");
+            setHeaderPromo(false);
+          } else {
+            setTimeout(() => {
+              setLastKeyPressed(null);
+            }, 10);
+          }
+        },
+      };
+
+      const action = actions[key];
+      if (action) {
+        action();
+        setLastKeyPressed(key);
+      }
+    },
+    [navigate, lastKeyPressed, headerPromo]
+  );
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      handleDebouncedKeyPress(e); // Pass the event directly
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [handleDebouncedKeyPress]);
+
   // Render the component
   return (
     <header>
@@ -135,7 +138,7 @@ function Header() {
           <ShareButton />
           <button
             title="Close (x), Undo (u)"
-            onClick={removeHeaderPromo}
+            onClick={() => handleDebouncedKeyPress({ key: "x" })}
             className="header-promo-btn"
           >
             <IoCloseSharp />
