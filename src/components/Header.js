@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaCode } from "react-icons/fa6";
 import {
   TbHomeQuestion,
   TbHomeSignal,
@@ -8,7 +7,10 @@ import {
   TbSend,
   TbWorldCode,
 } from "react-icons/tb";
+import { IoCloseSharp } from "react-icons/io5";
 import debounce from "lodash/debounce";
+import ShareButton from "../components/ShareButton.js";
+import UrlCopyButton from "../components/UrlCopyButton.js";
 
 function Header() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -16,7 +18,7 @@ function Header() {
   const [online, setOnline] = useState(navigator.onLine);
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
   const [headerPromo, setHeaderPromo] = useState(
-    localStorage.getItem("headerPromo") !== "closed"
+    localStorage.getItem("headerPromo") === "open"
   );
   const [dayName, setDayName] = useState("Loading..");
   const headerPromoParentRef = useRef(null);
@@ -44,42 +46,44 @@ function Header() {
     // Check if the user has previously closed the header promo
     const storedHeaderPromo = localStorage.getItem("headerPromo") === "closed";
     if (storedHeaderPromo) {
-      setHeaderPromo(false); // Hide the promo if found in localStorage
+      setHeaderPromo(false); // Hide the promo if found in localStorage to be closed
     }
   }, []);
 
   const removeHeaderPromo = () => {
-    setHeaderPromo(false); // Hide the promo
-    localStorage.setItem("headerPromo", "closed"); // Store in localStorage
-    setLastKeyPressed(null);
+    localStorage.setItem("headerPromo", "closed");
+    setHeaderPromo(false);
+    setLastKeyPressed("x");
   };
 
   useEffect(() => {
-    // Handle key press events
     const handleKeyPress = (e) => {
-      debouncedKeyPress(e); // Debounce the key press event
+      debouncedKeyPress(e);
     };
 
     window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
   }, [debouncedKeyPress]);
 
   const handleDebouncedKeyPress = useCallback(
     (e) => {
       const key = e.key.toLowerCase();
-      if (["input", "textarea"].includes(e.target.tagName.toLowerCase()))
-        return;
+      const { tagName } = e.target;
+      if (["input", "textarea"].includes(tagName.toLowerCase())) return;
       if (key === lastKeyPressed) return;
+
       const actions = {
         h: () => navigate("/"),
         a: () => navigate("/about"),
         p: () => navigate("/projects"),
         c: () => navigate("/contact"),
-        ">": () => {
+        u: () => {
           localStorage.setItem("headerPromo", "open");
           setHeaderPromo(true);
         },
-        "<": () => {
+        x: () => {
           localStorage.setItem("headerPromo", "closed");
           setHeaderPromo(false);
         },
@@ -91,11 +95,10 @@ function Header() {
         setLastKeyPressed(key);
       }
     },
-    [lastKeyPressed, navigate]
+    [navigate, lastKeyPressed, setHeaderPromo]
   );
 
   const updateDayName = useCallback(() => {
-    // Update day name only when the day changes
     const days = [
       "Sunday!",
       "Monday!",
@@ -116,8 +119,8 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    updateDayName(); // initial call
-    return () => {}; // Empty cleanup function to prevent re-renders
+    updateDayName();
+    //return () => {};
   }, [updateDayName]);
 
   // Render the component
@@ -128,15 +131,19 @@ function Header() {
           ref={headerPromoParentRef}
           className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md"
         >
-          <span className="px-2 animate-bounce font-light">Hello World!</span>
+          <span className="px-2 animate-pulse font-light text-sm">
+            Hello World!
+          </span>
+          <ShareButton />
           <button
-            title="Close (<), Undo (>)"
+            title="Close (x), Undo (u)"
             onClick={removeHeaderPromo}
-            className="header-promo-close-btn"
+            className="header-promo-btn"
           >
-            <FaCode />
+            <IoCloseSharp />
           </button>
-          <span className="px-2 animate-bounce font-light transition-all md:duration-200 ease-in">
+          <UrlCopyButton />
+          <span className="px-2 animate-pulse font-light transition-all md:duration-200 ease-in text-sm">
             It's {dayName}
           </span>
         </section>
