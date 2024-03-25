@@ -5,7 +5,7 @@ import Footer from "../components/Footer.js";
 import { TbFaceIdError } from "react-icons/tb";
 
 function NoPage() {
-  const [countdown, setCountdown] = useState(10000000);
+  const [countdown, setCountdown] = useState(10);
   const navigate = useNavigate();
   const previousPage = sessionStorage.getItem("previousPage");
 
@@ -29,15 +29,15 @@ function NoPage() {
     <>
       <Header />
       <main className="flex flex-col items-center justify-between gap-16 py-32 text-[#f5f5f5]/90 bg-[#16181d]">
-        <h2 className="text-lg font-semibold">Sorry, page not found!</h2>
+        <h2 className="text-2xl font-semibold">Sorry, page not found!</h2>
         <TbFaceIdError className="text-9xl text-[#f5f5f5]/75 scale-125" />
         <div className="ficjc flex-col gap-6">
-          <span className="text-sm">
+          <span>
             Redirecting to {previousPage ? "Previous" : "Home"} page in{" "}
             {countdown}s...
           </span>
           <button onClick={goBackOrHome} className="back-or-home-btn">
-            {previousPage ? "Go Back" : "Go Home"}
+            Go {previousPage ? "Back" : "Home"} Now
           </button>
         </div>
       </main>
