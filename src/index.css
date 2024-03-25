@@ -31,7 +31,7 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 rounded-b-md;
   }
   .footer-link-card {
-    @apply flex flex-col items-start justify-center bg-gradient-to-br hover:bg-gradient-to-tl from-[#16181d] from-85% to-[#646674]/50 hover:to-[#646674] text-[#fdfdff] rounded-md w-full;
+    @apply flex flex-col items-start justify-center bg-gradient-to-b from-[#16181d] from-50% to-[#646674]/15 text-[#fdfdff] rounded-md w-full;
   }
   .footer-link-card ul {
     @apply p-2 md:px-4 flex flex-col gap-0.5;
@@ -40,7 +40,7 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 w-full rounded-t-md mb-2.5;
   }
   .about-details-card h3 {
-    @apply font-semibold text-lg py-2 px-4 text-center bg-[#f5f5f5]/5 w-full rounded-b-md mb-2.5;
+    @apply font-semibold text-lg text-center;
   }
   .about-details-card ul {
     @apply w-full list-disc px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-[#111111] flex flex-col gap-y-1;
@@ -58,7 +58,7 @@
     @apply cursor-pointer p-2 md:p-4 rounded bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-[#f5f5f5] flex flex-col gap-1 md:gap-2 items-center justify-center;
   }
   .about-details-card {
-    @apply cursor-pointer p-4 md:pt-0 bg-gradient-to-tl hover:bg-gradient-to-br rounded-md from-[#16181d] from-80% to-[#646674] hover:to-[#646675]/50 font-semibold text-[#f5f5f5] flex flex-col gap-1 items-center justify-center;
+    @apply cursor-pointer p-4 bg-gradient-to-t rounded-xl from-[#16181d] from-50% to-[#646674]/15 font-semibold text-[#f5f5f5] flex flex-col gap-6 items-center justify-center border-t-2;
   }
   .projects-card {
     @apply cursor-pointer w-64 relative flex-col items-center justify-center overflow-hidden rounded-xl shadow-inner shadow-[#111111];
