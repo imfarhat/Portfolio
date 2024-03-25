@@ -17,7 +17,13 @@ function Header() {
 
   const [online, setOnline] = useState(navigator.onLine);
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
-  const [headerPromo, setHeaderPromo] = useState(true);
+  const [headerPromo, setHeaderPromo] = useState(() => {
+    // Check if the user has previously closed the header promo
+    const storedHeaderPromo = localStorage.getItem("headerPromo") === "closed";
+    // If the stored value is 'closed', return false, otherwise return true (default)
+    return !storedHeaderPromo;
+  });
+
   const [dayName, setDayName] = useState("Loading..");
   const headerPromoParentRef = useRef(null);
 
