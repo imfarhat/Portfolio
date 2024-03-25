@@ -136,7 +136,9 @@ function Header() {
           >
             <FaCode />
           </button>
-          <span className="px-2 animate-bounce font-light">It's {dayName}</span>
+          <span className="px-2 animate-bounce font-light transition-all md:duration-200 ease-in">
+            It's {dayName}
+          </span>
         </section>
       )}
       <nav>
