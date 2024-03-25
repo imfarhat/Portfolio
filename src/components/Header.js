@@ -17,9 +17,7 @@ function Header() {
 
   const [online, setOnline] = useState(navigator.onLine);
   const [lastKeyPressed, setLastKeyPressed] = useState(null);
-  const [headerPromo, setHeaderPromo] = useState(
-    localStorage.getItem("headerPromo") === "open"
-  );
+  const [headerPromo, setHeaderPromo] = useState(true);
   const [dayName, setDayName] = useState("Loading..");
   const headerPromoParentRef = useRef(null);
 
