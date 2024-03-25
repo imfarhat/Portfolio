@@ -107,7 +107,7 @@
   input[type="email"],
   input[type="tel"],
   textarea {
-    @apply bg-[#f5f5f5];
+    @apply bg-[#fafafa];
   }
 
   input[type="radio"] {
