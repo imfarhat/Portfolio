@@ -120,14 +120,14 @@ function Contact() {
           <article className="px-2 py-4 md:px-4 md:py-6 flex md:flex-col-reverse items-center justify-center gap-3 md:gap-4 w-full text-3xl">
             <SocialLinks />
           </article>
-          <article className=" w-full flex flex-col items-center justify-center gap-4 text-[#f5f5f5]">
+          <article className="px-2 md:px-4 w-full flex flex-col items-center justify-center gap-4 text-[#f5f5f5]">
             <h3 className="font-semibold text-xl">Send a mesage</h3>
             <form
               action=""
               method="post"
               name="Contact"
               onSubmit={handleContactForm}
-              className="flex flex-col gap-2 md:gap-4 items-center justify-center w-full"
+              className="flex flex-col gap-4 md:gap-6 items-center justify-center w-full"
             >
               <div>
                 <label htmlFor="name">Name:</label>
