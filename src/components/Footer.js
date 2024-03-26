@@ -65,18 +65,26 @@ function Footer() {
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
+      // Option 1: Download from a URL (if resumePdf points to a valid URL)
       if (et.name === "Resumers") {
-        const url = resumePdf; // Assuming resumePdf contains the URL of the PDF file
+        const response = await fetch(resumePdf);
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const blob = await response.blob();
         const link = document.createElement("a");
-        link.href = url;
+        link.href = URL.createObjectURL(blob); // Create a temporary URL for the blob
         link.setAttribute("download", "Imran Farhat Resume.pdf");
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         submitButton.innerHTML = "Downloaded &check;";
+        return; // Exit the function after successful download
       }
     } catch (error) {
-      // Handle error here 
+      // Handle error here
       submitButton.innerHTML = "Error !";
       console.log(error);
     } finally {
