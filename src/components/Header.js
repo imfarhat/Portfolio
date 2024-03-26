@@ -146,7 +146,7 @@ function Header() {
           <button
             title="Close (x), Undo (u)"
             onClick={() => handleDebouncedKeyPress({ key: "x" })}
-            className="header-promo-btn active:rotate-[360deg] transition md:duration-200 ease-in"
+            className="header-promo-btn"
           >
             <IoCloseSharp />
           </button>{" "}
