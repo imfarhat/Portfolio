@@ -143,14 +143,14 @@ function Header() {
           <span className="px-2 animate-pulse text-[0.925rem] font-normal">
             Hello World!
           </span>
-          <ShareButton />
           <button
             title="Close (x), Undo (u)"
             onClick={() => handleDebouncedKeyPress({ key: "x" })}
             className="header-promo-btn"
           >
             <IoCloseSharp />
-          </button>
+          </button>{" "}
+          <ShareButton />
           <UrlCopyButton />
           {/* <span className="px-2 animate-pulse transition-all md:duration-200 ease-in text-sm font-normal">
             It's {dayName}
