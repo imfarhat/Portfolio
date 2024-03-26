@@ -129,7 +129,7 @@ function Contact() {
               className="flex flex-col gap-4 md:gap-6 items-center justify-center w-full"
             >
               <div>
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">Name*</label>
                 <input
                   type="text"
                   maxLength="50"
@@ -146,7 +146,7 @@ function Contact() {
               </div>
 
               <div>
-                <span>Gender:</span>
+                <span>Gender*</span>
                 <aside className="flex items-start justify-center gap-4">
                   <div className="flex flex-row items-center justify-center gap-2">
                     <label
@@ -205,7 +205,7 @@ function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email*</label>
                 <input
                   type="email"
                   maxLength="35"
@@ -221,7 +221,7 @@ function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="phone">Phone (+91):</label>
+                <label htmlFor="phone">Phone (+91)*</label>
                 <input
                   type="tel"
                   maxLength="10"
@@ -238,7 +238,7 @@ function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message">Message:</label>
+                <label htmlFor="message">Message*</label>
                 <textarea
                   rows="5"
                   minLength="10"
