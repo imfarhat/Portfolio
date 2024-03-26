@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   TbHomeQuestion,
@@ -24,12 +24,6 @@ function Header() {
     return !storedHeaderPromo;
   });
 
-  // const [dayName, setDayName] = useState("Loading..");
-  const headerPromoParentRef = useRef(null);
-
-  // Debounce key press event
-  useState(() => debounce((e) => handleDebouncedKeyPress(e), 250));
-
   useEffect(() => {
     // Handle online/offline status
     const handleOnline = () => setOnline(true);
@@ -51,33 +45,6 @@ function Header() {
       setHeaderPromo(false); // Hide the promo if found in localStorage to be closed
     }
   }, []);
-
-  /*
-  const updateDayName = useCallback(() => {
-    const days = [
-      "Sunday!",
-      "Monday!",
-      "Tuesday!",
-      "Wednesday!",
-      "Thursday!",
-      "Friday!",
-      "Saturday!",
-    ];
-    const currentDate = new Date();
-    const currentDayIndex = currentDate.getDay();
-    setDayName(days[currentDayIndex]);
-
-    const millisecondsUntilMidnight =
-      24 * 60 * 60 * 1000 - (currentDate % (24 * 60 * 60 * 1000));
-    const timerId = setTimeout(updateDayName, millisecondsUntilMidnight);
-    return () => clearTimeout(timerId);
-  }, []);
-
-  useEffect(() => {
-    updateDayName();
-    //return () => {};
-  }, [updateDayName]);
-  */
 
   const handleDebouncedKeyPress = useCallback(
     (e) => {
@@ -123,13 +90,17 @@ function Header() {
   );
 
   useEffect(() => {
+    const debouncedKeyPress = debounce((e) => handleDebouncedKeyPress(e), 200);
     const handleKeyPress = (e) => {
-      handleDebouncedKeyPress(e); // Pass the event directly
+      debouncedKeyPress(e);
     };
 
     window.addEventListener("keydown", handleKeyPress);
+
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
+      // Cleanup debounce function
+      debouncedKeyPress.cancel();
     };
   }, [handleDebouncedKeyPress]);
 
@@ -137,10 +108,7 @@ function Header() {
   return (
     <header>
       {headerPromo && (
-        <section
-          ref={headerPromoParentRef}
-          className="flex flex-row-reverse w-full gap-2 md:gap-4 px-2 md:px-1 pt-1.5 items-center justify-end md:justify-center max-w-7xl text-[#f5f5f5] font-bold rounded-b-md"
-        >
+        <section className="flex flex-row-reverse w-full gap-2 md:gap-4 px-2 md:px-1 pt-1.5 items-center justify-end md:justify-center max-w-7xl text-[#f5f5f5] font-bold rounded-b-md">
           <span className="px-2 animate-pulse text-[0.925rem] font-normal">
             Hello World!
           </span>
@@ -153,9 +121,6 @@ function Header() {
           </button>
           <ShareButton />
           <UrlCopyButton />
-          {/* <span className="px-2 animate-pulse transition-all md:duration-200 ease-in text-sm font-normal">
-            It's {dayName}
-          </span> */}
         </section>
       )}
       <nav>
