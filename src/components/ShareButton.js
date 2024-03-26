@@ -15,7 +15,7 @@ const ShareButton = () => {
     try {
       if (navigator.share) {
         const data = {
-          title: shareTitle,
+          title: `${shareTitle} Web App Link`,
           text: `${shareTitle}:`,
           url: `${shareUrl}\n\n`,
         };
