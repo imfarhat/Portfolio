@@ -65,18 +65,17 @@ function Footer() {
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
-      setTimeout(() => {
-        if (et.name === "Resumers") {
-          const url = resumePdf; // Assuming resumePdf contains the URL of the PDF file
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "Imran Farhat Resume.pdf");
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          submitButton.innerHTML = "Downloaded &check;";
-        }
-      }, 1000);
+
+      if (et.name === "Resumers") {
+        const url = resumePdf; // Assuming resumePdf contains the URL of the PDF file
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "Imran Farhat Resume.pdf");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        submitButton.innerHTML = "Downloaded &check;";
+      }
     } catch (error) {
       // Handle error here
       submitButton.innerHTML = "Error !";
