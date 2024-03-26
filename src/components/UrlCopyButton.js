@@ -4,16 +4,14 @@ import { MdOutlineContentCopy, MdLibraryAddCheck } from "react-icons/md";
 const CopyButton = () => {
   const [copied, setCopied] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
-  const [shareTitle, setShareTitle] = useState("");
 
   useEffect(() => {
     setShareUrl(window.location.origin);
-    setShareTitle(document.title);
   }, []);
 
   const copyToClipboard = async (e) => {
     try {
-      const textToCopy = `${shareTitle}: ${shareUrl}`;
+      const textToCopy = `${shareUrl}`;
       await navigator.clipboard.writeText(textToCopy);
       // console.log("Copied to clipboard");
       e.target.disabled = true; // Disable the button after clicking
