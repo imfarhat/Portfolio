@@ -2,7 +2,7 @@
 
 # Farhat Portfolio
 
-Welcome to Farhat Portfolio, a web application showcasing the work and projects of I. Farhat.
+Look through I. Farhat's creative portfolio demonstrating the competence in HTML, CSS, Tailwind CSS, JavaScript and React JS. Discover amazing projects, ideas and their implementations!
 
 ## Description
 
