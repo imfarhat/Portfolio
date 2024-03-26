@@ -76,7 +76,6 @@ function Contact() {
         phone: "",
         message: "",
       });
-      et.reset(); // Reset the form
       setTimeout(() => {
         submitButton.innerHTML = submitBtnInitailaValue;
         submitButton.disabled = false; // Enable submit button
