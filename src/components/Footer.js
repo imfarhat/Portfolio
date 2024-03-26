@@ -65,26 +65,16 @@ function Footer() {
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
-      setTimeout(async () => {
+      setTimeout(() => {
         if (et.name === "Resumers") {
-          try {
-            const response = await fetch(resumePdf);
-            if (!response.ok) {
-              throw new Error("Failed to fetch PDF");
-            }
-            const blob = await response.blob();
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-            link.setAttribute("download", "Imran Farhat Resume.pdf");
-            document.body.appendChild(link).click();
-            document.body.removeChild(link);
-            submitButton.innerHTML = "Downloaded &check;";
-          } catch (error) {
-            console.error("Error downloading PDF:", error);
-            // Update UI to inform the user of the error
-            submitButton.innerHTML = "Error !";
-          }
+          const url = resumePdf; // Assuming resumePdf contains the URL of the PDF file
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "Imran Farhat Resume.pdf");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          submitButton.innerHTML = "Downloaded &check;";
         }
       }, 1000);
     } catch (error) {
