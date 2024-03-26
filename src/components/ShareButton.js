@@ -25,7 +25,7 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `${shareDescription}\n${shareUrl}`, // Include description and URL
+          text: `${shareTitle}\n${shareDescription}\n\n${shareUrl}`, // Include title, description, and URL
           url: shareUrl,
           files: [], // Initialize files array
         };
