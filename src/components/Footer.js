@@ -17,9 +17,7 @@ function Footer() {
     value = e.target.value;
     setUser({ ...user, [name]: value });
   };
-  //
-  //console.log("Hey threre!");
-  //
+
   const handleFooterForm = async (e) => {
     e.preventDefault();
     const et = e.target;
@@ -71,6 +69,9 @@ function Footer() {
         if (et.name === "Resumers") {
           try {
             const response = await fetch(resumePdf);
+            if (!response.ok) {
+              throw new Error("Failed to fetch PDF");
+            }
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
             const link = document.createElement("a");
@@ -80,7 +81,9 @@ function Footer() {
             document.body.removeChild(link);
             submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
-            throw new Error(error);
+            console.error("Error downloading PDF:", error);
+            // Update UI to inform the user of the error
+            submitButton.innerHTML = "Error !";
           }
         }
       }, 1000);
