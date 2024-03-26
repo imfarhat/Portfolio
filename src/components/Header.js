@@ -99,7 +99,7 @@ function Header() {
           if (!headerPromo) return;
           if (
             window.confirm(
-              `Are you sure you want to close the section?\nUndo by pressing 'u' or clearing site data`
+              `Are you sure you want to close the "Hello World!" section?\nUndo by pressing 'u' or clearing site data.`
             )
           ) {
             localStorage.setItem("headerPromo", "closed");
