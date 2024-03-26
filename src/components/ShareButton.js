@@ -29,8 +29,6 @@ const ShareButton = () => {
     }
   };
 
-
-
   return (
     <button onClick={handleShare} title="Share (s)" className="header-promo-btn">
       <GiShare />
