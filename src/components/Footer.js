@@ -92,7 +92,6 @@ function Footer() {
         resumeEmail: "",
         folioRating: null,
       });
-      et.reset(); // Reset the form
       setTimeout(() => {
         submitButton.innerHTML = submitBtnInitailaValue;
         submitButton.disabled = false; // Enable submit button
