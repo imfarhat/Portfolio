@@ -30,7 +30,6 @@ Installing Farhat Portfolio allows for convenient access to the portfolio as a s
 
 ## Tech Stacks Used
 
-- HTML
 - Tailwind CSS
 - React JS
 
