@@ -23,7 +23,7 @@ function Footer() {
     const et = e.target;
     const submitButton = et.querySelector('button[type="submit"]');
 
-    const submitBtnInitailaValue = submitButton.innerHTML;
+    const submitBtnInitialaValue = submitButton.innerHTML;
     submitButton.innerHTML = "Wait... &#x23F3;";
     submitButton.disabled = true; // Disable submit button
 
@@ -93,7 +93,7 @@ function Footer() {
         folioRating: null,
       });
       setTimeout(() => {
-        submitButton.innerHTML = submitBtnInitailaValue;
+        submitButton.innerHTML = submitBtnInitialaValue;
         submitButton.disabled = false; // Enable submit button
       }, 5000);
     }
