@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
+import resumePdf from "../assets/docs/IMRAN FARHAT RESUME.pdf";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -61,8 +62,17 @@ function Footer() {
       if (result === "error") {
         throw new Error("Backend response was not ok");
       }
-      submitButton.innerHTML = "Success &check;";
       // Handle success response here
+      submitButton.innerHTML = "Success &check;";
+      setTimeout(() => {
+        if (et.name === "Resumers") {
+          const link = document.createElement("a");
+          link.href = resumePdf;
+          link.download = "Imran Farhat Resume.pdf";
+          link.click();
+          link.remove();
+        }
+      }, 1000);
     } catch (error) {
       submitButton.innerHTML = "Error !";
       console.log(error);
