@@ -5,7 +5,6 @@ const ShareButton = () => {
   const [shareUrl, setShareUrl] = useState("");
   const [shareTitle, setShareTitle] = useState("");
   const [shareDescription, setShareDescription] = useState("");
-  const shareImage = "/android-chrome-512x512.png"; // Path to the image in the public folder
 
   useEffect(() => {
     setShareUrl(window.location.origin);
@@ -25,20 +24,9 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `${shareTitle}: ${shareUrl}\n${shareDescription}\n${shareImage}`, // Include title, URL, description, and image
+          text: `${shareTitle}: ${shareUrl}\n${shareDescription}`, // Only include title, URL, and description
           url: shareUrl,
-          files: [], // Initialize files array
         };
-
-        // Fetch the image file
-        const response = await fetch(shareImage);
-        const blob = await response.blob();
-        const file = new File([blob], "android-chrome-512x512.png", {
-          type: "image/png",
-        });
-
-        // Add the file to the files array
-        data.files.push(file);
 
         await navigator.share(data);
       } else {
@@ -48,6 +36,7 @@ const ShareButton = () => {
       console.error("Error sharing:", error);
     }
   };
+
 
   return (
     <button onClick={handleShare} title="Share (s)" className="header-promo-btn">
