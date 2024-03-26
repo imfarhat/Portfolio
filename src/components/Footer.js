@@ -354,6 +354,7 @@ function Footer() {
                 value={user.subEmail}
                 onChange={handleInputChange}
                 className="feedback-tab-input"
+                title="Enter your email to subscribe to our newsletter!"
               />
               <button
                 type="submit"
@@ -385,6 +386,7 @@ function Footer() {
                 onChange={handleInputChange}
                 ref={inputResumeReqRef}
                 className="feedback-tab-input"
+                title="Enter your email to download resume!"
               />
               <button
                 type="submit"
