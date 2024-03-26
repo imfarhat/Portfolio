@@ -23,7 +23,7 @@ function Footer() {
     const et = e.target;
     const submitButton = et.querySelector('button[type="submit"]');
 
-    const submitBtnInitialValue = submitButton.innerHTML;
+    const submitBtnInitailaValue = submitButton.innerHTML;
     submitButton.innerHTML = "Wait... &#x23F3;";
     submitButton.disabled = true; // Disable submit button
 
@@ -39,6 +39,11 @@ function Footer() {
       formData.append("submitTime", submitTime);
       formData.append("formName", et.name);
       formData.append("origin", window.location.origin);
+
+      // Example: log the formData for demonstration
+      /* for (let pair of formData.entries()) {
+        console.log(pair[0] + ":" + pair[1]);
+      } */
 
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbzOfVyYAhi4EQgeqHbWigRiyc3NxoQspPUI38I5s2HbCHQcVZ5rwch-qPRE99ZdPFE/exec",
@@ -57,7 +62,6 @@ function Footer() {
       if (result === "error") {
         throw new Error("Backend response was not ok");
       }
-
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
@@ -65,9 +69,6 @@ function Footer() {
         if (et.name === "Resumers") {
           try {
             const response = await fetch(resumePdf);
-            if (!response.ok) {
-              throw new Error("Failed to download resume");
-            }
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
             const link = document.createElement("a");
@@ -77,15 +78,14 @@ function Footer() {
             document.body.removeChild(link);
             submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
-            console.error(error);
-            submitButton.innerHTML = "Error !";
+            throw new Error(error);
           }
         }
       }, 1000);
     } catch (error) {
       // Handle error here
-      console.error(error);
       submitButton.innerHTML = "Error !";
+      console.log(error);
     } finally {
       setUser({
         subEmail: "",
@@ -93,7 +93,7 @@ function Footer() {
         folioRating: null,
       });
       setTimeout(() => {
-        submitButton.innerHTML = submitBtnInitialValue;
+        submitButton.innerHTML = submitBtnInitailaValue;
         submitButton.disabled = false; // Enable submit button
       }, 5000);
     }
