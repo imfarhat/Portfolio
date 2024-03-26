@@ -66,17 +66,13 @@ function Footer() {
       submitButton.innerHTML = "Success &check;";
       setTimeout(() => {
         if (et.name === "Resumers") {
-          const link = document.createElement("a");
-          link.href = resumePdf;
-          link.download = "Imran Farhat Resume.pdf";
-          link.click();
-          link.remove();
+          window.open(resumePdf, "_blank");
         }
       }, 1000);
     } catch (error) {
+      // Handle error here
       submitButton.innerHTML = "Error !";
       console.log(error);
-      // Handle error here
     } finally {
       setUser({
         subEmail: "",
