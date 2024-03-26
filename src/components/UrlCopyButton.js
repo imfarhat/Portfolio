@@ -7,7 +7,7 @@ const CopyButton = () => {
   const [shareTitle, setShareTitle] = useState("");
 
   useEffect(() => {
-    setShareUrl(window.location.href);
+    setShareUrl(window.location.hostname);
     setShareTitle(document.title);
   }, []);
 
