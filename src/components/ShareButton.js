@@ -4,19 +4,11 @@ import { GiShare } from "react-icons/gi";
 const ShareButton = () => {
   const [shareUrl, setShareUrl] = useState("");
   const [shareTitle, setShareTitle] = useState("");
-  const [shareDescription, setShareDescription] = useState("");
 
   useEffect(() => {
     setShareUrl(window.location.origin);
     setShareTitle(document.title);
 
-    // Get the description from the meta tag
-    const descriptionMetaTag = document.querySelector(
-      'meta[name="description"]'
-    );
-    if (descriptionMetaTag) {
-      setShareDescription(descriptionMetaTag.content);
-    }
   }, []);
 
   const handleShare = async () => {
@@ -24,7 +16,7 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `*${shareTitle}*: ${shareDescription}\n\n`, // Bold the title
+          text: `${shareTitle}`, 
           url: shareUrl,
         };
 
