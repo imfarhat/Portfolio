@@ -1,4 +1,4 @@
-<div align="center"><a href="https://farhat.vercel.app"><img src="https://raw.githubusercontent.com/imfarhat/Portfolio/main/public/apple-touch-icon.png" alt="Farhat Portfolio Logo" height="75"></a></div>
+#### <div align="center"><a href="https://farhat.vercel.app"><img src="https://raw.githubusercontent.com/imfarhat/Portfolio/main/public/apple-touch-icon.png" alt="Farhat Portfolio Logo" height="75"></a></div>
 
 # Farhat Portfolio
 
