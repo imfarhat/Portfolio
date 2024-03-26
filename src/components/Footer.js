@@ -87,12 +87,12 @@ function Footer() {
       submitButton.innerHTML = "Error !";
       console.log(error);
     } finally {
-      setUser({
-        subEmail: "",
-        resumeEmail: "",
-        folioRating: null,
-      });
       setTimeout(() => {
+        setUser({
+          subEmail: "",
+          resumeEmail: "",
+          folioRating: null,
+        });
         submitButton.innerHTML = submitBtnInitialaValue;
         submitButton.disabled = false; // Enable submit button
       }, 5000);
