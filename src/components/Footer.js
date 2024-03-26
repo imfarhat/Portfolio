@@ -78,7 +78,8 @@ function Footer() {
             document.body.removeChild(link);
             submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
-            throw new Error(error);
+            submitButton.innerHTML = "Error !";
+            console.log(error);
           }
         }
       }, 1000);
