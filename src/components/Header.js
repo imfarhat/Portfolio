@@ -91,7 +91,7 @@ function Header() {
         a: () => navigate("/about"),
         p: () => navigate("/projects"),
         c: () => navigate("/contact"),
-        s: () => handleShare(),
+        // s: () => handleShare(),
         u: () => {
           localStorage.setItem("headerPromo", "open");
           setHeaderPromo(true);
@@ -150,7 +150,7 @@ function Header() {
             className="header-promo-btn"
           >
             <IoCloseSharp />
-          </button>{" "}
+          </button>
           <ShareButton />
           <UrlCopyButton />
           {/* <span className="px-2 animate-pulse transition-all md:duration-200 ease-in text-sm font-normal">
