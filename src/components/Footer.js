@@ -63,14 +63,24 @@ function Footer() {
         throw new Error("Backend response was not ok");
       }
       // Handle success response here
-      submitButton.innerHTML = "Success &check;";
-      setTimeout(() => {
+      submitButton.innerHTML =
+        et.name === "Resumers" ? "Downloading..." : "Success &check;";
+      setTimeout(async () => {
         if (et.name === "Resumers") {
-          const link = document.createElement("a");
-          link.href = resumePdf;
-          link.setAttribute("download", "Imran_Farhat_Resume.pdf");
-          document.body.appendChild(link).click();
-          document.body.removeChild(link);
+          try {
+            const response = await fetch(resumePdf);
+            const blob = await response.blob();
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", "Imran Farhat Resume.pdf");
+
+            document.body.appendChild(link).click();
+            document.body.removeChild(link);
+          } catch (error) {
+             throw new Error(error);
+          }
         }
       }, 1000);
     } catch (error) {
