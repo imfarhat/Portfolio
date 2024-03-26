@@ -64,15 +64,22 @@ function Footer() {
       }
       // Handle success response here
       submitButton.innerHTML = "Success &check;";
+
       setTimeout(() => {
         if (et.name === "Resumers") {
-          window.open(resumePdf, "_blank");
+          const link = document.createElement("a");
+          link.href = resumePdf;
+          link.download = "Imran Farhat Resume.pdf"; // Set desired file name here
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link); // Remove the link after clicking
         }
       }, 1000);
+    
     } catch (error) {
-      // Handle error here
       submitButton.innerHTML = "Error !";
       console.log(error);
+      // Handle error here
     } finally {
       setUser({
         subEmail: "",
