@@ -17,7 +17,9 @@ function Footer() {
     value = e.target.value;
     setUser({ ...user, [name]: value });
   };
-
+  //
+  console.log("Hey threre!");
+  //
   const handleFooterForm = async (e) => {
     e.preventDefault();
     const et = e.target;
@@ -78,8 +80,7 @@ function Footer() {
             document.body.removeChild(link);
             submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
-            submitButton.innerHTML = "Error !";
-            console.log(error);
+            throw new Error(error);
           }
         }
       }, 1000);
