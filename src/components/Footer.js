@@ -71,15 +71,14 @@ function Footer() {
             const response = await fetch(resumePdf);
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
-
             const link = document.createElement("a");
             link.href = url;
             link.setAttribute("download", "Imran Farhat Resume.pdf");
-
             document.body.appendChild(link).click();
             document.body.removeChild(link);
+            submitButton.innerHTML = "Success &check;";
           } catch (error) {
-             throw new Error(error);
+            throw new Error(error);
           }
         }
       }, 1000);
