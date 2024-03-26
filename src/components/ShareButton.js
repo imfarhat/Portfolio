@@ -24,7 +24,7 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `${shareTitle}: ${shareDescription}`, // Only include title and description
+          text: `<b>${shareTitle}</b>: ${shareDescription}\n`, // Bold the title
           url: shareUrl,
         };
 
@@ -36,6 +36,7 @@ const ShareButton = () => {
       console.error("Error sharing:", error);
     }
   };
+
 
 
   return (
