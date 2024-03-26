@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
-import resumePdf from "../assets/docs/IMRAN FARHAT RESUME.pdf";
+import resumePdf from "../assets/docs/i-farhat-resume.pdf";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -68,9 +68,9 @@ function Footer() {
         if (et.name === "Resumers") {
           const link = document.createElement("a");
           link.href = resumePdf;
-          link.setAttribute("download", "Imran_Farhat_Resume.pdf"); // or "Imran-Farhat-Resume.pdf"
+          link.setAttribute("download", "Imran_Farhat_Resume.pdf");
           document.body.appendChild(link).click();
-          document.body.removeChild(link); // Remove the link after clicking
+          document.body.removeChild(link);
         }
       }, 1000);
     } catch (error) {
