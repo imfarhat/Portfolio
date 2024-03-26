@@ -22,7 +22,7 @@ function Home() {
           <article className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
             <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-[#f5f5f5]">
               <h1 className="text-3xl font-bold">
-                Welcome to I Farhat's Portfolio Website!
+                Welcome to I. Farhat's Portfolio Website!
               </h1>
               <p className="text-[#f5f5f5]/75">
                 I am I. Farhat, a passionate web developer with expertise in
