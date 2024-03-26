@@ -31,7 +31,7 @@ function Footer() {
       // Get current date and time
       const { submitDate, submitTime } = await getDateTime();
 
-      // Get form data
+      // Get form data..
       const formData = new FormData(et);
 
       // Append submitDate and submitTime to the formData
