@@ -17,9 +17,7 @@ function Footer() {
     value = e.target.value;
     setUser({ ...user, [name]: value });
   };
-  //
-  console.log("Hey threre!");
-  //
+
   const handleFooterForm = async (e) => {
     e.preventDefault();
     const et = e.target;
