@@ -9,7 +9,7 @@ const ShareButton = () => {
 
   useEffect(() => {
     setShareUrl(window.location.origin);
-    setShareTitle(document.title + " Web App");
+    setShareTitle(document.title);
 
     // Get the description from the meta tag
     const descriptionMetaTag = document.querySelector(
