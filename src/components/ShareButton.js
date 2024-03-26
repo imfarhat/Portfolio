@@ -50,7 +50,7 @@ const ShareButton = () => {
   };
 
   return (
-    <button onClick={handleShare} title="Share" className="header-promo-btn">
+    <button onClick={handleShare} title="Share (s)" className="header-promo-btn">
       <GiShare />
     </button>
   );

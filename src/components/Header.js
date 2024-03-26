@@ -91,6 +91,7 @@ function Header() {
         a: () => navigate("/about"),
         p: () => navigate("/projects"),
         c: () => navigate("/contact"),
+        s: () => handleShare(),
         u: () => {
           localStorage.setItem("headerPromo", "open");
           setHeaderPromo(true);
