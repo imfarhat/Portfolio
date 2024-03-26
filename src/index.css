@@ -13,7 +13,7 @@
     @apply text-xs md:text-base;
   }
   .header-promo-btn {
-    @apply p-2 rounded-full font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/85 active:text-[#16181d] border md:border border-transparent hover:border-[#f5f5f5] select-none shadow;
+    @apply p-2 rounded-full font-semibold bg-[#f5f5f5]/[0.075] backdrop-blur-sm transition md:duration-200 ease-in active:bg-[#f5f5f5]/75 active:text-[#16181d] border md:border border-transparent hover:border-[#f5f5f5] select-none shadow;
   }
   header {
     @apply flex flex-col items-center justify-center sticky top-0 z-20 bg-[#111111]/90 backdrop-blur-sm border-b shadow transition-all md:duration-200 ease-in;

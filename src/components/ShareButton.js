@@ -50,7 +50,7 @@ const ShareButton = () => {
   };
 
   return (
-    <button onClick={handleShare} title="Share" className="header-promo-btn">
+    <button onClick={handleShare} title="Share" className="header-promo-btn active:rotate-[360deg] transition md:duration-200 ease-in">
       <GiShare />
     </button>
   );
