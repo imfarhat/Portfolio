@@ -93,10 +93,13 @@ function Footer() {
         resumeEmail: "",
         folioRating: null,
       });
-      setTimeout(() => {
-        submitButton.innerHTML = submitBtnInitialaValue;
-        submitButton.disabled = false; // Enable submit button
-      }, 5000);
+      setTimeout(
+        () => {
+          submitButton.innerHTML = submitBtnInitialaValue;
+          submitButton.disabled = false; // Enable submit button
+        },
+        et.name === "Resumers" ? 6000 : 5000
+      );
     }
   };
 
