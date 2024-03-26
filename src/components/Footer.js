@@ -79,14 +79,14 @@ function Footer() {
             submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
             submitButton.innerHTML = "Error !";
-            console.log(error);
+            console.error(error);
           }
         }
       }, 1000);
     } catch (error) {
       // Handle error here
       submitButton.innerHTML = "Error !";
-      console.log(error);
+      console.error(error);
     } finally {
       setUser({
         subEmail: "",
