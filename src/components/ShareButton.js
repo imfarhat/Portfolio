@@ -1,29 +1,59 @@
-const handleShare = async () => {
-  try {
-    if (navigator.share) {
-      const shareContent = `${shareTitle}: ${shareUrl}\n${shareDescription}`; // Combine title, URL, and description
-      const data = {
-        title: shareTitle,
-        text: shareContent,
-        url: shareUrl,
-        files: [], // Initialize files array
-      };
+import React, { useState, useEffect } from "react";
+import { GiShare } from "react-icons/gi";
 
-      // Fetch the image file
-      const response = await fetch(shareImage);
-      const blob = await response.blob();
-      const file = new File([blob], "android-chrome-512x512.png", {
-        type: "image/png",
-      });
+const ShareButton = () => {
+  const [shareUrl, setShareUrl] = useState("");
+  const [shareTitle, setShareTitle] = useState("");
+  const [shareDescription, setShareDescription] = useState("");
+  const shareImage = "/android-chrome-512x512.png"; // Path to the image in the public folder
 
-      // Add the file to the files array
-      data.files.push(file);
+  useEffect(() => {
+    setShareUrl(window.location.origin);
+    setShareTitle(document.title + " Web App");
 
-      await navigator.share(data);
-    } else {
-      throw new Error("Web Share API not supported");
+    // Get the description from the meta tag
+    const descriptionMetaTag = document.querySelector(
+      'meta[name="description"]'
+    );
+    if (descriptionMetaTag) {
+      setShareDescription(descriptionMetaTag.content);
     }
-  } catch (error) {
-    console.error("Error sharing:", error);
-  }
+  }, []);
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        const data = {
+          title: shareTitle,
+          text: `${shareTitle}: ${shareUrl}\n${shareDescription}\n${shareImage}`, // Include title, URL, description, and image
+          url: shareUrl,
+          files: [], // Initialize files array
+        };
+
+        // Fetch the image file
+        const response = await fetch(shareImage);
+        const blob = await response.blob();
+        const file = new File([blob], "android-chrome-512x512.png", {
+          type: "image/png",
+        });
+
+        // Add the file to the files array
+        data.files.push(file);
+
+        await navigator.share(data);
+      } else {
+        throw new Error("Web Share API not supported");
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
+
+  return (
+    <button onClick={handleShare} title="Share" className="header-promo-btn">
+      <GiShare />
+    </button>
+  );
 };
+
+export default ShareButton;
