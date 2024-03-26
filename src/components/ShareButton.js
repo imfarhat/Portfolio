@@ -24,7 +24,7 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `<b>${shareTitle}</b>: ${shareDescription}\n`, // Bold the title
+          text: `*${shareTitle}*: ${shareDescription}\n\n`, // Bold the title
           url: shareUrl,
         };
 
