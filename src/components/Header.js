@@ -24,7 +24,7 @@ function Header() {
     return !storedHeaderPromo;
   });
 
-  const [dayName, setDayName] = useState("Loading..");
+  // const [dayName, setDayName] = useState("Loading..");
   const headerPromoParentRef = useRef(null);
 
   // Debounce key press event
@@ -52,6 +52,7 @@ function Header() {
     }
   }, []);
 
+  /*
   const updateDayName = useCallback(() => {
     const days = [
       "Sunday!",
@@ -76,6 +77,7 @@ function Header() {
     updateDayName();
     //return () => {};
   }, [updateDayName]);
+  */
 
   const handleDebouncedKeyPress = useCallback(
     (e) => {
@@ -136,9 +138,9 @@ function Header() {
       {headerPromo && (
         <section
           ref={headerPromoParentRef}
-          className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md transition-all md:duration-200 ease-in"
+          className="flex flex-row-reverse w-full gap-2.5 md:gap-4 px-2 md:px-1 pt-1.5 items-center justify-end max-w-7xl text-[#f5f5f5] font-bold rounded-b-md transition-all md:duration-200 ease-in"
         >
-          <span className="px-2 animate-pulse text-sm font-normal">
+          <span className="px-2 animate-pulse text-[0.925rem] font-normal">
             Hello World!
           </span>
           <ShareButton />
@@ -150,9 +152,9 @@ function Header() {
             <IoCloseSharp />
           </button>
           <UrlCopyButton />
-          <span className="px-2 animate-pulse transition-all md:duration-200 ease-in text-sm font-normal">
+          {/* <span className="px-2 animate-pulse transition-all md:duration-200 ease-in text-sm font-normal">
             It's {dayName}
-          </span>
+          </span> */}
         </section>
       )}
       <nav>
