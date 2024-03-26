@@ -8,6 +8,7 @@ const ShareButton = () => {
   useEffect(() => {
     setShareUrl(window.location.origin);
     setShareTitle(document.title);
+
   }, []);
 
   const handleShare = async () => {
@@ -15,7 +16,8 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `${shareTitle}: ${shareUrl}`,
+          text: `${shareTitle}:`,
+          url: `${shareUrl}\n\n`,
         };
 
         await navigator.share(data);
@@ -27,12 +29,10 @@ const ShareButton = () => {
     }
   };
 
+
+
   return (
-    <button
-      onClick={handleShare}
-      title="Share (s)"
-      className="header-promo-btn"
-    >
+    <button onClick={handleShare} title="Share (s)" className="header-promo-btn">
       <GiShare />
     </button>
   );
