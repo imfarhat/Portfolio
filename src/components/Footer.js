@@ -76,7 +76,7 @@ function Footer() {
             link.setAttribute("download", "Imran Farhat Resume.pdf");
             document.body.appendChild(link).click();
             document.body.removeChild(link);
-            submitButton.innerHTML = "Success &check;";
+            submitButton.innerHTML = "Downloaded &check;";
           } catch (error) {
             throw new Error(error);
           }
