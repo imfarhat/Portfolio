@@ -58,7 +58,7 @@ git clone https://github.com/imfarhat/Portfolio.git
 To run the project locally, navigate to the project directory and install dependencies using npm or yarn. Then, start the development server.
 
 ```bash
-cd Portfolio
+cd portfolio
 npm install
 npm start
 ```
