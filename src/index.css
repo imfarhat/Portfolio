@@ -85,7 +85,7 @@
     @apply font-semibold text-base py-[0.3rem] px-4 text-center bg-[#f5f5f5]/5 text-[#fdfdff]/95 hover:bg-[#16181d]/95 active:bg-[#f5f5f5]/5 active:scale-95 border-[1.5px] border-current shadow w-fit rounded-md transition;
   }
   .feedback-tab-btn {
-    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-[#f5f5f5]/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-[#f5f5f5]/5 disabled:opacity-50 min-w-[50%] transition ease-in md:duration-200;
+    @apply py-1 md:py-[0.3rem] px-4 font-semibold rounded bg-[#f5f5f5]/5 text-[#fdfdff] hover:bg-[#16181d] border-[1.5px] active:scale-95 border-[#fdfdff] active:bg-[#f5f5f5]/5 min-w-[50%] transition ease-in md:duration-200;
   }
   .feedback-tab-input {
     @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded;
@@ -131,7 +131,7 @@
     }
   }
   button {
-    user-select: none;
+    @apply select-none disabled:opacity-50;
   }
   /* Scrollbar styling */
   body::-webkit-scrollbar {
