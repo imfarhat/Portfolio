@@ -24,8 +24,8 @@ const ShareButton = () => {
       if (navigator.share) {
         const data = {
           title: shareTitle,
-          text: `${shareTitle}: ${shareUrl}\n${shareDescription}`, // Only include title, URL, and description
-          url: shareUrl,
+          text: `${shareTitle}: ${shareUrl}\n\n${shareDescription}`, // Only include title, URL, and description
+          // url: shareUrl,
         };
 
         await navigator.share(data);
