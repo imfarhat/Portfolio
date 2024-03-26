@@ -31,7 +31,7 @@ const CopyButton = () => {
     <button
       onClick={copyToClipboard}
       className="header-promo-btn"
-      title="Share"
+      title="Copy URL"
       disabled={copied}
     >
       {copied ? <MdLibraryAddCheck /> : <MdOutlineContentCopy />}
