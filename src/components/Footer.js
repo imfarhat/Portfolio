@@ -65,7 +65,6 @@ function Footer() {
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
-
       if (et.name === "Resumers") {
         const url = resumePdf; // Assuming resumePdf contains the URL of the PDF file
         const link = document.createElement("a");
