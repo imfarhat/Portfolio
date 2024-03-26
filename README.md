@@ -1,8 +1,8 @@
-#### <div align="center"><a href="https://farhat.vercel.app"><img src="https://raw.githubusercontent.com/imfarhat/Portfolio/main/public/apple-touch-icon.png" alt="Farhat Portfolio Logo" height="75"></a></div>
+<div align="center"><a href="https://farhat.vercel.app"><img src="https://raw.githubusercontent.com/imfarhat/Portfolio/main/public/apple-touch-icon.png" alt="Farhat Portfolio Logo" height="75"></a></div>
 
 # Farhat Portfolio
 
-Look through I. Farhat's creative portfolio demonstrating the competence in HTML, CSS, Tailwind CSS, JavaScript and React JS. Discover amazing projects, ideas and their implementations!
+Look through I. Farhat's creative portfolio demonstrating the competence in HTML, CSS, Tailwind CSS, JavaScript, and React JS. Discover amazing projects, ideas, and their implementations!
 
 ## Description
 
@@ -39,3 +39,7 @@ You can clone this repository using the following command:
 
 ```bash
 git clone https://github.com/imfarhat/Portfolio.git
+
+## Copyright
+
+© 2024 I. Farhat. All rights reserved.
