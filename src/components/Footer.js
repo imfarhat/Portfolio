@@ -76,7 +76,7 @@ function Footer() {
         submitButton.innerHTML = "Downloaded &check;";
       }
     } catch (error) {
-      // Handle error here
+      // Handle error here 
       submitButton.innerHTML = "Error !";
       console.log(error);
     } finally {
