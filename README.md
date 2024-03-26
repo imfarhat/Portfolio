@@ -49,19 +49,19 @@ Installing Farhat Portfolio allows for convenient access to the portfolio as a s
 
 You can clone this repository using the following command:
 
-\`\`\`bash
+```bash
 git clone https://github.com/imfarhat/Portfolio.git
-\`\`\`
+```
 
 ## Usage
 
 To run the project locally, navigate to the project directory and install dependencies using npm or yarn. Then, start the development server.
 
-\`\`\`bash
+```bash
 cd Portfolio
 npm install
 npm start
-\`\`\`
+```
 
 ## Contributing
 
