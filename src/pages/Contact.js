@@ -250,6 +250,7 @@ function Contact() {
                   value={user.message}
                   autoComplete="off"
                   onChange={handleInputChange}
+                  spellCheck={true}
                 ></textarea>
               </div>
 
