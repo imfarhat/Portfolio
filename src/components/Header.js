@@ -97,7 +97,7 @@ function Header() {
           if (!headerPromo) return;
           if (
             window.confirm(
-              "Are you sure you want to close the header promo? This action is permanent."
+              `Are you sure you want to close the section?\nUndo by pressing 'u' or clearing site data`
             )
           ) {
             localStorage.setItem("headerPromo", "closed");
@@ -138,9 +138,7 @@ function Header() {
           ref={headerPromoParentRef}
           className="flex md:px-0.5 pt-1.5 items-center justify-between max-w-7xl w-full text-[#f5f5f5] font-bold rounded-b-md transition-all md:duration-200 ease-in"
         >
-          <span className="px-2 animate-pulse text-sm">
-            Hello World!
-          </span>
+          <span className="px-2 animate-pulse text-sm">Hello World!</span>
           <ShareButton />
           <button
             title="Close (x), Undo (u)"
