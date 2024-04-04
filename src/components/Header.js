@@ -49,6 +49,10 @@ function Header() {
   const handleDebouncedKeyPress = useCallback(
     (e) => {
       const key = e.key.toLowerCase();
+      // Check if any modifier key is pressed
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      // Check if only one key is pressed and it's an alphabet key
+      if (key.length !== 1 || !/[a-z]/.test(key)) return;
       const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
       if (tagName && ["input", "textarea"].includes(tagName)) return;
       if (key === lastKeyPressed) return; // Check if the current key is the same as the last one
