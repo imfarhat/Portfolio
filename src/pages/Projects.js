@@ -31,9 +31,10 @@ function Projects() {
         </section>
         <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
-            <Link
-              to="https://github.com/imfarhat/AttendQR"
-              target="_blank"
+            <div
+              onClick={() =>
+                window.open("https://github.com/imfarhat/AttendQR")
+              }
               className="projects-card"
             >
               <figure>
@@ -73,11 +74,10 @@ function Projects() {
                   <strong>HTML</strong>
                 </span>
               </p>
-            </Link>
+            </div>
 
-            <Link
-              to="https://github.com/imfarhat/SkipPi"
-              target="_blank"
+            <div
+              onClick={() => window.open("https://github.com/imfarhat/SkipPi")}
               className="projects-card"
             >
               <figure>
@@ -116,11 +116,10 @@ function Projects() {
                   <strong>HTML</strong>
                 </span>
               </p>
-            </Link>
+            </div>
 
-            <Link
-              to="https://tis.pages.dev"
-              target="_blank"
+            <div
+              onClick={() => window.open("https://tis.pages.dev")}
               className="projects-card"
             >
               <figure>
@@ -160,11 +159,10 @@ function Projects() {
                   <strong>HTML</strong>
                 </span>
               </p>
-            </Link>
+            </div>
 
-            <Link
-              to="https://farhateservices.pages.dev"
-              target="_blank"
+            <div
+              onClick={() => window.open("https://farhateservices.pages.dev")}
               className="projects-card"
             >
               <figure>
@@ -203,7 +201,7 @@ function Projects() {
                   <strong>HTML</strong>
                 </span>
               </p>
-            </Link>
+            </div>
           </article>
         </section>
       </main>
