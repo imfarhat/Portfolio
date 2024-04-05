@@ -79,6 +79,7 @@ function Contact() {
       // Handle error here
     } finally {
       setTimeout(() => {
+        et.reset()
         setUser({
           name: "",
           gender: "",

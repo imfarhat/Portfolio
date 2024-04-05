@@ -136,7 +136,9 @@
   textarea {
     @apply after:content-['*'] after:ml-0.5 after:text-[#fdfdff];
   }
-
+  img {
+    @apply select-none;
+  }
   /* Scrollbar styling */
   body::-webkit-scrollbar {
     width: 0.5rem;

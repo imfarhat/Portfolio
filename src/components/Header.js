@@ -49,14 +49,28 @@ function Header() {
   const handleDebouncedKeyPress = useCallback(
     (e) => {
       const key = e.key.toLowerCase();
+
+      const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
+      if (
+        e.altKey &&
+        (tagName || ["input", "textarea"].includes(tagName)) &&
+        key === lastKeyPressed
+      ) {
+        return;
+      }
+
+      /*
+      if (!e.altKey) return;
+      <--
       // Check if any modifier key is pressed
       if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
       // Check if only one key is pressed and it's an alphabet key
       if (key.length !== 1 || !/[a-z]/.test(key)) return;
+      -->
       const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
       if (tagName && ["input", "textarea"].includes(tagName)) return;
       if (key === lastKeyPressed) return; // Check if the current key is the same as the last one
-
+      */
       const actions = {
         h: () => navigate("/"),
         a: () => navigate("/about"),
@@ -135,7 +149,7 @@ function Header() {
           I. Farhat
         </Link>
         <div className="flex gap-2 md:gap-3 items-center justify-center">
-          <NavLink to="/" title="Home (h)" className="nav-link-n">
+          <NavLink to="/" title="Home (Alt + h)" className="nav-link-n">
             {online ? (
               <TbHomeSignal className="nav-link-icon" />
             ) : (
@@ -143,15 +157,23 @@ function Header() {
             )}
             <span className="nav-link-span">Home</span>
           </NavLink>
-          <NavLink to="/about" title="About (a)" className="nav-link-n">
+          <NavLink to="/about" title="About (Alt + a)" className="nav-link-n">
             <TbUserScan className="nav-link-icon" />
             <span className="nav-link-span">About</span>
           </NavLink>
-          <NavLink to="/projects" title="Projects (p)" className="nav-link-w">
+          <NavLink
+            to="/projects"
+            title="Projects (Alt + p)"
+            className="nav-link-w"
+          >
             <TbWorldCode className="nav-link-icon" />
             <span className="nav-link-span">Projects</span>
           </NavLink>
-          <NavLink to="/contact" title="Contact (c)" className="nav-link-w">
+          <NavLink
+            to="/contact"
+            title="Contact (Alt + c)"
+            className="nav-link-w"
+          >
             <TbSend className="nav-link-icon" />
             <span className="nav-link-span">Contact</span>
           </NavLink>

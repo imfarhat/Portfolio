@@ -93,6 +93,7 @@ function Footer() {
       console.log(error);
     } finally {
       setTimeout(() => {
+        et.reset();
         setUser({
           subEmail: "",
           resumeEmail: "",
