@@ -21,7 +21,12 @@ function Footer() {
   const handleFooterForm = async (e) => {
     e.preventDefault();
     const et = e.target;
+    //Disbale buttons and inputs
     const submitButton = et.querySelector('button[type="submit"]');
+    const inputTags = et.querySelectorAll("input, textarea");
+    inputTags.forEach((element) => {
+      element.setAttribute("disabled", true);
+    });
 
     const submitBtnInitialaValue = submitButton.innerHTML;
     submitButton.innerHTML = "Wait... &#x23F3;";
@@ -87,15 +92,18 @@ function Footer() {
       submitButton.innerHTML = "Error !";
       console.log(error);
     } finally {
-      setUser({
-        subEmail: "",
-        resumeEmail: "",
-        folioRating: null,
-      });
       setTimeout(() => {
+        setUser({
+          subEmail: "",
+          resumeEmail: "",
+          folioRating: null,
+        });
         submitButton.innerHTML = submitBtnInitialaValue;
         submitButton.disabled = false; // Enable submit button
-      }, 5000);
+        inputTags.forEach((element) => {
+          element.removeAttribute("disabled");
+        });
+      }, 7000);
     }
   };
 

@@ -22,7 +22,16 @@ function Contact() {
   const handleContactForm = async (e) => {
     e.preventDefault();
     const et = e.target;
+    //Disbale buttons and inputs
     const submitButton = et.querySelector('button[type="submit"]');
+    const inputTags = et.querySelectorAll("input, textarea");
+    inputTags.forEach((element) => {
+      // Check if the element is a radio-type input and is selected
+      if (!(element.type === "radio" && element.checked)) {
+        // If it's not a selected radio button, set the "disabled" attribute
+        element.setAttribute("disabled", true);
+      }
+    });
 
     const submitBtnInitailaValue = submitButton.innerHTML;
     submitButton.innerHTML = "Wait... &#x23F3;";
@@ -69,17 +78,21 @@ function Contact() {
       console.log(error);
       // Handle error here
     } finally {
-      setUser({
-        name: "",
-        gender: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
       setTimeout(() => {
+        setUser({
+          name: "",
+          gender: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
         submitButton.innerHTML = submitBtnInitailaValue;
-        submitButton.disabled = false; // Enable submit button
-      }, 5000);
+        // Enable submit button and inputs
+        submitButton.disabled = false;
+        inputTags.forEach((element) => {
+          element.removeAttribute("disabled");
+        });
+      }, 7000);
     }
   };
 
@@ -129,7 +142,7 @@ function Contact() {
               className="flex flex-col gap-4 md:gap-6 items-center justify-center w-full"
             >
               <div>
-                <label htmlFor="name">Name*</label>
+                <label>Name</label>
                 <input
                   type="text"
                   maxLength="50"
@@ -137,7 +150,6 @@ function Contact() {
                   required
                   pattern="[a-zA-Z ]{2,}"
                   name="name"
-                  id="name"
                   placeholder="Your Name"
                   value={user.name}
                   autoComplete="off"
@@ -146,33 +158,29 @@ function Contact() {
               </div>
 
               <div>
-                <span>Gender*</span>
-                <aside className="flex items-start justify-center gap-4">
-                  <div className="flex flex-row items-center justify-center gap-2">
-                    <label
-                      htmlFor="male"
-                      className="cursor-pointer select-none"
-                    >
-                      Male
-                    </label>
+                <label>Gender</label>
+                <aside className="flex items-start justify-center gap-4 md:gap-5  radio-group">
+                  <label
+                    htmlFor="male"
+                    className="ficjc flex-row gap-2 select-none cursor-pointer"
+                  >
+                    Male
                     <input
                       type="radio"
                       required
                       name="gender"
-                      value="male"
                       id="male"
+                      value="male"
                       checked={user.gender === "male"}
                       onChange={handleInputChange}
                     />
-                  </div>
+                  </label>
 
-                  <div className="flex flex-row items-center justify-center gap-2">
-                    <label
-                      htmlFor="female"
-                      className="cursor-pointer select-none"
-                    >
-                      Female
-                    </label>
+                  <label
+                    htmlFor="female"
+                    className="ficjc flex-row gap-2 select-none cursor-pointer"
+                  >
+                    Female
                     <input
                       type="radio"
                       required
@@ -182,15 +190,13 @@ function Contact() {
                       checked={user.gender === "female"}
                       onChange={handleInputChange}
                     />
-                  </div>
+                  </label>
 
-                  <div className="flex flex-row items-center justify-center gap-2">
-                    <label
-                      htmlFor="other"
-                      className="cursor-pointer select-none"
-                    >
-                      Other
-                    </label>
+                  <label
+                    htmlFor="other"
+                    className="ficjc flex-row gap-2 select-none cursor-pointer"
+                  >
+                    Other
                     <input
                       type="radio"
                       required
@@ -200,12 +206,12 @@ function Contact() {
                       checked={user.gender === "other"}
                       onChange={handleInputChange}
                     />
-                  </div>
+                  </label>
                 </aside>
               </div>
 
               <div>
-                <label htmlFor="email">Email*</label>
+                <label>Email</label>
                 <input
                   type="email"
                   maxLength="35"
@@ -213,7 +219,6 @@ function Contact() {
                   required
                   pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                   name="email"
-                  id="email"
                   placeholder="example@gmail.com"
                   value={user.email}
                   autoComplete="off"
@@ -221,7 +226,7 @@ function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="phone">Phone (+91)*</label>
+                <label>Phone (+91)</label>
                 <input
                   type="tel"
                   maxLength="10"
@@ -229,7 +234,6 @@ function Contact() {
                   required
                   pattern="[0-9]{10}"
                   name="phone"
-                  id="phone"
                   placeholder="Phone Number"
                   value={user.phone}
                   autoComplete="off"
@@ -238,14 +242,13 @@ function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message">Message*</label>
+                <label>Message</label>
                 <textarea
                   rows="5"
                   minLength="10"
                   maxLength="500"
                   required
                   name="message"
-                  id="message"
                   placeholder="Your Message"
                   value={user.message}
                   autoComplete="off"

@@ -106,12 +106,6 @@
   textarea {
     @apply py-1.5 px-2 text-[#16181d] focus:outline-sky-500 invalid:focus:outline-sky-500 valid:focus:outline-green-500 out-of-range:focus:outline-red-500 rounded w-full;
   }
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    @apply focus:bg-white focus:text-[#16181d];
-  }
 
   input[type="radio"] {
     @apply cursor-pointer;
@@ -130,9 +124,19 @@
       transform: rotate(-360deg);
     }
   }
-  button {
-    @apply select-none disabled:opacity-50;
+  button[type="submit"] {
+    @apply select-none disabled:opacity-75;
   }
+  form:not([name="Ratings"]) input:not([type="radio"]),
+  textarea {
+    @apply disabled:text-[#16181d] disabled:bg-opacity-95 bg-[#fdfdff] transition md:duration-200 ease-in;
+  }
+
+  form[name="Contact"] label:not([for]),
+  textarea {
+    @apply after:content-['*'] after:ml-0.5 after:text-[#fdfdff];
+  }
+
   /* Scrollbar styling */
   body::-webkit-scrollbar {
     width: 0.5rem;
