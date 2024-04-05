@@ -143,7 +143,7 @@ function Contact() {
               className="flex flex-col gap-4 md:gap-6 items-center justify-center w-full"
             >
               <div>
-                <label>Name</label>
+                <bdo>Name</bdo>
                 <input
                   type="text"
                   maxLength="50"
@@ -159,7 +159,7 @@ function Contact() {
               </div>
 
               <div>
-                <label>Gender</label>
+                <bdo>Gender</bdo>
                 <aside className="flex items-start justify-center gap-4 md:gap-5  radio-group">
                   <label
                     htmlFor="male"
@@ -212,7 +212,7 @@ function Contact() {
               </div>
 
               <div>
-                <label>Email</label>
+                <bdo>Email</bdo>
                 <input
                   type="email"
                   maxLength="35"
@@ -227,7 +227,7 @@ function Contact() {
                 />
               </div>
               <div>
-                <label>Phone (+91)</label>
+                <bdo>Phone (+91)</bdo>
                 <input
                   type="tel"
                   maxLength="10"
@@ -243,7 +243,7 @@ function Contact() {
               </div>
 
               <div>
-                <label>Message</label>
+                <bdo>Message</bdo>
                 <textarea
                   rows="5"
                   minLength="10"

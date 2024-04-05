@@ -132,8 +132,7 @@
     @apply disabled:text-[#16181d] disabled:bg-opacity-95 bg-[#fdfdff] transition md:duration-200 ease-in;
   }
 
-  form[name="Contact"] label:not([for]),
-  textarea {
+  form[name="Contact"] bdo {
     @apply after:content-['*'] after:ml-0.5 after:text-[#fdfdff];
   }
   img {
