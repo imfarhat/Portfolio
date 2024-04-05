@@ -59,23 +59,23 @@ function Home() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <h3 className="programming-lang-card">
                 <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded" />
-                <span className="text-sm md:text-base">HTML</span>
+                <span className="text-xs md:text-base">HTML</span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded" />
-                <span className="text-sm md:text-base">CSS</span>
+                <span className="text-xs md:text-base">CSS</span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded p-1.5" />
-                <span className="text-sm md:text-base">Tailwind</span>
+                <span className="text-xs md:text-base">Tailwind</span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiJavascript className="text-7xl md:text-9xl text-[#f0db4f] rounded" />
-                <span className="text-sm md:text-base">JavaScript</span>
+                <span className="text-xs md:text-base">JavaScript</span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded p-1.5" />
-                <span className="text-sm md:text-base">React JS</span>
+                <span className="text-xs md:text-base">React JS</span>
               </h3>
             </div>
           </article>
