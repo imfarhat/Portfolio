@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
-import resumePdf from "../assets/docs/i-farhat-resume.pdf";
+import cvPdf from "../assets/docs/i-farhat-cv.pdf";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -70,9 +70,9 @@ function Footer() {
       // Handle success response here
       submitButton.innerHTML =
         et.name === "Resumers" ? "Downloading..." : "Success &check;";
-      // Option 1: Download from a URL (if resumePdf points to a valid URL)
+      // Option 1: Download from a URL (if cvPdf points to a valid URL)
       if (et.name === "Resumers") {
-        const response = await fetch(resumePdf);
+        const response = await fetch(cvPdf);
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -81,7 +81,7 @@ function Footer() {
         const blob = await response.blob();
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob); // Create a temporary URL for the blob
-        link.setAttribute("download", "Imran Farhat Resume.pdf");
+        link.setAttribute("download", "Imran Farhat CV.pdf");
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
