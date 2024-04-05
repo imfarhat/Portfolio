@@ -29,43 +29,21 @@ function Projects() {
             <h1>Here are some of my recent projects</h1>
           </article>
         </section>
-        <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
+        <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
-            <div className="projects-card group">
-              <h3>
-                T.I.S.
-                <span>
-                  <Link
-                    to="https://tis.pages.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IoGlobeOutline />
-                  </Link>
-                  <Link
-                    to="https://github.com/imfarhat/The-International-School"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsGithub />
-                  </Link>
-                </span>
-              </h3>
-              <img
-                src="https://raw.githubusercontent.com/imfarhat/The-International-School/main/contents/images/logo/main-icon.png"
-                alt="TIS Logo"
-                loading="eager"
-                className="p-2"
-              />
-              <p className="group-hover:opacity-100 h-fit">
-                <strong>The International School (TIS)</strong>: Coded one of my
-                finest projects of 2023 coded using HTML, Tailwind CSS and
-                JavaScript with 40+ pages. A school website with all the extra
-                ordinary experince and discovery options.
-              </p>
-            </div>
+            <Link
+              to="https://github.com/imfarhat/AttendQR"
+              target="_blank"
+              className="projects-card"
+            >
+              <figure>
+                <img
+                  src="https://raw.githubusercontent.com/imfarhat/AttendQR/main/public/AttendQR.png"
+                  alt="AttendQR Logo"
+                  loading="eager"
+                />
+              </figure>
 
-            <div className="projects-card group">
               <h3>
                 AttendQR
                 <span>
@@ -85,53 +63,30 @@ function Projects() {
                   </Link>
                 </span>
               </h3>
-              <img
-                src="https://raw.githubusercontent.com/imfarhat/AttendQR/main/public/AttendQR.png"
-                alt="AttendQR Logo"
-                loading="eager"
-              />
-              <p className="group-hover:opacity-100 h-fit">
-                <strong>AttendQR</strong>: QR Code based Attendance App to makr
-                attendace of employees, students, etc. and can be used in most
-                of the sectors minimizing the resourced and making the place
-                techy. Currently in initial phase...
-              </p>
-            </div>
-
-            <div className="projects-card group">
-              <h3>
-                Business Portfolio
+              <p>
+                <em>
+                  QR Code based Attendance Management <code>Mar'24</code>
+                </em>
                 <span>
-                  <Link
-                    to="https://farhateservices.pages.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <IoGlobeOutline />
-                  </Link>
-                  <Link
-                    to="https://github.com/farhateservices/fesa/tree/main/eCommerce"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsGithub />
-                  </Link>
+                  <strong>React JS</strong>
+                  <strong>Tailwind CSS</strong>
+                  <strong>HTML</strong>
                 </span>
-              </h3>
-              <img
-                src="https://raw.githubusercontent.com/farhateservices/fesa/main/logo-head-black.png"
-                alt="FeSA Logo"
-                loading="eager"
-              />
-              <p className="group-hover:opacity-100 h-fit">
-                <strong>Farhat e Services & Assistance</strong>: A platform that
-                showcases my skills in HTML, CSS, and JavaScript. Designed with
-                mobile users in mind, this website offers a smooth and intuitive
-                experience on your smartphone.
               </p>
-            </div>
+            </Link>
 
-            <div className="projects-card group">
+            <Link
+              to="https://github.com/imfarhat/SkipPi"
+              target="_blank"
+              className="projects-card"
+            >
+              <figure>
+                <img
+                  src="https://raw.githubusercontent.com/imfarhat/SkipPi/main/icon.png"
+                  alt="SkipPi Logo"
+                  loading="eager"
+                />
+              </figure>
               <h3>
                 SkipPi
                 <span>
@@ -151,18 +106,104 @@ function Projects() {
                   </Link>
                 </span>
               </h3>
-              <img
-                src="https://raw.githubusercontent.com/imfarhat/SkipPi/main/icon.png"
-                alt="SkipPi Logo"
-                loading="eager"
-              />
-              <p className="group-hover:opacity-100 h-fit">
-                <strong>A Chrome / Firefox Extension</strong>: Auto-skip YouTube
-                ads in under 0.1 second, efficiently bypassing ads skippable
-                after 5 seconds, completing the skip in less than 100
-                milliseconds and saving nearly 5 seconds each time.
+              <p>
+                <em>
+                  YouTube Ad-Skipping Extension <code>Feb'24</code>
+                </em>
+                <span>
+                  <strong>JavaScript</strong>
+                  <strong>JSON</strong>
+                  <strong>HTML</strong>
+                </span>
               </p>
-            </div>
+            </Link>
+
+            <Link
+              to="https://tis.pages.dev"
+              target="_blank"
+              className="projects-card"
+            >
+              <figure>
+                <img
+                  src="https://raw.githubusercontent.com/imfarhat/The-International-School/main/contents/images/logo/main-icon.png"
+                  alt="TIS Logo"
+                  loading="eager"
+                />
+              </figure>
+
+              <h3>
+                T.I.S.
+                <span>
+                  <Link
+                    to="https://tis.pages.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IoGlobeOutline />
+                  </Link>
+                  <Link
+                    to="https://github.com/imfarhat/The-International-School"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsGithub />
+                  </Link>
+                </span>
+              </h3>
+              <p>
+                <em>
+                  The International Shcool <code>Nov'23</code>
+                </em>
+                <span>
+                  <strong>JavaScript</strong>
+                  <strong>Tailwind CSS</strong>
+                  <strong>HTML</strong>
+                </span>
+              </p>
+            </Link>
+
+            <Link
+              to="https://farhateservices.pages.dev"
+              target="_blank"
+              className="projects-card"
+            >
+              <figure>
+                <img
+                  src="https://raw.githubusercontent.com/farhateservices/fesa/main/logo-head-black.png"
+                  alt="FeSA Logo"
+                  loading="eager"
+                />
+              </figure>
+              <h3>
+                FeSA
+                <span>
+                  <Link
+                    to="https://farhateservices.pages.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IoGlobeOutline />
+                  </Link>
+                  <Link
+                    to="https://github.com/farhateservices/fesa/tree/main/eCommerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsGithub />
+                  </Link>
+                </span>
+              </h3>
+              <p>
+                <em>
+                  Business Portfolio Website <code>Aug'23</code>
+                </em>
+                <span>
+                  <strong>JavaScript</strong>
+                  <strong>CSS</strong>
+                  <strong>HTML</strong>
+                </span>
+              </p>
+            </Link>
           </article>
         </section>
       </main>
