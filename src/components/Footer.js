@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
 import cvPdf from "../assets/docs/i-farhat-cv.pdf";
 import svgWave from "../assets/images/backgrounds/wave.svg";
+import pngFeSALogo from "../assets/images/icons/FeSA.png";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -136,7 +137,7 @@ function Footer() {
   };
   //Scroll to top when user switched page and not on the top
   useEffect(() => {
-    //window.scrollY > 0 && scrollToTop();
+    window.scrollY > 0 && scrollToTop();
   }, []); // Empty dependency array i.e. this effect runs only once, on mount
 
   function locateResumeReqInput() {
@@ -157,12 +158,7 @@ function Footer() {
         </button>
       </section>
 
-      <section
-        className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6 rounded bg-cover"
-        style={{
-          backgroundImage: `url(${svgWave})`,
-        }}
-      >
+      <section className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6 rounded">
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Quick Links</h3>
           <ul>
@@ -443,10 +439,10 @@ function Footer() {
           <span className="flex flex-row gap-1 md:gap-1.5 items-center justify-center">
             Powered by
             <img
-              src="https://farhateservices.pages.dev/logo-head-white.png"
+              src={pngFeSALogo}
               alt="Farhat e Services & Assistance"
               loading="lazy"
-              className="h-5 filter bg-blend-multiply"
+              className="h-5 filter bg-blend-multiply invert"
             />
             Farhat e Services & Assistance
           </span>

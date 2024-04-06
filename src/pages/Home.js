@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import { TbLoader } from "react-icons/tb";
+import pngWorkingDev from "../assets/images/characters/working-dev.png";
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -39,7 +40,7 @@ function Home() {
                       <TbLoader className="text-7xl h-[50%] w-[50%] text-[#f5f5f5]/25 animate-[spin_3s_ease-in-out_infinite] transition md:duration-200 ease-in" />
                     )}
                     <img
-                      src="https://raw.githubusercontent.com/imfarhat/portfolio/main/src/assets/images/characters/working-dev.png"
+                      src={pngWorkingDev}
                       alt="Working Developer"
                       loading="eager"
                       onLoad={handleImageLoad}

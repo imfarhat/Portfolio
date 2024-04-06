@@ -4,6 +4,10 @@ import { IoGlobeOutline } from "react-icons/io5";
 import { MdInstallDesktop } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import pngTISLogo from "../assets/images/icons/TIS.png";
+import pngSkipPiLogo from "../assets/images/icons/SkipPi.png";
+import pngAttendQRLogo from "../assets/images/icons/AttendQR.png";
+import pngFeSALogo from "../assets/images/icons/FeSA.png";
 
 function Projects() {
   sessionStorage.setItem("previousPage", window.location.pathname);
@@ -39,7 +43,7 @@ function Projects() {
             >
               <figure>
                 <img
-                  src="https://raw.githubusercontent.com/imfarhat/AttendQR/main/public/AttendQR.png"
+                  src={pngAttendQRLogo}
                   alt="AttendQR Logo"
                   loading="eager"
                 />
@@ -81,11 +85,7 @@ function Projects() {
               className="projects-card"
             >
               <figure>
-                <img
-                  src="https://raw.githubusercontent.com/imfarhat/SkipPi/main/icon.png"
-                  alt="SkipPi Logo"
-                  loading="eager"
-                />
+                <img src={pngSkipPiLogo} alt="SkipPi Logo" loading="eager" />
               </figure>
               <h3>
                 SkipPi
@@ -123,11 +123,7 @@ function Projects() {
               className="projects-card"
             >
               <figure>
-                <img
-                  src="https://raw.githubusercontent.com/imfarhat/The-International-School/main/contents/images/logo/main-icon.png"
-                  alt="TIS Logo"
-                  loading="eager"
-                />
+                <img src={pngTISLogo} alt="TIS Logo" loading="eager" />
               </figure>
 
               <h3>
@@ -151,7 +147,7 @@ function Projects() {
               </h3>
               <p>
                 <em>
-                  The International Shcool <code>Nov'23</code>
+                  The International Shcool Website <code>Nov'23</code>
                 </em>
                 <span>
                   <strong>JavaScript</strong>
@@ -166,11 +162,7 @@ function Projects() {
               className="projects-card"
             >
               <figure>
-                <img
-                  src="https://raw.githubusercontent.com/farhateservices/fesa/main/logo-head-black.png"
-                  alt="FeSA Logo"
-                  loading="eager"
-                />
+                <img src={pngFeSALogo} alt="FeSA Logo" loading="eager" />
               </figure>
               <h3>
                 FeSA
