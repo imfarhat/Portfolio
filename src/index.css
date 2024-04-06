@@ -148,7 +148,7 @@
     @apply after:content-['*'] after:ml-0.5 after:text-[#fdfdff];
   }
   img,
-  button, {
+  button {
     @apply select-none;
   }
   /* Scrollbar styling */
