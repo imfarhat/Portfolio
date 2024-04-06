@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
 import cvPdf from "../assets/docs/i-farhat-cv.pdf";
@@ -127,13 +127,17 @@ function Footer() {
   };
 
   const scrollToTop = () => {
+    if (window.scrollY === 0) return;
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+    console.log("dsfdsf");
   };
-  //Scroll to top when user switched page
-  //scrollToTop();
+  //Scroll to top when user switched page and not on the top
+  useEffect(() => {
+    window.scrollY > 0 && scrollToTop();
+  }, []); // Empty dependency array i.e. this effect runs only once, on mount
 
   function locateResumeReqInput() {
     if (inputResumeReqRef.current) {
