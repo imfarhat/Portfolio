@@ -55,7 +55,7 @@
     @apply hover:bg-gradient-to-tr text-[#fd1d1d] from-[#f56040] via-[#fd1d1d] via-80% to-[#c13584] active:from-[#f56040]/85 active:via-[#fd1d1d]/85 active:to-[#c13584]/85;
   }
   .programming-lang-card {
-    @apply cursor-pointer aspect-square p-2 md:p-4 pb-1 md:pb-2 rounded md:rounded-md bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] font-semibold text-[#f5f5f5] flex flex-col gap-0.5 md:gap-2 items-center justify-center;
+    @apply cursor-pointer aspect-square p-2 md:p-4 pb-1 md:pb-2 rounded md:rounded-md bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] hover:to-[#64667480] font-semibold text-[#f5f5f5] flex flex-col gap-0.5 md:gap-2 items-center justify-center;
   }
   .about-details-card {
     @apply cursor-pointer p-4 bg-gradient-to-b rounded-xl from-[#16181d] from-50% to-[#646674]/10 font-semibold text-[#f5f5f5] flex flex-col gap-4 md:gap-6 items-center justify-center border-t-2 border-[#fdfdff]/70;

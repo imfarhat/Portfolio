@@ -5,6 +5,7 @@ import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import { TbLoader } from "react-icons/tb";
 import pngWorkingDev from "../assets/images/characters/working-dev.png";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -53,30 +54,45 @@ function Home() {
             </aside>
           </article>
 
-          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4">
+          <article
+            className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4 bg-cover"
+            style={{
+              backgroundImage: `url(${svgWave})`,
+            }}
+          >
             <h1 className="rotate-0 lg:rotate-90 text-[#f5f5f5] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
               <h3 className="programming-lang-card">
                 <FaHtml5 className="text-5xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">HTML5</span>
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  HTML5
+                </span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaCss3Alt className="text-5xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">CSS3</span>
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  CSS3
+                </span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiTailwindcss className="text-5xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">Tailwind</span>
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  Tailwind
+                </span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiJavascript className="text-5xl md:text-9xl text-[#f0db4f] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">JavaScript</span>
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  JavaScript
+                </span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaReact className="text-5xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">React JS</span>
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  React JS
+                </span>
               </h3>
             </div>
           </article>
