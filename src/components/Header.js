@@ -52,7 +52,7 @@ function Header() {
 
       const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
       if (
-        !e.altKey ||
+        !e.altKey |
         e.ctrlKey ||
         e.metaKey ||
         (tagName && ["input", "textarea"].includes(tagName)) ||
@@ -60,7 +60,6 @@ function Header() {
       ) {
         return;
       }
-
       /*
       if (!e.altKey) return;
       <--
@@ -95,7 +94,7 @@ function Header() {
           } else {
             setTimeout(() => {
               setLastKeyPressed(null);
-            }, 10);
+            }, 1);
           }
         },
       };
@@ -133,8 +132,8 @@ function Header() {
             Hello World!
           </span>
           <button
-            title="Close (x), Undo (u)"
-            onClick={() => handleDebouncedKeyPress({ key: "x" })}
+            title="Close (Alt + x), Undo (Alt + u)"
+            onClick={() => handleDebouncedKeyPress({ key: "x", altKey: true })}
             className="header-promo-btn"
           >
             <IoCloseSharp />
