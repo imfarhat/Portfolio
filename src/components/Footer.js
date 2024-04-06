@@ -132,7 +132,6 @@ function Footer() {
       top: 0,
       behavior: "smooth",
     });
-    console.log("dsfdsf");
   };
   //Scroll to top when user switched page and not on the top
   useEffect(() => {
