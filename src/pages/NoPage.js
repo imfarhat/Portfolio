@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import { TbFaceIdError } from "react-icons/tb";
+import svg404  from "../assets/images/backgrounds/404-spacecraft.svg";
 
 function NoPage() {
   const [countdown, setCountdown] = useState(10);
@@ -28,18 +28,17 @@ function NoPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between gap-16 py-32 text-[#f5f5f5]/90 bg-[#16181d]">
-        <h2 className="text-xl font-semibold">Sorry, page not found!</h2>
-        <img
-          src="https://raw.githubusercontent.com/imfarhat/Portfolio/c41a6ef4a9dba6b5f9310435ca3f6d2b1b30376f/src/assets/images/backgrounds/404-spacescraft.svg"
-          alt="404 "
-        />
-        <div className="ficjc flex-col gap-6">
-          <span>
-            Redirecting to {previousPage ? "Previous" : "Home"} page in{" "}
+      <main className="flex flex-col items-center justify-between gap-0 py-20 text-[#f5f5f5]/90 bg-[#16181d]">
+        <h2 className="text-lg">
+          <em>Sorry, page not found!</em>
+        </h2>
+        <img src={svg404} alt="404" className="h-96" />
+        <div className="ficjc flex-col gap-4">
+          <code>
+            Redirecting to {previousPage ? "previous" : "Home"} page in{" "}
             {countdown}s...
-          </span>
-          <button onClick={goBackOrHome} className="back-or-home-btn">
+          </code>
+          <button onClick={goBackOrHome} className="back-or-home-btn text-sm">
             Go {previousPage ? "Back" : "Home"} Now
           </button>
         </div>
