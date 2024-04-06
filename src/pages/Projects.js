@@ -35,13 +35,12 @@ function Projects() {
         </section>
         <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
-            <div
-              onClick={() =>
-                window.open("https://github.com/imfarhat/AttendQR")
-              }
-              className="projects-card"
-            >
-              <figure>
+            <div className="projects-card">
+              <figure
+                onClick={() =>
+                  window.open("https://github.com/imfarhat/SkipPi")
+                }
+              >
                 <img
                   src={pngAttendQRLogo}
                   alt="AttendQR Logo"
@@ -80,11 +79,12 @@ function Projects() {
               </p>
             </div>
 
-            <div
-              onClick={() => window.open("https://github.com/imfarhat/SkipPi")}
-              className="projects-card"
-            >
-              <figure>
+            <div className="projects-card">
+              <figure
+                onClick={() =>
+                  window.open("https://github.com/imfarhat/SkipPi")
+                }
+              >
                 <img src={pngSkipPiLogo} alt="SkipPi Logo" loading="eager" />
               </figure>
               <h3>
@@ -118,11 +118,8 @@ function Projects() {
               </p>
             </div>
 
-            <div
-              onClick={() => window.open("https://tis.pages.dev")}
-              className="projects-card"
-            >
-              <figure>
+            <div className="projects-card">
+              <figure onClick={() => window.open("https://tis.pages.dev")}>
                 <img src={pngTISLogo} alt="TIS Logo" loading="eager" />
               </figure>
 
@@ -157,11 +154,10 @@ function Projects() {
               </p>
             </div>
 
-            <div
-              onClick={() => window.open("https://farhateservices.pages.dev")}
-              className="projects-card"
-            >
-              <figure>
+            <div className="projects-card">
+              <figure
+                onClick={() => window.open("https://farhateservices.pages.dev")}
+              >
                 <img src={pngFeSALogo} alt="FeSA Logo" loading="eager" />
               </figure>
               <h3>
