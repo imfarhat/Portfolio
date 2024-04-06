@@ -57,26 +57,26 @@ function Home() {
             <h1 className="rotate-0 lg:rotate-90 text-[#f5f5f5] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
               <h3 className="programming-lang-card">
-                <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded" />
-                <span className="text-xs md:text-base">HTML</span>
+                <FaHtml5 className="text-5xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">HTML5</span>
               </h3>
               <h3 className="programming-lang-card">
-                <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded" />
-                <span className="text-xs md:text-base">CSS</span>
+                <FaCss3Alt className="text-5xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">CSS3</span>
               </h3>
               <h3 className="programming-lang-card">
-                <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded p-1.5" />
-                <span className="text-xs md:text-base">Tailwind</span>
+                <SiTailwindcss className="text-5xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">Tailwind</span>
               </h3>
               <h3 className="programming-lang-card">
-                <SiJavascript className="text-7xl md:text-9xl text-[#f0db4f] rounded" />
-                <span className="text-xs md:text-base">JavaScript</span>
+                <SiJavascript className="text-5xl md:text-9xl text-[#f0db4f] rounded-[0.175rem] md:rounded-md aspect-square" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">JavaScript</span>
               </h3>
               <h3 className="programming-lang-card">
-                <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded p-1.5" />
-                <span className="text-xs md:text-base">React JS</span>
+                <FaReact className="text-5xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">React JS</span>
               </h3>
             </div>
           </article>
