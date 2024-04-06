@@ -52,8 +52,10 @@ function Header() {
 
       const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
       if (
-        e.altKey &&
-        (tagName || ["input", "textarea"].includes(tagName)) &&
+        !e.altKey ||
+        e.ctrlKey ||
+        e.metaKey ||
+        (tagName && ["input", "textarea"].includes(tagName)) ||
         key === lastKeyPressed
       ) {
         return;
