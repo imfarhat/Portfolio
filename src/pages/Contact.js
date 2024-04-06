@@ -24,13 +24,9 @@ function Contact() {
     const et = e.target;
     //Disbale buttons and inputs
     const submitButton = et.querySelector('button[type="submit"]');
-    const inputTags = et.querySelectorAll("input, textarea");
-    inputTags.forEach((element) => {
-      // Check if the element is a radio-type input and is selected
-      if (!(element.type === "radio" && element.checked)) {
-        // If it's not a selected radio button, set the "disabled" attribute
-        element.setAttribute("disabled", true);
-      }
+    const disableInputTags = et.querySelectorAll("input, textarea");
+    disableInputTags.forEach((element) => {
+      element.setAttribute("readonly", true);
     });
 
     const submitBtnInitailaValue = submitButton.innerHTML;
@@ -79,7 +75,7 @@ function Contact() {
       // Handle error here
     } finally {
       setTimeout(() => {
-        et.reset()
+        et.reset();
         setUser({
           name: "",
           gender: "",
@@ -90,8 +86,11 @@ function Contact() {
         submitButton.innerHTML = submitBtnInitailaValue;
         // Enable submit button and inputs
         submitButton.disabled = false;
-        inputTags.forEach((element) => {
-          element.removeAttribute("disabled");
+        const enableInputTags = et.querySelectorAll(
+          "input[readonly], textarea[readonly]"
+        );
+        enableInputTags.forEach((element) => {
+          element.removeAttribute("readonly");
         });
       }, 7000);
     }

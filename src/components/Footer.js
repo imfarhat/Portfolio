@@ -23,9 +23,9 @@ function Footer() {
     const et = e.target;
     //Disbale buttons and inputs
     const submitButton = et.querySelector('button[type="submit"]');
-    const inputTags = et.querySelectorAll("input, textarea");
-    inputTags.forEach((element) => {
-      element.setAttribute("disabled", true);
+    const disableInputTags = et.querySelectorAll("input, textarea");
+    disableInputTags.forEach((element) => {
+      element.setAttribute("readonly", true);
     });
 
     const submitBtnInitialaValue = submitButton.innerHTML;
@@ -101,8 +101,11 @@ function Footer() {
         });
         submitButton.innerHTML = submitBtnInitialaValue;
         submitButton.disabled = false; // Enable submit button
-        inputTags.forEach((element) => {
-          element.removeAttribute("disabled");
+        const enableInputTags = et.querySelectorAll(
+          "input[readonly], textarea[readonly]"
+        );
+        enableInputTags.forEach((element) => {
+          element.removeAttribute("readonly");
         });
       }, 7000);
     }
