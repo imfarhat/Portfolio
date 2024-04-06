@@ -141,14 +141,14 @@
   }
   form:not([name="Ratings"]) input:not([type="radio"]),
   textarea {
-    @apply read-only:text-[#16181d] read-only:bg-opacity-95 bg-[#fdfdff] transition md:duration-200 ease-in;
+    @apply read-only:text-[#16181d] read-only:bg-opacity-90 read-only:bg-[#fdfdff] transition-all md:duration-200 ease-in;
   }
 
   form[name="Contact"] bdo {
     @apply after:content-['*'] after:ml-0.5 after:text-[#fdfdff];
   }
   img,
-  button {
+  button, {
     @apply select-none;
   }
   /* Scrollbar styling */
