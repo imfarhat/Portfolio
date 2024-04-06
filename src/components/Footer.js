@@ -151,7 +151,7 @@ function Footer() {
   }
 
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d] border-t shadow">
+    <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d] border-t border-[#fdfdff80] shadow">
       <section className="w-full py-4 text-[#141e28] bg-gradient-to-l from-[#16181d] to-[#646674]/25 flex items-center justify-center">
         <button className="back-to-top-btn" onClick={scrollToTop}>
           Back to Top
