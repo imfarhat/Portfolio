@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks.js";
 import cvPdf from "../assets/docs/i-farhat-cv.pdf";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function Footer() {
   const [user, setUser] = useState({
@@ -135,7 +136,7 @@ function Footer() {
   };
   //Scroll to top when user switched page and not on the top
   useEffect(() => {
-    window.scrollY > 0 && scrollToTop();
+    //window.scrollY > 0 && scrollToTop();
   }, []); // Empty dependency array i.e. this effect runs only once, on mount
 
   function locateResumeReqInput() {
@@ -156,7 +157,12 @@ function Footer() {
         </button>
       </section>
 
-      <section className="py-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-3 md:gap-6 lg:gap-8 rounded-3xl">
+      <section
+        className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6 rounded bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Quick Links</h3>
           <ul>
@@ -267,7 +273,12 @@ function Footer() {
         </div>
       </section>
 
-      <section className="py-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full">
+      <section
+        className="my-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Connect with me</h2>
           <article className="px-2 py-4 md:px-4 md:py-8 flex flex-wrap items-center justify-between gap-4 md:gap-6 w-fit text-3xl">
@@ -276,7 +287,12 @@ function Footer() {
         </div>
       </section>
 
-      <section className="py-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full">
+      <section
+        className="my-4 flex flex-col items-center justify-center gap-3 rounded-3xl w-full bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <div className="flex flex-col items-center justify-center gap-2 md:gap-0 bg-gradient-to-r from-[#16181d] to-[#646674]/25 text-[#fdfdff] w-full">
           <h2 className="footer-panel-h2">Feedback+ Tab</h2>
           <article

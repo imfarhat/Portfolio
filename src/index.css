@@ -31,13 +31,13 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 rounded-b-md;
   }
   .footer-link-card {
-    @apply flex flex-col items-start justify-center bg-gradient-to-b from-[#16181d] from-50% to-[#646674]/15 text-[#fdfdff] rounded-md w-full;
+    @apply flex flex-col items-start justify-center bg-gradient-to-t from-[#16181d] from-50% to-[#646674]/15 text-[#fdfdff] rounded-md w-full shadow-xl shadow-[#16181d];
   }
   .footer-link-card ul {
     @apply p-2 md:px-4 flex flex-col gap-0.5;
   }
   .footer-card-h3 {
-    @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 w-full rounded-t-md mb-2.5;
+    @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 w-full rounded-t-md mb-2.5 border-b border-[#fdfdff80];
   }
   .about-details-card h3 {
     @apply font-semibold text-lg text-center;
