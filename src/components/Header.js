@@ -52,8 +52,7 @@ function Header() {
 
       const tagName = e.target?.tagName?.toLowerCase(); // Safely access tagName
       if (
-        !e.altKey |
-        e.ctrlKey ||
+        !e.altKey | e.ctrlKey ||
         e.metaKey ||
         (tagName && ["input", "textarea"].includes(tagName)) ||
         key === lastKeyPressed
@@ -86,7 +85,7 @@ function Header() {
           if (!headerPromo) return;
           if (
             window.confirm(
-              `Are you sure you want to close the "Hello World!" section?\n\nPress 'u' to undo or clear data.`
+              `Are you sure you want to close the "Hello World!" section?\n\nPress 'Alt + u' to undo or clear data.`
             )
           ) {
             localStorage.setItem("headerPromo", "closed");
