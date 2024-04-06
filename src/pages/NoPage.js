@@ -31,7 +31,7 @@ function NoPage() {
       <main className="flex flex-col items-center justify-between gap-16 py-32 text-[#f5f5f5]/90 bg-[#16181d]">
         <h2 className="text-xl font-semibold">Sorry, page not found!</h2>
         <img
-          src="https://raw.githubusercontent.com/imfarhat/Portfolio/51f54ae396db7f6aa2039ff95a15569483d382d6/src/assets/images/backgrounds/404-spacescraft.svg"
+          src="https://raw.githubusercontent.com/imfarhat/Portfolio/c41a6ef4a9dba6b5f9310435ca3f6d2b1b30376f/src/assets/images/backgrounds/404-spacescraft.svg"
           alt="404 "
         />
         <div className="ficjc flex-col gap-6">
