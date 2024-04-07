@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-import svg404  from "../assets/images/backgrounds/404-spacecraft.svg";
+import svg404 from "../assets/images/backgrounds/404-spacecraft.svg";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function NoPage() {
   const [countdown, setCountdown] = useState(10);
@@ -28,7 +29,12 @@ function NoPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-between gap-0 py-20 text-[#f5f5f5]/90 bg-[#16181d]">
+      <main
+        className="flex flex-col items-center justify-between gap-0 py-20 text-[#f5f5f5]/90 bg-[#16181d] bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <h2 className="text-lg">
           <em>Sorry, page not found!</em>
         </h2>
