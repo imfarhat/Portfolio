@@ -117,7 +117,12 @@ function Contact() {
   return (
     <>
       <Header />
-      <main className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d]">
+      <main
+        className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d] bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <section className="w-full max-w-7xl flex flex-col ficjc gap-8">
           <article className="flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">Contact</h1>
@@ -129,12 +134,7 @@ function Contact() {
             </p>
           </article>
         </section>
-        <section
-          className="max-w-7xl md:rounded-md overflow-hidden p-2 md:p-4 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 bg-cover"
-          style={{
-            backgroundImage: `url(${svgWave})`,
-          }}
-        >
+        <section className="max-w-7xl md:rounded-md overflow-hidden p-2 md:p-4 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
           <article className="px-2 py-4 md:px-4 md:py-6 flex md:flex-col-reverse items-center justify-center gap-3 md:gap-4 w-full text-3xl">
             <SocialLinks />
           </article>

@@ -16,7 +16,12 @@ function Projects() {
   return (
     <>
       <Header />
-      <main className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d]">
+      <main
+        className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d] bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <section className="w-full flex flex-col ficjc gap-8">
           <article className="max-w-7xl flex flex-col items-center justify-center gap-4 text-[#f5f5f5] md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="font-semibold px-2 text-center text-3xl">
@@ -31,12 +36,7 @@ function Projects() {
             <h1>Here are some of my recent projects</h1>
           </article>
         </section>
-        <section
-          className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25 bg-cover"
-          style={{
-            backgroundImage: `url(${svgWave})`,
-          }}
-        >
+        <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card">
               <figure

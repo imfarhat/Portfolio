@@ -31,7 +31,7 @@
     @apply font-semibold text-base py-2 px-4 text-center bg-[#f5f5f5]/5 rounded-b-md;
   }
   .footer-link-card {
-    @apply flex flex-col items-start justify-center bg-gradient-to-b from-[#16181d] from-50% to-[#646674]/15 text-[#fdfdff] rounded-md w-full shadow-xl shadow-[#16181d];
+    @apply flex flex-col items-start justify-center bg-gradient-to-b from-[#16181d] from-50% to-[#646674]/15 text-[#fdfdff] rounded-md w-full shadow shadow-[#16181d] md:hover:-translate-y-4 transition-all md:duration-200 ease-in ;
   }
   .footer-link-card ul {
     @apply p-2 md:px-4 flex flex-col gap-0.5;
@@ -58,10 +58,10 @@
     @apply cursor-pointer aspect-square p-2 md:p-4 pb-1 md:pb-2 rounded md:rounded-md bg-gradient-to-tl hover:bg-gradient-to-br from-[#16181d] from-70% to-[#646674] hover:to-[#64667480] font-semibold text-[#f5f5f5] flex flex-col gap-0.5 md:gap-2 items-center justify-center shadow shadow-[#16181d] md:hover:-translate-y-4 transition-all md:duration-200 ease-in;
   }
   .about-details-card {
-    @apply cursor-pointer p-4 bg-gradient-to-b rounded-xl from-[#16181d] from-50% to-[#646674]/10 font-semibold text-[#f5f5f5] flex flex-col gap-4 md:gap-6 items-center justify-center border-t-2 border-[#fdfdff]/70 shadow shadow-[#16181d];
+    @apply cursor-pointer p-4 bg-gradient-to-b rounded-xl from-[#16181d] from-50% to-[#646674]/10 font-semibold text-[#f5f5f5] flex flex-col gap-4 md:gap-6 items-center justify-center border-t-2 border-[#fdfdff]/70 shadow shadow-[#16181d] md:hover:-translate-y-4 transition-all md:duration-200 ease-in;
   }
   .projects-card {
-    @apply w-72 flex flex-col items-center justify-center rounded-xl overflow-hidden bg-[#111111];
+    @apply w-72 flex flex-col items-center justify-center rounded-xl overflow-hidden bg-[#111111] shadow shadow-[#16181d] md:hover:-translate-y-4 transition-all md:duration-200 ease-in;
   }
   .projects-card h3 {
     @apply text-lg rounded-t-none flex flex-row items-center justify-between gap-1.5 w-full bottom-0 left-0 py-1.5 pl-2 pr-1 text-[#fdfdff] text-start font-semibold truncate border-b border-[#fdfdff80];

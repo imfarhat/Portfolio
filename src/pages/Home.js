@@ -19,7 +19,12 @@ function Home() {
   return (
     <>
       <Header />
-      <main className="pt-4 pb-8 md:pt-8 md:pb-16 ficjc flex-col gap-8 bg-[#16181d]">
+      <main
+        className="pt-4 pb-8 md:pt-8 md:pb-16 ficjc flex-col gap-8 bg-[#16181d] bg-cover"
+        style={{
+          backgroundImage: `url(${svgWave})`,
+        }}
+      >
         <section className="max-w-7xl w-full h-full flex flex-col gap-8">
           <article className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 rounded-md overflow-hidden">
             <aside className="flex flex-col items-start justify-center gap-2 w-full md:w-[50%] p-2 md:p-4 h-full text-[#f5f5f5]">
@@ -33,7 +38,7 @@ function Home() {
                 to create engaging and user-friendly web experiences.
               </p>
             </aside>
-            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-transparent to-[#f5f5f5]/5 rounded-full animate-spin">
+            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-[#16181d] to-[#16181d] rounded-full animate-spin">
               <div className="group md:cursor-pointer bg-gradient-to-t from-[#f5f5f5]/5 to-[#f5f5f5]/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                 <div className="bg-gradient-to-t from-[#f5f5f5]/10 to-[#f5f5f5]/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition-all ease-in md:duration-200">
@@ -54,12 +59,7 @@ function Home() {
             </aside>
           </article>
 
-          <article
-            className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4 bg-cover"
-            style={{
-              backgroundImage: `url(${svgWave})`,
-            }}
-          >
+          <article className="flex flex-col lg:flex-row-reverse items-center justify-center lg:justify-between gap-4 bg-gradient-to-r from-[#16181d] to-[#646674]/25 md:rounded-md overflow-hidden p-2 md:p-4">
             <h1 className="rotate-0 lg:rotate-90 text-[#f5f5f5] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
