@@ -15,7 +15,7 @@ function About() {
               About Me
             </h1>
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
-              Greetings! I'm I. Frahta, a professional with a penchant for
+              Greetings! I'm I. Farhat, a professional with a penchant for
               problem-solving and a passion for continuous learning. My journey
               in the realm of
               <span className="text-[#f5f5f5]">web development,</span>
