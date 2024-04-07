@@ -158,7 +158,7 @@ function Footer() {
         </button>
       </section>
 
-      <section className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6">
+      <section className="my-4 md:my-0 md:pt-8 md:pb-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6">
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Quick Links</h3>
           <ul>
@@ -426,12 +426,7 @@ function Footer() {
         </div>
       </section>
 
-      <section
-        className="px-2 py-4 md:px-4 flex items-center justify-between gap-2.5 text-[#fdfdff] bg-gradient-to-r from-[#16181d] to-[#646674]/25 w-full text-xs md:text-base bg-cover"
-        style={{
-          backgroundImage: `url(${svgWave})`,
-        }}
-      >
+      <section className="px-2 py-4 md:px-4 flex items-center justify-between gap-2.5 text-[#fdfdff] bg-gradient-to-t from-[#16181d] to-[#646674]/5 w-full text-xs md:text-base">
         <Link to="/" className="flex gap-1 md:gap-1.5">
           <span>&copy;</span> <span>{new Date().getFullYear()}</span>
           <span>I. Farhat</span>
