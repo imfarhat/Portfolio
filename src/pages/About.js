@@ -1,6 +1,6 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
-//import sparkingRays from "../assets/images/backgrounds/black-spakring-color-rays.jpg";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function About() {
   sessionStorage.setItem("previousPage", window.location.pathname);
@@ -23,7 +23,12 @@ function About() {
             </p>
           </article>
         </section>
-        <section className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc">
+        <section
+          className="md:rounded-md overflow-hidden p-2 md:p-4 w-full ficjc bg-cover"
+          style={{
+            backgroundImage: `url(${svgWave})`,
+          }}
+        >
           <article className="max-w-7xl w-full items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="about-details-card">
               <h3>Education</h3>

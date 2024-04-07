@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import SocialLinks from "../components/SocialLinks.js";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function Contact() {
   const [user, setUser] = useState({
@@ -128,7 +129,12 @@ function Contact() {
             </p>
           </article>
         </section>
-        <section className="max-w-7xl md:rounded-md overflow-hidden p-2 md:p-4 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+        <section
+          className="max-w-7xl md:rounded-md overflow-hidden p-2 md:p-4 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 bg-cover"
+          style={{
+            backgroundImage: `url(${svgWave})`,
+          }}
+        >
           <article className="px-2 py-4 md:px-4 md:py-6 flex md:flex-col-reverse items-center justify-center gap-3 md:gap-4 w-full text-3xl">
             <SocialLinks />
           </article>
