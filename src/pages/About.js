@@ -17,13 +17,9 @@ function About() {
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
               Greetings! I'm I. Farhat, a professional with a penchant for
               problem-solving and a passion for continuous learning. My journey
-              in the realm of
-              <span className="text-[#f5f5f5]">web development,</span>
-              <span className="text-[#f5f5f5]">web design</span>
-              and
-              <span className="text-[#f5f5f5]">graphic-design</span>
-              has been driven by curiosity and fueled by a desire to make a
-              positive impact through digital innovation.
+              in the realm of web development, web design and graphic-design has
+              been driven by curiosity and fueled by a desire to make a positive
+              impact through digital innovation.
             </p>
           </article>
         </section>

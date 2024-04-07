@@ -8,6 +8,7 @@ import pngTISLogo from "../assets/images/icons/TIS.png";
 import pngSkipPiLogo from "../assets/images/icons/SkipPi.png";
 import pngAttendQRLogo from "../assets/images/icons/AttendQR.png";
 import pngFeSALogo from "../assets/images/icons/FeSA.png";
+import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function Projects() {
   sessionStorage.setItem("previousPage", window.location.pathname);
@@ -23,12 +24,11 @@ function Projects() {
             </h1>
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
               Welcome to my
-              <span className="text-[#f5f5f5]">digital gallery</span>
+              digital gallery
               where pixels meet passion! Below, you'll find a curated selection
               of my proudest creations. From sleek website designs to robust
-              <span className="text-[#f5f5f5]">web applications,</span> each
-              project represents a unique journey of creativity and
-              craftsmanship.
+              web applications, each project represents a unique
+              journey of creativity and craftsmanship.
             </p>
             <h1>Here are some of my recent projects</h1>
           </article>
@@ -38,7 +38,7 @@ function Projects() {
             <div className="projects-card">
               <figure
                 onClick={() =>
-                  window.open("https://github.com/imfarhat/SkipPi")
+                  window.open("https://github.com/imfarhat/AttendQR")
                 }
               >
                 <img
