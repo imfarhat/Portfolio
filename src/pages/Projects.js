@@ -17,7 +17,7 @@ function Projects() {
     <>
       <Header />
       <main
-        className="py-4 md:pt-8 pb-16 ficjc flex-col gap-8 bg-[#16181d] bg-cover"
+        className="py-4 md:pt-8 ficjc flex-col md:gap-8 bg-[#16181d] bg-cover"
         style={{
           backgroundImage: `url(${svgWave})`,
         }}
