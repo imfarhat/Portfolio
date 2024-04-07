@@ -23,17 +23,20 @@ function Projects() {
               Projects
             </h1>
             <p className="px-2 md:px-4 text-justify text-[#f5f5f5]/75 drop-shadow shadow-black flex flex-wrap gap-x-1">
-              Welcome to my
-              digital gallery
-              where pixels meet passion! Below, you'll find a curated selection
-              of my proudest creations. From sleek website designs to robust
-              web applications, each project represents a unique
-              journey of creativity and craftsmanship.
+              Welcome to my digital gallery where pixels meet passion! Below,
+              you'll find a curated selection of my proudest creations. From
+              sleek website designs to robust web applications, each project
+              represents a unique journey of creativity and craftsmanship.
             </p>
             <h1>Here are some of my recent projects</h1>
           </article>
         </section>
-        <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25">
+        <section
+          className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc bg-gradient-to-r from-[#16181d] to-[#646674]/25 bg-cover"
+          style={{
+            backgroundImage: `url(${svgWave})`,
+          }}
+        >
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card">
               <figure
@@ -44,7 +47,7 @@ function Projects() {
                 <img
                   src={pngAttendQRLogo}
                   alt="AttendQR Logo"
-                  loading="eager"
+                  loading="_lazy"
                 />
               </figure>
 
@@ -85,7 +88,7 @@ function Projects() {
                   window.open("https://github.com/imfarhat/SkipPi")
                 }
               >
-                <img src={pngSkipPiLogo} alt="SkipPi Logo" loading="eager" />
+                <img src={pngSkipPiLogo} alt="SkipPi Logo" loading="_lazy" />
               </figure>
               <h3>
                 SkipPi
@@ -120,7 +123,7 @@ function Projects() {
 
             <div className="projects-card">
               <figure onClick={() => window.open("https://tis.pages.dev")}>
-                <img src={pngTISLogo} alt="TIS Logo" loading="eager" />
+                <img src={pngTISLogo} alt="TIS Logo" loading="_lazy" />
               </figure>
 
               <h3>
@@ -158,7 +161,7 @@ function Projects() {
               <figure
                 onClick={() => window.open("https://farhateservices.pages.dev")}
               >
-                <img src={pngFeSALogo} alt="FeSA Logo" loading="eager" />
+                <img src={pngFeSALogo} alt="FeSA Logo" loading="_lazy" />
               </figure>
               <h3>
                 FeSA
