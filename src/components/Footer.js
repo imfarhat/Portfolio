@@ -151,16 +151,14 @@ function Footer() {
   }
 
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d] border-t border-[#fdfdff80] shadow">
-      <section className="w-full py-4 text-[#141e28] bg-gradient-to-l from-[#16181d] to-[#646674]/25 flex items-center justify-center">
+    <footer className="flex flex-col items-center justify-center gap-4 bg-[#16181d] shadow">
+      <section className="w-full py-4 text-[#141e28] bg-gradient-to-t from-[#16181d] to-[#16181d] flex items-center justify-center border-b border-[#fdfdff80]">
         <button className="back-to-top-btn" onClick={scrollToTop}>
           Back to Top
         </button>
       </section>
 
-      <section
-        className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6"
-      >
+      <section className="my-4 grid grid-cols-2 md:grid-cols-4 items-start justify-center gap-4 md:gap-6">
         <div className="footer-link-card">
           <h3 className="footer-card-h3">Quick Links</h3>
           <ul>
