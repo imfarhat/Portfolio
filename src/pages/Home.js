@@ -38,7 +38,7 @@ function Home() {
                 to create engaging and user-friendly web experiences.
               </p>
             </aside>
-            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-[#16181d] to-[#16181d] rounded-full animate-spin">
+            <aside className="w-full md:w-[50%] p-4 md:p-6 bg-gradient-to-b from-[#16181d] to-[#f5f5f5]/5 sm:from-[#16181d] sm:to-[#16181d] rounded-full animate-spin">
               <div className="group md:cursor-pointer bg-gradient-to-t from-[#f5f5f5]/5 to-[#f5f5f5]/10 aspect-square rounded-full p-4 md:p-6 animate-reverse-spin">
                 <div className="bg-gradient-to-t from-[#f5f5f5]/10 to-[#f5f5f5]/5 aspect-square rounded-full p-4 md:p-6 animate-spin">
                   <div className="bg-gradient-to-t from-[#16181d] from-80% to-[#141e28] w-full h-full aspect-square rounded-full p-4 md:p-6 animate-reverse-spin ficjc transition-all ease-in md:duration-200">
