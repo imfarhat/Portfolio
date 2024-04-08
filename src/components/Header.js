@@ -127,7 +127,7 @@ function Header() {
     <header>
       {headerPromo && (
         <section className="flex flex-row-reverse w-full gap-2 md:gap-4 px-2 md:px-1 pt-1.5 items-center justify-end md:justify-center max-w-7xl text-[#f5f5f5] font-bold rounded-b-md">
-          <span className="px-2 animate-pulse text-[0.925rem] font-normal">
+          <span className="px-2 animate-pulse text-[0.925rem] font-normal bg-[#16181d] rounded-sm">
             Hello World!
           </span>
           <button
@@ -144,7 +144,7 @@ function Header() {
       <nav>
         <Link
           to="/"
-          className="text-lg md:text-xl font-semibold px-0 pt-1 md:pt-2 md:pb-1.5"
+          className="text-lg md:text-xl font-semibold pt-1 md:pt-2 md:pb-1.5 drop-shadow-lg"
         >
           I. Farhat
         </Link>
