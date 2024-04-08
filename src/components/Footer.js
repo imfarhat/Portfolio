@@ -419,14 +419,14 @@ function Footer() {
                 disabled={false}
                 className="feedback-tab-btn"
               >
-                Resume &#10148;
+                Resume &#11167;
               </button>
             </form>
           </article>
         </div>
       </section>
 
-      <section className="px-2 py-4 md:px-4 flex items-center justify-between gap-2.5 text-[#fdfdff] bg-gradient-to-t from-[#16181d] to-[#646674]/5 w-full text-xs md:text-base">
+      <section className="px-2 py-4 md:px-4 flex items-center justify-between gap-2.5 text-[#fdfdff] bg-transparen w-full text-xs md:text-base">
         <Link to="/" className="flex gap-1 md:gap-1.5">
           <span>&copy;</span> <span>{new Date().getFullYear()}</span>
           <span>I. Farhat</span>
