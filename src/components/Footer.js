@@ -420,7 +420,7 @@ function Footer() {
                 disabled={false}
                 className="feedback-tab-btn"
               >
-                Resume &darr; &darr;
+                Resume &#9729; &darr;
               </button>
             </form>
           </article>
