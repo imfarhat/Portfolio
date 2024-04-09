@@ -415,11 +415,12 @@ function Footer() {
                 title="Enter your email to download resume!"
               />
               <button
+                title="Download Resume"
                 type="submit"
                 disabled={false}
                 className="feedback-tab-btn"
               >
-                Resume &#11167;
+                Resume &darr; &darr;
               </button>
             </form>
           </article>
