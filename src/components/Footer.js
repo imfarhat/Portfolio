@@ -376,7 +376,7 @@ function Footer() {
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="subEmail"
                 id="subEmail"
-                placeholder="example@gmail.com"
+                placeholder="Enter email to subscribe to our newsletter"
                 value={user.subEmail}
                 onChange={handleInputChange}
                 className="feedback-tab-input"
@@ -407,7 +407,7 @@ function Footer() {
                 pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
                 name="resumeEmail"
                 id="resumeEmail"
-                placeholder="example@gmail.com"
+                placeholder="Enter your email to download resume"
                 value={user.resumeEmail}
                 onChange={handleInputChange}
                 ref={inputResumeReqRef}
