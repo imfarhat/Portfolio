@@ -171,8 +171,8 @@
   :root {
     --enlarge: scale(1.25);
     --page-color: steelblue;
-    --star-primary-color: gold;
-    --star-secondary-color: darkgoldenrod;
+    --star-primary-color: #fdfdff;
+    --star-secondary-color: #646674;
   }
 
   .container-rate {

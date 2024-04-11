@@ -420,7 +420,7 @@ function Footer() {
                 disabled={false}
                 className="feedback-tab-btn"
               >
-                Download CV &#9729; 
+                Download &#9729; 
               </button>
             </form>
           </article>
