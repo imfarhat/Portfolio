@@ -55,7 +55,7 @@ function Projects() {
                 AttendQR
                 <span>
                   <Link
-                    to="https://attendqr.vercel.app"
+                    to="https://attendqr.in"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
