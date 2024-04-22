@@ -39,11 +39,7 @@ function Projects() {
         <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card">
-              <figure
-                onClick={() =>
-                  window.open("https://github.com/imfarhat/AttendQR")
-                }
-              >
+              <figure onClick={() => window.open("https://attendqr.in")}>
                 <img
                   src={pngAttendQRLogo}
                   alt="AttendQR Logo"
@@ -60,13 +56,6 @@ function Projects() {
                     rel="noopener noreferrer"
                   >
                     <IoGlobeOutline />
-                  </Link>
-                  <Link
-                    to="https://github.com/imfarhat/AttendQR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsGithub />
                   </Link>
                 </span>
               </h3>
