@@ -61,12 +61,12 @@ function Projects() {
               </h3>
               <p>
                 <em>
-                  QR Code based Attendance Management <code>Mar'24</code>
+                  India's 1<sup>st</sup> QR Attendance Maagement Syst.{" "}
+                  <code>Mar'24</code>
                 </em>
                 <span>
                   <strong>React JS</strong>
                   <strong>Tailwind CSS</strong>
-                  <strong>HTML</strong>
                 </span>
               </p>
             </div>
@@ -104,8 +104,7 @@ function Projects() {
                 </em>
                 <span>
                   <strong>JavaScript</strong>
-                  <strong>JSON</strong>
-                  <strong>HTML</strong>
+                  <strong>Tailwind CSS</strong>
                 </span>
               </p>
             </div>
