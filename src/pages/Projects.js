@@ -48,7 +48,7 @@ function Projects() {
               </figure>
 
               <h3>
-                AttendQR
+                Attend QR
                 <span>
                   <Link
                     to="https://attendqr.in"
@@ -61,8 +61,7 @@ function Projects() {
               </h3>
               <p>
                 <em>
-                  India's 1<sup>st</sup> QR Attendance Maagement Syst.{" "}
-                  <code>Mar'24</code>
+                  QR Code baded Attendance Maagement System <code>Mar'24</code>
                 </em>
                 <span>
                   <strong>React JS</strong>
