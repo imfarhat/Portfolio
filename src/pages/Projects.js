@@ -6,7 +6,6 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import pngTISLogo from "../assets/images/icons/TIS.png";
 import pngSkipPiLogo from "../assets/images/icons/SkipPi.png";
-import pngAttendQRLogo from "../assets/images/icons/AttendQR.png";
 import pngFeSALogo from "../assets/images/icons/FeSA.png";
 import svgWave from "../assets/images/backgrounds/wave.svg";
 
@@ -41,7 +40,7 @@ function Projects() {
             <div className="projects-card">
               <figure onClick={() => window.open("https://attendqr.in")}>
                 <img
-                  src={pngAttendQRLogo}
+                  src="https://attendqr.vercel.app/AttendQR.png"
                   alt="AttendQR Logo"
                   loading="_lazy"
                 />
@@ -61,7 +60,7 @@ function Projects() {
               </h3>
               <p>
                 <em>
-                  QR Code baded Attendance Maagement System <code>Mar'24</code>
+                  Attendance Management System <code>Mar'24</code>
                 </em>
                 <span>
                   <strong>React JS</strong>
