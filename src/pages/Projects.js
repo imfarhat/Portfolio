@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import pngTISLogo from "../assets/images/icons/TIS.png";
 import pngSkipPiLogo from "../assets/images/icons/SkipPi.png";
 import pngFeSALogo from "../assets/images/icons/FeSA.png";
+import pngAttendQRLogo from "../assets/images/icons/AttendQR.png";
 import svgWave from "../assets/images/backgrounds/wave.svg";
 
 function Projects() {
@@ -40,7 +41,7 @@ function Projects() {
             <div className="projects-card">
               <figure onClick={() => window.open("https://attendqr.in")}>
                 <img
-                  src="https://attendqr.vercel.app/AttendQR.png"
+                  src={pngAttendQRLogo}
                   alt="AttendQR Logo"
                   loading="_lazy"
                 />
