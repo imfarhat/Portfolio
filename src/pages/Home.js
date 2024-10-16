@@ -66,37 +66,37 @@ function Home() {
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <h3 className="programming-lang-card">
                 <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   HTML5
                 </span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaCss3Alt className="text-7xl md:text-9xl text-[#264de4]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   CSS3
                 </span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiTailwindcss className="text-7xl md:text-9xl text-sky-500 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   Tailwind
                 </span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiJavascript className="text-7xl md:text-9xl text-[#f0db4f] rounded-[0.175rem] md:rounded-md aspect-square" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   JavaScript
                 </span>
               </h3>
               <h3 className="programming-lang-card">
                 <FaReact className="text-7xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   React JS
                 </span>
               </h3>
               <h3 className="programming-lang-card">
                 <SiNextdotjs className="text-7xl md:text-9xl text-black bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
-                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                <span className="text-xs md:font-semibold md:text-base pt-0.5">
                   Next JS
                 </span>
               </h3>
