@@ -6,7 +6,7 @@ import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import { TbLoader } from "react-icons/tb";
 import pngIFarhat from "../assets/images/characters/IFarhat.png";
 import svgWave from "../assets/images/backgrounds/wave.svg";
-
+import { SiNextdotjs } from "react-icons/si";
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -92,6 +92,12 @@ function Home() {
                 <FaReact className="text-5xl md:text-9xl text-sky-400 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
                 <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
                   React JS
+                </span>
+              </h3>
+              <h3 className="programming-lang-card">
+                <SiNextdotjs className="text-5xl md:text-9xl text-black bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square p-1" />
+                <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
+                  Next JS
                 </span>
               </h3>
             </div>
