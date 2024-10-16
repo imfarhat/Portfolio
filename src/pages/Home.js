@@ -63,7 +63,7 @@ function Home() {
             <h1 className="rotate-0 lg:rotate-90 text-[#f5f5f5] text-2xl md:text-3xl font-bold">
               Skills
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <h3 className="programming-lang-card">
                 <FaHtml5 className="text-7xl md:text-9xl text-[#e34c26]/95 bg-[#f5f5f5] rounded-[0.175rem] md:rounded-md aspect-square" />
                 <span className="text-[0.45rem] md:font-semibold md:text-base pt-0.5">
