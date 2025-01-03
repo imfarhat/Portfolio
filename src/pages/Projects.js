@@ -41,7 +41,7 @@ function Projects() {
             <div className="projects-card">
               <figure onClick={() => window.open("https://attendqr.in")}>
                 <img
-                  src="https://attendqr.in/android-chrome-192x192.png"
+                  src="https://attendqr.in/icon.png"
                   alt="AttendQR Logo"
                   loading="_lazy"
                 />
