@@ -39,7 +39,7 @@ function Projects() {
         <section className="md:rounded-md overflow-hidden px-2 py-8 md:px-4 md:py-12 w-full ficjc">
           <article className="max-w-7xl w-full items-center justify-center ffwicjc gap-4 md:gap-6">
             <div className="projects-card">
-              <figure onClick={() => window.open("https://attendqr.in")}>
+              <figure onClick={() => window.open("https://company.attendqr.in")}>
                 <img
                   src="https://attendqr.in/icon.png"
                   alt="AttendQR Logo"
@@ -51,7 +51,7 @@ function Projects() {
                 Attend QR
                 <span>
                   <Link
-                    to="https://attendqr.in"
+                    to="https://company attendqr.in"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
